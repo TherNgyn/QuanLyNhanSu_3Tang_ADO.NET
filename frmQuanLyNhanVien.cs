@@ -1,13 +1,18 @@
 ﻿using System.Data;
 using System.Windows.Forms;
-using static QuanLyNhanSu_3Tang_ADO.Connection;
+
 using Microsoft.Data.SqlClient;
 using Microsoft.Data;
+using QuanLyNhanSu_3Tang_ADO.BS_Layer;
 
 namespace QuanLyNhanSu_3Tang_ADO
 {
     public partial class frmQuanLyNhanVien : Form
     {
+        DataTable dtNhanVien = null;
+        bool Them;
+        string err;
+        BLNhanVien dbNV = new BLNhanVien();
         void LoadData()
         {
             // Xóa trống các đối tượng trong Panel  
@@ -22,29 +27,23 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtThamNien.ResetText();
             txtTimKiemMaNV.ResetText();
 
-            // Không cho thao tác trên các nút Lưu / Hủy  s
-            // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát  
+           
             btnThem.Enabled = true;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
            
             try
             {
-                //Load dữ liệu từ bảng Nhân viên lên DataGridView
-                string data = "Select * from NhanVien";
-                dataGridViewNhanVien.DataSource = Connection.LoadDataTable(data);
+                dtNhanVien = new DataTable();
+                dtNhanVien.Clear();
 
-                //Load dữ liệu lên combobox Phòng ban
-                string phongban = "select MaPB, TenPB from PhongBan"; // Chọn cột MaPB và TenPB
-                cbbPhongBan.DataSource = Connection.LoadDataTable(phongban);
-                cbbPhongBan.ValueMember = "MaPB"; // Chọn MaPB làm giá trị
-                cbbPhongBan.DisplayMember = "TenPB"; // Hiển thị TenPB trong ComboBox
+                DataSet ds = dbNV.LayNhanVien();
+                dtNhanVien = ds.Tables[0];
 
-                //Load dữ liệu lên combobox Chức vụ
-                string chucvu = "select MaCV, TenCV from ChucVu"; // Chọn cột MaPB và TenPB
-                cbbChucVu.DataSource = Connection.LoadDataTable(chucvu);
-                cbbChucVu.ValueMember = "MaCV";
-                cbbChucVu.DisplayMember = "TenCV";
+                dataGridViewNhanVien.DataSource = dtNhanVien;
+                //
+                
+
             }
             catch (SqlException)
             {

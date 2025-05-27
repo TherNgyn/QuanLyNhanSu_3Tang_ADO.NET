@@ -7,16 +7,28 @@
       "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\fetch_head||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:fetch_head||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\frmquanlynhanvien.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:frmquanlynhanvien.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\frmquanlynhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:frmquanlynhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\bs layer\\blnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:bs layer\\blnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\db layer\\dbmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|solutionrelative:db layer\\dbmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50236B4F-C793-417B-BDE4-5459CBF42943}|QuanLyNhanSu_3Tang_ADO.csproj|c:\\users\\hp\\source\\repos\\quanlynhansu_3tang_ado\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,8 +52,20 @@
         },
         {
           "DockedWidth": 424,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmQuanLyNhanVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.cs",
+              "RelativeDocumentMoniker": "frmQuanLyNhanVien.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.cs [Design]",
+              "RelativeToolTip": "frmQuanLyNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:57:23.843Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -50,7 +74,7 @@
               "RelativeDocumentMoniker": "frmQuanLyNhanVien.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.cs",
               "RelativeToolTip": "frmQuanLyNhanVien.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBYAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T12:37:23.971Z",
               "EditorCaption": ""
@@ -58,6 +82,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FETCH_HEAD",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\FETCH_HEAD",
+              "RelativeDocumentMoniker": "FETCH_HEAD",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\FETCH_HEAD",
+              "RelativeToolTip": "FETCH_HEAD",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-27T17:51:10.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmQuanLyNhanVien.resx",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.resx",
+              "RelativeDocumentMoniker": "frmQuanLyNhanVien.resx",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.resx",
+              "RelativeToolTip": "frmQuanLyNhanVien.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-27T17:51:07.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmQuanLyNhanVien.Designer.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.Designer.cs",
               "RelativeDocumentMoniker": "frmQuanLyNhanVien.Designer.cs",
@@ -69,41 +118,34 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Connection.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\Connection.cs",
-              "RelativeDocumentMoniker": "Connection.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\Connection.cs",
-              "RelativeToolTip": "Connection.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBYAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "BLNhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\BS Layer\\BLNhanVien.cs",
+              "RelativeDocumentMoniker": "BS Layer\\BLNhanVien.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\BS Layer\\BLNhanVien.cs",
+              "RelativeToolTip": "BS Layer\\BLNhanVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T12:17:55.842Z",
+              "WhenOpened": "2025-05-27T17:48:57.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmQuanLyNhanVien.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.cs",
-              "RelativeDocumentMoniker": "frmQuanLyNhanVien.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.cs [Design]",
-              "RelativeToolTip": "frmQuanLyNhanVien.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "DBMain.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\DB Layer\\DBMain.cs",
+              "RelativeDocumentMoniker": "DB Layer\\DBMain.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\DB Layer\\DBMain.cs",
+              "RelativeToolTip": "DB Layer\\DBMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T11:57:23.843Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "WhenOpened": "2025-05-27T15:00:55.139Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -111,16 +153,15 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T12:15:20.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2025-05-27T12:15:20.422Z"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }
