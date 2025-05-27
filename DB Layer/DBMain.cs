@@ -32,23 +32,29 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
             return ds;
         }
 
-
-        public bool MyExecuteNonQuery(string strSQL, CommandType ct, ref string error)
+        public bool MyExecuteNonQuery(SqlCommand cmd, CommandType ct, ref string error)
         {
             bool f = false;
             if (conn.State == ConnectionState.Open)
                 conn.Close();
             conn.Open();
-            comm.CommandText = strSQL;
-            comm.CommandType = ct;
+            cmd.Connection = conn;
+            cmd.CommandType = ct;
+
             try
             {
-                comm.ExecuteNonQuery();
-                f = true;
+                cmd.ExecuteNonQuery();
+                f = true;  
             }
             catch (SqlException ex)
             {
                 error = ex.Message;
+                f = false;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                f = false;
             }
             finally
             {
@@ -56,5 +62,6 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
             }
             return f;
         }
+
     }
 }
