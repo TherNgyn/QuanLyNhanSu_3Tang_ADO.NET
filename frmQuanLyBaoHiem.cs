@@ -175,7 +175,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                 int r = dgvBaoHiem.CurrentCell.RowIndex;
                 string maBH = dgvBaoHiem.Rows[r].Cells[1].Value.ToString();
 
-                DialogResult traloi = MessageBox.Show("Chắc xóa mẫu tin này không?", "Trả lời", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult traloi = MessageBox.Show("Chắc xóa không?", "Trả lời", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (traloi == DialogResult.Yes)
                 {

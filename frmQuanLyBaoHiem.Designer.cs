@@ -189,7 +189,7 @@
             txtTimKiemMaBH.Margin = new Padding(4, 6, 4, 6);
             txtTimKiemMaBH.Name = "txtTimKiemMaBH";
             txtTimKiemMaBH.PlaceholderForeColor = Color.Gray;
-            txtTimKiemMaBH.PlaceholderText = "Tìm kiếm theo mã bảo hiểm'";
+            txtTimKiemMaBH.PlaceholderText = "Tìm kiếm theo mã bảo hiểm";
             txtTimKiemMaBH.SelectedText = "";
             txtTimKiemMaBH.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtTimKiemMaBH.Size = new Size(334, 56);
@@ -317,7 +317,7 @@
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.ForeColor = Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.GradientActiveCaption;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
@@ -538,7 +538,7 @@
             // guna2GroupBox1
             // 
             guna2GroupBox1.Controls.Add(dgvBaoHiem);
-            guna2GroupBox1.CustomBorderColor = Color.Navy;
+            guna2GroupBox1.CustomBorderColor = Color.GhostWhite;
             guna2GroupBox1.CustomBorderThickness = new Padding(0, 45, 0, 0);
             guna2GroupBox1.CustomizableEdges = customizableEdges17;
             guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
