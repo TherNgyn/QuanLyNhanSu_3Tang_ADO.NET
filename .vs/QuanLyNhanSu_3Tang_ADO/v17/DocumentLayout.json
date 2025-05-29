@@ -132,22 +132,10 @@
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAABsWAAAAAAAAAAAowCsWAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsWAAAAAAAAAAAowCoWAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-05-29T12:25:09.725Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BLChamCong.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\BS Layer\\BLChamCong.cs",
-              "RelativeDocumentMoniker": "BS Layer\\BLChamCong.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\BS Layer\\BLChamCong.cs",
-              "RelativeToolTip": "BS Layer\\BLChamCong.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwAcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T09:25:28.355Z"
             },
             {
               "$type": "Document",
@@ -197,6 +185,26 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-29T12:21:28.403Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BLChamCong.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\BS Layer\\BLChamCong.cs",
+              "RelativeDocumentMoniker": "BS Layer\\BLChamCong.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\BS Layer\\BLChamCong.cs",
+              "RelativeToolTip": "BS Layer\\BLChamCong.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T09:25:28.355Z"
             },
             {
               "$type": "Document",
@@ -377,14 +385,6 @@
               "WhenOpened": "2025-05-27T17:51:10.808Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "frmChamCong.cs [Design]",
@@ -393,7 +393,8 @@
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmChamCong.cs [Design]",
               "RelativeToolTip": "frmChamCong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T09:11:14.082Z"
+              "WhenOpened": "2025-05-28T09:11:14.082Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -415,7 +416,8 @@
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyBaoHiem.cs [Design]",
               "RelativeToolTip": "frmQuanLyBaoHiem.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:20:22.393Z"
+              "WhenOpened": "2025-05-29T12:20:22.393Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -426,7 +428,8 @@
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmChiTietHopDong.cs [Design]",
               "RelativeToolTip": "frmChiTietHopDong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T03:52:36.673Z"
+              "WhenOpened": "2025-05-28T03:52:36.673Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -437,7 +440,8 @@
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.cs [Design]",
               "RelativeToolTip": "frmQuanLyNhanVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T11:57:23.843Z"
+              "WhenOpened": "2025-05-27T11:57:23.843Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

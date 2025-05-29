@@ -139,18 +139,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmQuanLyHopDong.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyHopDong.cs",
-              "RelativeDocumentMoniker": "frmQuanLyHopDong.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyHopDong.cs [Design]",
-              "RelativeToolTip": "frmQuanLyHopDong.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:20:57.674Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
               "Title": "BLChamCong.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\BS Layer\\BLChamCong.cs",
@@ -171,7 +159,8 @@
               "RelativeToolTip": "frmChamCong.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T09:16:14.341Z"
+              "WhenOpened": "2025-05-28T09:16:14.341Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -183,16 +172,18 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T12:15:20.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T12:15:20.422Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmQuanLyHopDong.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyHopDong.cs",
+              "RelativeDocumentMoniker": "frmQuanLyHopDong.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyHopDong.cs [Design]",
+              "RelativeToolTip": "frmQuanLyHopDong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:20:57.674Z"
             },
             {
               "$type": "Document",
@@ -288,8 +279,7 @@
               "RelativeToolTip": "frmQuanLyHopDong.Designer.cs",
               "ViewState": "AgIAAD8CAAAAAAAAAAAAAFECAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:39:04.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T18:39:04.54Z"
             },
             {
               "$type": "Document",
@@ -387,6 +377,14 @@
               "WhenOpened": "2025-05-27T17:51:10.808Z"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "frmChamCong.cs [Design]",
@@ -417,8 +415,7 @@
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyBaoHiem.cs [Design]",
               "RelativeToolTip": "frmQuanLyBaoHiem.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:20:22.393Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-29T12:20:22.393Z"
             },
             {
               "$type": "Document",
@@ -429,8 +426,7 @@
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmChiTietHopDong.cs [Design]",
               "RelativeToolTip": "frmChiTietHopDong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T03:52:36.673Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-28T03:52:36.673Z"
             },
             {
               "$type": "Document",
@@ -441,8 +437,7 @@
               "ToolTip": "C:\\Users\\HP\\source\\repos\\QuanLyNhanSu_3Tang_ADO\\frmQuanLyNhanVien.cs [Design]",
               "RelativeToolTip": "frmQuanLyNhanVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T11:57:23.843Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-27T11:57:23.843Z"
             }
           ]
         }
