@@ -339,7 +339,7 @@
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.GradientActiveCaption;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
@@ -402,7 +402,7 @@
             guna2GroupBox1.CustomBorderThickness = new Padding(0, 45, 0, 0);
             guna2GroupBox1.CustomizableEdges = customizableEdges15;
             guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            guna2GroupBox1.ForeColor = Color.Black;
+            guna2GroupBox1.ForeColor = Color.White;
             guna2GroupBox1.Location = new Point(12, 329);
             guna2GroupBox1.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox1.Name = "guna2GroupBox1";
@@ -620,7 +620,6 @@
             guna2GroupBox1.ResumeLayout(false);
             guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
-
         }
 
         #endregion
