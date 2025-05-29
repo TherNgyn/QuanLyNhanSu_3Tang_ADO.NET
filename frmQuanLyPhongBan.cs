@@ -14,9 +14,11 @@ namespace QuanLyNhanSu_3Tang_ADO
 {
     public partial class frmQuanLyPhongBan : Form
     {
+        DataTable dtMaNV;
         DataTable dtPhongBan;
         DataTable dtSoLuong;
         BLPhongBan bLPhongBan;
+        BLNhanVien bLNhanVien;
         String userName;
         bool Them;
         string err;
@@ -24,6 +26,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             InitializeComponent();
             bLPhongBan = new BLPhongBan();
+            bLNhanVien = new BLNhanVien();
             this.userName = userName;
             LoadData();
         }
@@ -33,7 +36,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtMaPB.Enabled = false;
             txtTenPB.Enabled = false;
             txtSDT.Enabled = false;
-            txtMaTrP.Enabled = false;
+            cmbMaTrP.Enabled = false;
             txtHo.Enabled = false;
             txtTen.Enabled = false;
 
@@ -64,7 +67,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtMaPB.Text = MaPB;
             txtTenPB.Text = dgvPhongBan.Rows[r].Cells[1].Value.ToString();
             txtSDT.Text = dgvPhongBan.Rows[r].Cells[2].Value.ToString();
-            txtMaTrP.Text = dgvPhongBan.Rows[r].Cells[3].Value.ToString();
+            cmbMaTrP.SelectedValue = dgvPhongBan.Rows[r].Cells[3].Value.ToString();
             txtHo.Text = dgvPhongBan.Rows[r].Cells[4].Value.ToString();
             txtTen.Text = dgvPhongBan.Rows[r].Cells[5].Value.ToString();
 
@@ -96,16 +99,16 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtMaPB.ResetText();
             txtTenPB.ResetText();
             txtSDT.ResetText();
-            txtMaTrP.ResetText();
+            cmbMaTrP.ResetText();
             txtHo.ResetText();
             txtTen.ResetText();
 
             txtMaPB.Enabled = true;
             txtTenPB.Enabled = true;
             txtSDT.Enabled = true;
-            txtMaTrP.Enabled = true;
-            txtHo.Enabled = true;
-            txtTen.Enabled = true;
+            cmbMaTrP.Enabled = true;
+            txtHo.Enabled = false;
+            txtTen.Enabled = false;
 
             btnHuy.Enabled = true;
             btnLuu.Enabled = true;
@@ -119,7 +122,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtMaPB.Enabled = false;
             txtTenPB.Enabled = false;
             txtSDT.Enabled = false;
-            txtMaTrP.Enabled = false;
+            cmbMaTrP.Enabled = false;
             txtHo.Enabled = false;
             txtTen.Enabled = false;
 
@@ -136,7 +139,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtMaPB.Enabled = false;
             txtTenPB.Enabled = true;
             txtSDT.Enabled = true;
-            txtMaTrP.Enabled = true;
+            cmbMaTrP.Enabled = true;
             txtHo.Enabled = true;
             txtTen.Enabled = true;
 
@@ -151,7 +154,14 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
 
             this.AutoScroll = true;
+            dtMaNV = new DataTable();
+            dtMaNV.Clear();
+            DataSet ds2 = bLNhanVien.LayTatCaMaNhanVien();
+            dtMaNV = ds2.Tables[0];
 
+            cmbMaTrP.DataSource = dtMaNV;
+            cmbMaTrP.DisplayMember = "MaNV";
+            cmbMaTrP.ValueMember = "MaNV";
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -191,7 +201,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                     txtMaPB.Text,
                     txtTenPB.Text,
                     txtSDT.Text,
-                    txtMaTrP.Text,
+                    cmbMaTrP.SelectedValue.ToString(),
                     ref err);
                 if (themThanhCong)
                 {
@@ -209,11 +219,30 @@ namespace QuanLyNhanSu_3Tang_ADO
                     txtMaPB.Text,
                     txtTenPB.Text,
                     txtSDT.Text,
-                    txtMaTrP.Text,
+                    cmbMaTrP.SelectedValue.ToString(),
                     ref err);
                 LoadData();
                 MessageBox.Show("Đã sửa xong!");
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult traloi;
+            traloi = MessageBox.Show("Chắc không?", "Trả lời",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            // Kiểm tra có nhắp chọn nút Ok không?  
+            if (traloi == DialogResult.OK)
+            {
+                frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                frmMenuQuanTriVien.Show();
+                this.Hide();
+            }
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

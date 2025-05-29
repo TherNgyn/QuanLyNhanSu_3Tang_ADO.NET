@@ -61,7 +61,9 @@ namespace QuanLyNhanSu_3Tang_ADO
         }
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            frmQuanLyTaiKhoan frmQuanLyTaiKhoan = new frmQuanLyTaiKhoan(userName);
+            frmQuanLyTaiKhoan.Show();
+            this.Hide();
         }
 
         private void guna2HtmlLabel6_Click(object sender, EventArgs e)

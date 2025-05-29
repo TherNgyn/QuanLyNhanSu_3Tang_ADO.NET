@@ -77,6 +77,27 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
             }
         }
 
+        public DataSet LayTenLoaiTaiKhoan()
+        {
+            return db.ExecuteQueryDataSet("SELECT DISTINCT TK.MaLoai ,Ten FROM TaiKhoan TK INNER JOIN LoaiTaiKhoan LTK ON TK.MaLoai = LTK.MaLoai", CommandType.Text);
+        }
+        public DataSet LayThongTinTaiKhoan()
+        {
+            return db.ExecuteQueryDataSet("SELECT TenDangNhap, MatKhau, TK.MaLoai, Ho, NV.Ten, LTK.Ten as TenLoai " +
+                "FROM TaiKhoan TK INNER JOIN NhanVien NV ON TK.TenDangNhap = NV.MaNV " +
+                "INNER JOIN LoaiTaiKhoan LTK ON TK.MaLoai = LTK.MaLoai", CommandType.Text);
+        }
+        public bool ThemTaiKhoan(String username, String password, String MaLoai, ref string err)
+        {
+            string sqlString = "INSERT Into TaiKhoan(TenDangNhap, MatKhau, MaLoai) VALUES (@TenDangNhap, @MatKhau, @MaLoai) ";
+               
+            SqlCommand cmd = new SqlCommand(sqlString);
+            cmd.Parameters.AddWithValue("@TenDangNhap", username);
+            cmd.Parameters.AddWithValue("@MatKhau", password);
+            cmd.Parameters.AddWithValue("@MaLoai", MaLoai);
+            return db.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
+
+        }
         public bool CapNhatMatKhau(String username, String password, ref string err)
         {
             string sqlString = "UPDATE TaiKhoan " +
@@ -87,6 +108,26 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
             cmd.Parameters.AddWithValue("@MatKhau", password);
             return db.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
 
+        }
+        public bool CapNhatTaiKhoan(String username, String password,String MaLoai, ref string err)
+        {
+            string sqlString = "UPDATE TaiKhoan " +
+               "SET MatKhau = @MatKhau , MaLoai = @MaLoai" +
+               "WHERE TenDangNhap = @TenDangNhap";
+            SqlCommand cmd = new SqlCommand(sqlString);
+            cmd.Parameters.AddWithValue("@TenDangNhap", username);
+            cmd.Parameters.AddWithValue("@MatKhau", password);
+            cmd.Parameters.AddWithValue("@MaLoai", MaLoai);
+            return db.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
+
+        }
+        public bool XoaTaiKhoan(ref string err,String username)
+        {
+            string sqlString = "Delete From TaiKhoan Where TenDangNhap=@TenDangNhap";
+            SqlCommand cmd = new SqlCommand(sqlString);
+            cmd.Parameters.AddWithValue("@TenDangNhap", username);
+            return db.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
+            
         }
     }
 }

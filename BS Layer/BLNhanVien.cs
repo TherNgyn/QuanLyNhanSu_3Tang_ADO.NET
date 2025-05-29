@@ -18,6 +18,11 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
         {
             db = new DBMain();
         }
+        public DataSet LayTatCaMaNhanVien()
+        {
+            return db.ExecuteQueryDataSet("SELECT MaNV FROM NhanVien", CommandType.Text);
+
+        }
         public DataSet LayNhanVien()
         {
             return db.ExecuteQueryDataSet("SELECT * FROM NhanVien", CommandType.Text);
