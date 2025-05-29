@@ -77,7 +77,7 @@
             btnChamCong.Size = new Size(225, 56);
             btnChamCong.TabIndex = 1;
             btnChamCong.Text = "Chấm Công";
-            btnChamCong.Click += guna2Button2_Click;
+            btnChamCong.Click += btnChamCong_Click;
             // 
             // btnDangKyNghiPhep
             // 

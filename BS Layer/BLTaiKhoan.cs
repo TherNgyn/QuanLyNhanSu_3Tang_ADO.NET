@@ -28,7 +28,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
                                    "FROM TaiKhoan TK JOIN LoaiTaiKhoan LTK ON TK.MaLoai = LTK.MaLoai " +
                                    "WHERE TK.TenDangNhap = @Username AND TK.MatKhau = @Password";
 
-                // Tạo SqlCommand và thêm tham số, giống như cách bạn muốn
+               
                 SqlCommand cmd = new SqlCommand(sqlString);
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@Password", password); // Mật khẩu không mã hóa

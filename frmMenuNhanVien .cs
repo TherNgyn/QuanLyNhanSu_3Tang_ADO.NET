@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         public frmMenuNhanVien(String username)
         {
             InitializeComponent();
-            userName = username;
+            this.userName = username;
         }
 
         private void frmMenuNhanVien_Load(object sender, EventArgs e)
@@ -29,9 +30,10 @@ namespace QuanLyNhanSu_3Tang_ADO
             MessageBox.Show("Mở Form Đăng Ký Nghỉ Phép cho nhân viên.");
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnChamCong_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Mở Form Chấm Công cho nhân viên.");
+            frmChamCong frmChamCong = new frmChamCong(userName);
+            frmChamCong.ShowDialog();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -59,5 +61,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             frmCapNhatMatKhau.Show();
             this.Hide();
         }
+
+        
     }
 }

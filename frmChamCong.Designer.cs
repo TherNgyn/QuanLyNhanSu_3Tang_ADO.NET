@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dataGridViewChamCong = new DataGridView();
             Column2 = new DataGridViewTextBoxColumn();
             Thang = new DataGridViewTextBoxColumn();
@@ -43,6 +43,8 @@
             txtMaNV = new TextBox();
             lblMaNV = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            cbbLoaiChamCong = new ComboBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewChamCong).BeginInit();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
@@ -96,16 +98,18 @@
             // 
             // guna2GroupBox1
             // 
+            guna2GroupBox1.Controls.Add(label1);
+            guna2GroupBox1.Controls.Add(cbbLoaiChamCong);
             guna2GroupBox1.Controls.Add(btnChamCong);
             guna2GroupBox1.Controls.Add(txtMaNV);
             guna2GroupBox1.Controls.Add(lblMaNV);
             guna2GroupBox1.CustomBorderColor = Color.SteelBlue;
-            guna2GroupBox1.CustomizableEdges = customizableEdges5;
+            guna2GroupBox1.CustomizableEdges = customizableEdges1;
             guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox1.ForeColor = Color.Black;
             guna2GroupBox1.Location = new Point(25, 22);
             guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2GroupBox1.Size = new Size(877, 243);
             guna2GroupBox1.TabIndex = 10;
             guna2GroupBox1.Text = "THÔNG TIN CHẤM CÔNG";
@@ -127,7 +131,7 @@
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(281, 95);
+            txtMaNV.Location = new Point(180, 95);
             txtMaNV.Name = "txtMaNV";
             txtMaNV.ReadOnly = true;
             txtMaNV.Size = new Size(310, 30);
@@ -137,7 +141,7 @@
             // 
             lblMaNV.AutoSize = true;
             lblMaNV.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            lblMaNV.Location = new Point(148, 99);
+            lblMaNV.Location = new Point(37, 99);
             lblMaNV.Name = "lblMaNV";
             lblMaNV.Size = new Size(127, 22);
             lblMaNV.TabIndex = 10;
@@ -147,15 +151,33 @@
             // 
             guna2GroupBox2.Controls.Add(dataGridViewChamCong);
             guna2GroupBox2.CustomBorderColor = Color.SteelBlue;
-            guna2GroupBox2.CustomizableEdges = customizableEdges7;
+            guna2GroupBox2.CustomizableEdges = customizableEdges3;
             guna2GroupBox2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox2.ForeColor = Color.Black;
             guna2GroupBox2.Location = new Point(25, 296);
             guna2GroupBox2.Name = "guna2GroupBox2";
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GroupBox2.Size = new Size(877, 497);
             guna2GroupBox2.TabIndex = 11;
             guna2GroupBox2.Text = "DANH SÁCH CHẤM CÔNG";
+            // 
+            // cbbLoaiChamCong
+            // 
+            cbbLoaiChamCong.FormattingEnabled = true;
+            cbbLoaiChamCong.Location = new Point(692, 95);
+            cbbLoaiChamCong.Name = "cbbLoaiChamCong";
+            cbbLoaiChamCong.Size = new Size(151, 31);
+            cbbLoaiChamCong.TabIndex = 13;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            label1.Location = new Point(547, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(140, 22);
+            label1.TabIndex = 14;
+            label1.Text = "Loại chấm công:";
             // 
             // frmChamCong
             // 
@@ -192,5 +214,7 @@
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblMaNV;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+        private Label label1;
+        private ComboBox cbbLoaiChamCong;
     }
 }
