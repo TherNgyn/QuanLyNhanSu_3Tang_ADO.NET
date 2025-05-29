@@ -560,7 +560,7 @@
             Controls.Add(guna2Panel1);
             Controls.Add(guna2GroupBox1);
             Name = "frmQuanLyBaoHiem";
-            Text = "frmQuanLyBaoHiem";
+            Text = "Quản lý bảo hiểm";
             Load += frmQuanLyBaoHiem_Load;
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox3.PerformLayout();

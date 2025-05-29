@@ -514,7 +514,7 @@
             Controls.Add(guna2Panel1);
             Controls.Add(guna2GroupBox1);
             Name = "frmQuanLyNghiPhep";
-            Text = "frmQuanLyNghiPhep";
+            Text = "Quản lý nghỉ phép";
             Load += frmQuanLyNghiPhep_Load;
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox3.PerformLayout();
