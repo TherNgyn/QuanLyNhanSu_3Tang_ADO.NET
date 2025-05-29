@@ -154,3 +154,4 @@ D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-win
 D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyBaoHiem.resources
 D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyNghiPhep.resources
 D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyChucVu.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyThongBao.resources
