@@ -46,7 +46,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
             ds = bLNhanVien.LayNhanVienTheoMa(userName);
-            DataTable dt = ds.Tables[0]; 
+            DataTable dt = ds.Tables[0];
             DataRow dataRow = dt.Rows[0];
             txtMaNhanVien.Text = dataRow["MaNV"].ToString();
             txtHo.Text = dataRow["Ho"].ToString();
@@ -99,7 +99,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             err = "";
             DateTime ngaySinh = dtpNgaySinh.Value.Date;
             bLNhanVien.CapNhatNhanVien(txtMaNhanVien.Text, txtHo.Text, txtTen.Text, cmbGioiTinh.SelectedItem.ToString(), ngaySinh,
-                txtDiaChi.Text, txtSoDT.Text, txtEmail.Text, txtCCCD.Text,ref err);
+                txtDiaChi.Text, txtSoDT.Text, txtEmail.Text, txtCCCD.Text, ref err);
             LoadData();
         }
 
@@ -149,6 +149,20 @@ namespace QuanLyNhanSu_3Tang_ADO
             MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK) this.Close();
+        }
+
+        private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            frmQuanLyNV frmQuanLyNV = new frmQuanLyNV(userName);
+            frmQuanLyNV.Show();
+            this.Hide();
+        }
+
+        private void btnQuanLyPhongBan_Click(object sender, EventArgs e)
+        {
+            frmQuanLyPhongBan frmQuanLyPhongBan = new frmQuanLyPhongBan(userName);
+            frmQuanLyPhongBan.Show();
+            this.Hide();
         }
     }
 }

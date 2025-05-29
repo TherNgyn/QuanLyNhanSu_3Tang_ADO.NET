@@ -110,11 +110,11 @@
             guna2Panel1.Controls.Add(btnLamMoi);
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Dock = DockStyle.Bottom;
-            guna2Panel1.Location = new Point(0, 947);
+            guna2Panel1.Location = new Point(0, 898);
             guna2Panel1.Margin = new Padding(4, 5, 4, 5);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(1392, 118);
+            guna2Panel1.Size = new Size(1363, 118);
             guna2Panel1.TabIndex = 8;
             // 
             // guna2Button1
@@ -245,7 +245,7 @@
             guna2GroupBox3.CustomizableEdges = customizableEdges5;
             guna2GroupBox3.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox3.ForeColor = Color.Black;
-            guna2GroupBox3.Location = new Point(87, 74);
+            guna2GroupBox3.Location = new Point(87, 32);
             guna2GroupBox3.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox3.Name = "guna2GroupBox3";
             guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -549,7 +549,7 @@
             guna2GroupBox1.CustomizableEdges = customizableEdges9;
             guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox1.ForeColor = Color.Black;
-            guna2GroupBox1.Location = new Point(87, 589);
+            guna2GroupBox1.Location = new Point(87, 540);
             guna2GroupBox1.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -585,6 +585,7 @@
             dataGridViewNhanVien.RowTemplate.Height = 24;
             dataGridViewNhanVien.Size = new Size(1255, 291);
             dataGridViewNhanVien.TabIndex = 0;
+            dataGridViewNhanVien.CellContentClick += dataGridViewNhanVien_CellContentClick;
             // 
             // Column1
             // 
@@ -722,7 +723,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(255, 234, 220);
-            ClientSize = new Size(1413, 1062);
+            ClientSize = new Size(1384, 885);
             Controls.Add(guna2GroupBox1);
             Controls.Add(guna2GroupBox3);
             Controls.Add(guna2Panel1);
@@ -737,7 +738,6 @@
             guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewNhanVien).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion

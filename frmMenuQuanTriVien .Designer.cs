@@ -102,6 +102,7 @@
             btnQuanLyNhanVien.Size = new Size(225, 56);
             btnQuanLyNhanVien.TabIndex = 0;
             btnQuanLyNhanVien.Text = "Quản Lý Nhân Viên";
+            btnQuanLyNhanVien.Click += btnQuanLyNhanVien_Click;
             // 
             // btnQuanLyPhongBan
             // 
@@ -118,6 +119,7 @@
             btnQuanLyPhongBan.Size = new Size(225, 56);
             btnQuanLyPhongBan.TabIndex = 1;
             btnQuanLyPhongBan.Text = "Quản Lý Phòng Ban";
+            btnQuanLyPhongBan.Click += btnQuanLyPhongBan_Click;
             // 
             // btnQuanLyTaiKhoan
             // 
@@ -356,8 +358,9 @@
             // 
             dtpNgaySinh.Checked = true;
             dtpNgaySinh.CustomizableEdges = customizableEdges21;
+            dtpNgaySinh.FillColor = Color.White;
             dtpNgaySinh.Font = new Font("Segoe UI", 9F);
-            dtpNgaySinh.Format = DateTimePickerFormat.Long;
+            dtpNgaySinh.Format = DateTimePickerFormat.Short;
             dtpNgaySinh.Location = new Point(232, 332);
             dtpNgaySinh.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpNgaySinh.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);

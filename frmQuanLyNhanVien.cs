@@ -27,11 +27,11 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtThamNien.ResetText();
             txtTimKiemMaNV.ResetText();
 
-           
+
             btnThem.Enabled = true;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
-           
+
             try
             {
                 dtNhanVien = new DataTable();
@@ -42,7 +42,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 dataGridViewNhanVien.DataSource = dtNhanVien;
                 //
-                
+
 
             }
             catch (SqlException)
@@ -63,6 +63,11 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void frmQuanLyNhanVien_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void dataGridViewNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -154,3 +154,6 @@ E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\ref\QuanLyNhanSu
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmDangNhap.resources
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuNhanVien.resources
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuQuanTriVien.resources
+E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyNV.resources
+E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmCapNhatMatKhau.resources
+E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyPhongBan.resources

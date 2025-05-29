@@ -55,8 +55,9 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnDoiMatKhauNhanVien_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Mở Form Đổi Mật Khẩu cá nhân.");
-
+            frmCapNhatMatKhau frmCapNhatMatKhau = new frmCapNhatMatKhau(userName);
+            frmCapNhatMatKhau.Show();
+            this.Hide();
         }
     }
 }

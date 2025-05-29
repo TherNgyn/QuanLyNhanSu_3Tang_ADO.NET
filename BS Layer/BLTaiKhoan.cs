@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +75,18 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
             {
                 return "Đã xảy ra lỗi trong quá trình xác thực: " + ex.Message;
             }
+        }
+
+        public bool CapNhatMatKhau(String username, String password, ref string err)
+        {
+            string sqlString = "UPDATE TaiKhoan " +
+               "SET MatKhau = @MatKhau " +
+               "WHERE TenDangNhap = @TenDangNhap";
+            SqlCommand cmd = new SqlCommand(sqlString);
+            cmd.Parameters.AddWithValue("@TenDangNhap", username);
+            cmd.Parameters.AddWithValue("@MatKhau", password);
+            return db.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
+
         }
     }
 }
