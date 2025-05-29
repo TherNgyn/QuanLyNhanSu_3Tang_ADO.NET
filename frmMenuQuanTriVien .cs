@@ -166,5 +166,12 @@ namespace QuanLyNhanSu_3Tang_ADO
             frmQuanLyPhongBan.Show();
             this.Hide();
         }
+
+        private void btnThongKeLuong_Click(object sender, EventArgs e)
+        {
+            frmThongKeLuongNhanVien frmTK = new frmThongKeLuongNhanVien();
+            frmTK.Show();
+            this.Hide();
+        }
     }
 }

@@ -67,7 +67,7 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
             if (conn.State == ConnectionState.Open)
                 conn.Close();
             conn.Open();
-            cmd.Connection = conn; // Gán kết nối cho SqlCommand
+            cmd.Connection = conn; 
             cmd.CommandType = ct;
 
             da = new SqlDataAdapter(cmd);
@@ -97,6 +97,22 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
                     conn.Close();
                 throw ex; 
             }
+        }
+        public DataTable ExecuteQueryDataTableWithCmd(SqlCommand cmd, CommandType cmdType)
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandType = cmdType;
+
+            da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            conn.Close();
+            return dt;
         }
 
     }

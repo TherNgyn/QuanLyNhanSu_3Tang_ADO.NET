@@ -20,6 +20,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
         {
             return db.ExecuteQueryDataSet("SELECT * FROM Thang", CommandType.Text);
         }
+
         public bool ThemThang(string MaThang, string MoTa, int SoNgayCong, ref string err)
         {
             try

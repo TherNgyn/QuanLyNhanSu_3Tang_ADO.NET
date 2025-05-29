@@ -4,6 +4,9 @@
     <Compile Update="frmChiTietThuongPhat.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQuanLyBaoHiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,5 +58,13 @@
     <Compile Update="frmQuanLyThuongPhat.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmThongKeLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="QLNS.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

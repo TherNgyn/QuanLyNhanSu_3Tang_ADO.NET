@@ -52,7 +52,9 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnXemLuong_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Mở Form Xem Lương cho nhân viên.");
+            frmLuongNhanVien frmLuongNhanVien = new frmLuongNhanVien(userName);
+            frmLuongNhanVien.ShowDialog();
+          
         }
 
         private void btnDoiMatKhauNhanVien_Click(object sender, EventArgs e)
