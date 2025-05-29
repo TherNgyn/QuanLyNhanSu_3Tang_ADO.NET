@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuanLyNhanSu_3Tang_ADO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5f88021c97d6a56ef3daf995d3b5be9ab600a5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b17c10618758ffef1896f58e67e1e5e971cfb49")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuanLyNhanSu_3Tang_ADO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuanLyNhanSu_3Tang_ADO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
