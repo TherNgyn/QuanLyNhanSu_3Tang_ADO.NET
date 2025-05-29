@@ -83,6 +83,7 @@
             btnThoat = new Button();
             btnHuy = new Button();
             btnLuu = new Button();
+            btnKTHDHetHan = new Button();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewHopDong).BeginInit();
             guna2GroupBox1.SuspendLayout();
@@ -515,6 +516,7 @@
             guna2Panel1.BackColor = Color.AliceBlue;
             guna2Panel1.BorderColor = Color.Black;
             guna2Panel1.BorderThickness = 1;
+            guna2Panel1.Controls.Add(btnKTHDHetHan);
             guna2Panel1.Controls.Add(btnThoat);
             guna2Panel1.Controls.Add(btnHuy);
             guna2Panel1.Controls.Add(btnLuu);
@@ -580,6 +582,22 @@
             btnLuu.UseVisualStyleBackColor = false;
             btnLuu.Click += btnLuu_Click;
             // 
+            // btnKTHDHetHan
+            // 
+            btnKTHDHetHan.BackColor = Color.Navy;
+            btnKTHDHetHan.FlatStyle = FlatStyle.Flat;
+            btnKTHDHetHan.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnKTHDHetHan.ForeColor = Color.White;
+            btnKTHDHetHan.Location = new Point(711, 62);
+            btnKTHDHetHan.Margin = new Padding(4, 2, 4, 2);
+            btnKTHDHetHan.Name = "btnKTHDHetHan";
+            btnKTHDHetHan.Size = new Size(306, 48);
+            btnKTHDHetHan.TabIndex = 12;
+            btnKTHDHetHan.Text = "Hợp đồng sắp hết hạn";
+            btnKTHDHetHan.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnKTHDHetHan.UseVisualStyleBackColor = false;
+            btnKTHDHetHan.Click += btnKTHDHetHan_Click;
+            // 
             // frmQuanLyHopDong
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -638,5 +656,6 @@
         private DataGridViewTextBoxColumn LuongCoBan;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
+        private Button btnKTHDHetHan;
     }
 }
