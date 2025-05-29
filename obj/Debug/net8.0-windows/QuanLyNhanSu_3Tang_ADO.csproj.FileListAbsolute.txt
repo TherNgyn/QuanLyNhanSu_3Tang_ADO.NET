@@ -252,3 +252,14 @@ C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyN
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyNV.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyPhongBan.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyTaiKhoan.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmCapNhatMatKhau.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmChamCong.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmChiTietHopDong.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmDangNhap.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuNhanVien.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuQuanTriVien.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyNV.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyPhongBan.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyTaiKhoan.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmXemThongBao.resources
+D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmDangKyNghiPhep.resources
