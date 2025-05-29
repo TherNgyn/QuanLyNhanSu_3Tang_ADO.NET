@@ -1,6 +1,7 @@
 ﻿create database QuanLyNhanSu
 GO
 use QuanLyNhanSu
+SELECT * FROM HopDong WHERE DATEDIFF(day, GETDATE(), NgayKT) <= 30
 GO
 CREATE TABLE ChucVu (
 	MaCV NVARCHAR(10) PRIMARY KEY,

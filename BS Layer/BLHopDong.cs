@@ -25,6 +25,17 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
             return db.ExecuteQueryDataSet("SELECT * FROM HopDong WHERE MaNV='" + 
                     MaNV+ "'", CommandType.Text);
         }
+        public DataSet XemChiTietHopDong(string MaNV)
+        {
+            string sql = "SELECT nv.MaNV, hd.MaHD, hd.LuongCoBan, hd.NgayBD AS NgayBatDauHopDong, " +
+              "hd.NgayKT AS NgayKetThucHopDong, pb.TenPB AS TenPhongBan, cv.TenCV AS TenChucVu " +
+              "FROM NhanVien nv " +
+              "JOIN HopDong hd ON nv.MaHD = hd.MaHD " +
+              "JOIN ChucVu cv ON nv.MaCV = cv.MaCV " +
+              "JOIN PhongBan pb ON pb.MaPB = nv.MaPB " +
+              "WHERE nv.MaNV = '" + MaNV + "'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
         public bool ThemHopDonng(string MaHD, string MaNV, int LuongCoBan, DateTime NgayBD, DateTime NgayKT, ref string err)
         {
             try
@@ -44,7 +55,6 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
                 err = ex.Message;
                 return false;
             }
-
         }
         public bool XoaHopDong(ref string err, string MaHD)
         {
@@ -64,6 +74,12 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
             cmd.Parameters.AddWithValue("@NgayBD", NgayBD);
             cmd.Parameters.AddWithValue("@NgayKT", NgayKT);
             return db.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
+        }
+        public DataSet LayHopDongSapHetHan()
+        {
+            string query = "SELECT * FROM HopDong " +
+                "WHERE NgayKT >= GETDATE() AND DATEDIFF(day, GETDATE(), NgayKT) <= 30;";
+            return db.ExecuteQueryDataSet(query, CommandType.Text);
         }
 
     }
