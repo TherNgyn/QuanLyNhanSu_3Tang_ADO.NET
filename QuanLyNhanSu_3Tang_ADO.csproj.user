@@ -4,6 +4,12 @@
     <Compile Update="frmDangKyNghiPhep.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmChiTietThuongPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQuanLyBaoHiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -28,6 +34,9 @@
     <Compile Update="frmMenuQuanTriVien .cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmQuanLyCongvaThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQuanLyHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,6 +56,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmQuanLyThuongPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmThongKeLuongNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmXemThongBao.cs">

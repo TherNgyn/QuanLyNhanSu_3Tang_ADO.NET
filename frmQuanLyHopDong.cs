@@ -172,7 +172,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Không cho thao tác trên các nút Lưu / Hủy / Panel  
             this.btnLuu.Enabled = false;
             this.btnHuy.Enabled = false;
-            this.guna2Panel1.Enabled = false;
+            
             dataGridViewHopDong_CellClick(null, null);
 
         }

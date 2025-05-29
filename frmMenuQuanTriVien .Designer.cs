@@ -60,6 +60,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnQuanLyNhanVien = new Guna.UI2.WinForms.Guna2Button();
             btnQuanLyPhongBan = new Guna.UI2.WinForms.Guna2Button();
             btnQuanLyTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
@@ -85,6 +87,7 @@
             btnThoat = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtMaNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
+            btnThongKeLuong = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // btnQuanLyNhanVien
@@ -468,11 +471,29 @@
             txtMaNhanVien.Size = new Size(248, 36);
             txtMaNhanVien.TabIndex = 26;
             // 
+            // btnThongKeLuong
+            // 
+            btnThongKeLuong.CustomizableEdges = customizableEdges33;
+            btnThongKeLuong.DisabledState.BorderColor = Color.DarkGray;
+            btnThongKeLuong.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnThongKeLuong.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnThongKeLuong.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnThongKeLuong.Font = new Font("Segoe UI", 9F);
+            btnThongKeLuong.ForeColor = Color.White;
+            btnThongKeLuong.Location = new Point(696, -2);
+            btnThongKeLuong.Name = "btnThongKeLuong";
+            btnThongKeLuong.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btnThongKeLuong.Size = new Size(225, 56);
+            btnThongKeLuong.TabIndex = 27;
+            btnThongKeLuong.Text = "Thống Kê Lương";
+            btnThongKeLuong.Click += btnThongKeLuong_Click;
+            // 
             // frmMenuQuanTriVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1129, 503);
+            Controls.Add(btnThongKeLuong);
             Controls.Add(txtMaNhanVien);
             Controls.Add(guna2HtmlLabel9);
             Controls.Add(btnThoat);
@@ -532,5 +553,6 @@
         private Guna.UI2.WinForms.Guna2Button btnThoat;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2TextBox txtMaNhanVien;
+        private Guna.UI2.WinForms.Guna2Button btnThongKeLuong;
     }
 }

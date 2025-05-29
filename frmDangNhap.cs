@@ -56,14 +56,12 @@ namespace QuanLyNhanSu_3Tang_ADO
                     frmMenuNhanVien menuNhanVien = new frmMenuNhanVien(username);
                     menuNhanVien.Show();
                     this.Hide();
-
                 }
                 else
                 {
                     frmMenuQuanTriVien menuQuanTriVien = new frmMenuQuanTriVien(username);
                     menuQuanTriVien.Show();
                     this.Hide();
-
                 }
             }
             else

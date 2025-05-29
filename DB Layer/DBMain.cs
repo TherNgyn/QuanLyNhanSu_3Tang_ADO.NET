@@ -10,7 +10,7 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
 {
     class DBMain
     {
-        public static string connectString = "Data Source=LAPTOP-7H9D7KEU\\CSDL_SQLSEVER;Initial Catalog=QuanLyNhanSu;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+        public static string connectString = "Data Source=DESKTOP-0PJCAJ8\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True;Encrypt=False";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
@@ -67,7 +67,7 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
             if (conn.State == ConnectionState.Open)
                 conn.Close();
             conn.Open();
-            cmd.Connection = conn; // Gán kết nối cho SqlCommand
+            cmd.Connection = conn; 
             cmd.CommandType = ct;
 
             da = new SqlDataAdapter(cmd);
@@ -75,6 +75,44 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
             da.Fill(ds);
             conn.Close(); // Đóng kết nối sau khi hoàn thành
             return ds;
+        }
+        public object ExecuteScalar(SqlCommand cmd, CommandType ct)
+        {
+            try
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandType = ct;
+                object result = cmd.ExecuteScalar();
+
+                conn.Close(); 
+                return result;
+            }
+            catch (Exception ex)
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+                throw ex; 
+            }
+        }
+        public DataTable ExecuteQueryDataTableWithCmd(SqlCommand cmd, CommandType cmdType)
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandType = cmdType;
+
+            da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            conn.Close();
+            return dt;
         }
 
     }

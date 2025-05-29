@@ -157,14 +157,21 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             frmQuanLyNV frmQuanLyNV = new frmQuanLyNV(userName);
             frmQuanLyNV.Show();
-            this.Hide();
+          
         }
 
         private void btnQuanLyPhongBan_Click(object sender, EventArgs e)
         {
             frmQuanLyPhongBan frmQuanLyPhongBan = new frmQuanLyPhongBan(userName);
             frmQuanLyPhongBan.Show();
-            this.Hide();
+            
+        }
+
+        private void btnThongKeLuong_Click(object sender, EventArgs e)
+        {
+            frmThongKeLuongNhanVien frmTK = new frmThongKeLuongNhanVien();
+            frmTK.Show();
+            
         }
     }
 }
