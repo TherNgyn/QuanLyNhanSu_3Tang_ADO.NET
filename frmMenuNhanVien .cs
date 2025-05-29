@@ -25,9 +25,10 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btnDangKyNghiPhep_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Mở Form Đăng Ký Nghỉ Phép cho nhân viên.");
+            frmDangKyNghiPhep frm = new frmDangKyNghiPhep(userName);
+            frm.ShowDialog();
         }
 
         private void btnChamCong_Click(object sender, EventArgs e)
@@ -64,6 +65,10 @@ namespace QuanLyNhanSu_3Tang_ADO
             this.Hide();
         }
 
-        
+        private void btnXemThongBao_Click(object sender, EventArgs e)
+        {
+            frmXemThongBao frm = new frmXemThongBao(userName); 
+            frm.ShowDialog();
+        }
     }
 }

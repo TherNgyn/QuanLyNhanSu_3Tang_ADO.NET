@@ -38,11 +38,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnXemLuong = new Guna.UI2.WinForms.Guna2Button();
             btnChamCong = new Guna.UI2.WinForms.Guna2Button();
             btnDangKyNghiPhep = new Guna.UI2.WinForms.Guna2Button();
             btnDoiMatKhauNhanVien = new Guna.UI2.WinForms.Guna2Button();
             btnThoat = new Guna.UI2.WinForms.Guna2Button();
+            btnXemThongBao = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // btnXemLuong
@@ -94,7 +97,7 @@
             btnDangKyNghiPhep.Size = new Size(225, 56);
             btnDangKyNghiPhep.TabIndex = 2;
             btnDangKyNghiPhep.Text = "Đăng Ký Nghỉ Phép";
-            btnDangKyNghiPhep.Click += guna2Button3_Click;
+            btnDangKyNghiPhep.Click += btnDangKyNghiPhep_Click;
             // 
             // btnDoiMatKhauNhanVien
             // 
@@ -130,11 +133,29 @@
             btnThoat.Text = "Thoát";
             btnThoat.Click += btnThoat_Click;
             // 
+            // btnXemThongBao
+            // 
+            btnXemThongBao.CustomizableEdges = customizableEdges11;
+            btnXemThongBao.DisabledState.BorderColor = Color.DarkGray;
+            btnXemThongBao.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnXemThongBao.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnXemThongBao.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnXemThongBao.Font = new Font("Segoe UI", 9F);
+            btnXemThongBao.ForeColor = Color.White;
+            btnXemThongBao.Location = new Point(44, 274);
+            btnXemThongBao.Name = "btnXemThongBao";
+            btnXemThongBao.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnXemThongBao.Size = new Size(225, 56);
+            btnXemThongBao.TabIndex = 5;
+            btnXemThongBao.Text = "Xem Thông Báo";
+            btnXemThongBao.Click += btnXemThongBao_Click;
+            // 
             // frmMenuNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1134, 506);
+            Controls.Add(btnXemThongBao);
             Controls.Add(btnThoat);
             Controls.Add(btnDoiMatKhauNhanVien);
             Controls.Add(btnDangKyNghiPhep);
@@ -153,5 +174,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDangKyNghiPhep;
         private Guna.UI2.WinForms.Guna2Button btnDoiMatKhauNhanVien;
         private Guna.UI2.WinForms.Guna2Button btnThoat;
+        private Guna.UI2.WinForms.Guna2Button btnXemThongBao;
     }
 }
