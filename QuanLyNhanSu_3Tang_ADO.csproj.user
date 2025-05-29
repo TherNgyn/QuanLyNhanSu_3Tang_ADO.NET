@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Update="frmQuanLyBaoHiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12,7 +11,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmChiTietHopDong.cs">
-=======
+		<SubType>Form</SubType>
+	</Compile>
     <Compile Update="frmCapNhatMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,7 +23,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmMenuQuanTriVien .cs">
->>>>>>> ead7653d052a4f56bb71eb8c3df8ab04c4a47836
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanLyHopDong.cs">
@@ -35,9 +34,9 @@
     <Compile Update="frmQuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Update="frmQuanLyThongBao.cs">
-=======
+		<SubType>Form</SubType>
+	</Compile>
     <Compile Update="frmQuanLyNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -45,7 +44,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanLyTaiKhoan.cs">
->>>>>>> ead7653d052a4f56bb71eb8c3df8ab04c4a47836
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

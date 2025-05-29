@@ -74,7 +74,6 @@ C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\ref\Qua
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.sourcelink.json
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyHopDong.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.Properties.Resources.resources
-<<<<<<< HEAD
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmChiTietHopDong.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyBaoHiem.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmChamCong.resources
@@ -162,7 +161,6 @@ D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-win
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyChucVu.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyNghiPhep.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyThongBao.resources
-=======
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\bin\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.exe
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\bin\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.deps.json
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\bin\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.runtimeconfig.json
@@ -247,4 +245,10 @@ E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Ta
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmCapNhatMatKhau.resources
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyPhongBan.resources
 E:\PJWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyTaiKhoan.resources
->>>>>>> ead7653d052a4f56bb71eb8c3df8ab04c4a47836
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmCapNhatMatKhau.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmDangNhap.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuNhanVien.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuQuanTriVien.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyNV.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyPhongBan.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyTaiKhoan.resources
