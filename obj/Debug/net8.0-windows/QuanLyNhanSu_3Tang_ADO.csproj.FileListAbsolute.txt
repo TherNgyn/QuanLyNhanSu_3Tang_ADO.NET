@@ -257,3 +257,5 @@ C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyN
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmChiTietThuongPhat.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmLuongNhanVien.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmThongKeLuongNhanVien.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmDangKyNghiPhep.resources
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmXemThongBao.resources
