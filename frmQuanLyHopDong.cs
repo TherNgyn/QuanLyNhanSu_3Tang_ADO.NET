@@ -28,7 +28,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             {
                 dtHopDong = new DataTable();
                 dtHopDong.Clear();
-                
+
 
                 DataSet ds = dbHopDong.LayHopDong();
                 dtHopDong = ds.Tables[0];
@@ -60,7 +60,8 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-
+            frmChiTietHopDong ct = new frmChiTietHopDong(this.txtMaNhanVien.Text);
+            ct.ShowDialog();
         }
 
         private void frmQuanLyHopDong_Load(object sender, EventArgs e)
@@ -227,17 +228,19 @@ namespace QuanLyNhanSu_3Tang_ADO
             var cellNgayKT = dataGridViewHopDong.Rows[r].Cells[4].Value;
 
             if (r >= 0 && r < dataGridViewHopDong.Rows.Count)
+            {
 
                 this.txtMaHopDong.Text = dataGridViewHopDong.Rows[r].Cells[0].Value?.ToString() ?? "";
-            this.txtMaNhanVien.Text = dataGridViewHopDong.Rows[r].Cells[1].Value?.ToString() ?? "";
-            this.txtLuongCoBan.Text = dataGridViewHopDong.Rows[r].Cells[2].Value?.ToString() ?? "";
-            this.dtpNgayBd.Value = cellNgayBD != null && cellNgayBD != DBNull.Value
-                ? Convert.ToDateTime(cellNgayBD)
-                : new DateTime(2022, 1, 1);
+                this.txtMaNhanVien.Text = dataGridViewHopDong.Rows[r].Cells[1].Value?.ToString() ?? "";
+                this.txtLuongCoBan.Text = dataGridViewHopDong.Rows[r].Cells[2].Value?.ToString() ?? "";
+                this.dtpNgayBd.Value = cellNgayBD != null && cellNgayBD != DBNull.Value
+                    ? Convert.ToDateTime(cellNgayBD)
+                    : new DateTime(2022, 1, 1);
 
-            this.dtpNgayKt.Value = cellNgayKT != null && cellNgayKT != DBNull.Value
-                ? Convert.ToDateTime(cellNgayKT)
-                : DateTime.Today;
+                this.dtpNgayKt.Value = cellNgayKT != null && cellNgayKT != DBNull.Value
+                    ? Convert.ToDateTime(cellNgayKT)
+                    : DateTime.Today;
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -258,6 +261,31 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void txtTimKiemMaNV_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnKTHDHetHan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataSet ds = dbHopDong.LayHopDongSapHetHan();
+
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    dtHopDong = ds.Tables[0];
+                    
+                    dataGridViewHopDong.DataSource = dtHopDong;
+                    MessageBox.Show("Có " + dtHopDong.Rows.Count + " hợp đồng sắp hết hạn.");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy hợp đồng sắp hết hạn.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

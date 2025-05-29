@@ -7,6 +7,24 @@
     <Compile Update="frmQuanLyChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmChiTietHopDong.cs">
+		<SubType>Form</SubType>
+	</Compile>
+    <Compile Update="frmCapNhatMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmMenuNhanVien .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmMenuQuanTriVien .cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmQuanLyHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +35,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmQuanLyThongBao.cs">
+		<SubType>Form</SubType>
+	</Compile>
+    <Compile Update="frmQuanLyNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmQuanLyPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmQuanLyTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

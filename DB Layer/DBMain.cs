@@ -10,7 +10,7 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
 {
     class DBMain
     {
-        public static string connectString = "Data Source=DESKTOP-0PJCAJ8\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True;Encrypt=False";
+        public static string connectString = "Data Source=LAPTOP-7H9D7KEU\\CSDL_SQLSEVER;Initial Catalog=QuanLyNhanSu;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
@@ -61,6 +61,20 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
                 conn.Close();
             }
             return f;
+        }
+        public DataSet ExecuteQueryDataSetWithCmd(SqlCommand cmd, CommandType ct)
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
+            cmd.Connection = conn; // Gán kết nối cho SqlCommand
+            cmd.CommandType = ct;
+
+            da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.Close(); // Đóng kết nối sau khi hoàn thành
+            return ds;
         }
 
     }
