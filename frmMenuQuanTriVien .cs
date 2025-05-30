@@ -173,5 +173,11 @@ namespace QuanLyNhanSu_3Tang_ADO
             frmTK.Show();
             this.Hide();
         }
+
+        private void btnQuanLyNghiPhep_Click(object sender, EventArgs e)
+        {
+            frmQuanLyNghiPhep frmNP = new frmQuanLyNghiPhep();
+            frmNP.Show();
+        }
     }
 }

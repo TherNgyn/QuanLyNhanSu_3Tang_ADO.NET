@@ -62,6 +62,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnQuanLyNhanVien = new Guna.UI2.WinForms.Guna2Button();
             btnQuanLyPhongBan = new Guna.UI2.WinForms.Guna2Button();
             btnQuanLyTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
@@ -88,6 +90,7 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtMaNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
             btnThongKeLuong = new Guna.UI2.WinForms.Guna2Button();
+            btnQuanLyNghiPhep = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // btnQuanLyNhanVien
@@ -102,7 +105,7 @@
             btnQuanLyNhanVien.Location = new Point(3, -2);
             btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
             btnQuanLyNhanVien.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnQuanLyNhanVien.Size = new Size(225, 56);
+            btnQuanLyNhanVien.Size = new Size(205, 56);
             btnQuanLyNhanVien.TabIndex = 0;
             btnQuanLyNhanVien.Text = "Quản Lý Nhân Viên";
             btnQuanLyNhanVien.Click += btnQuanLyNhanVien_Click;
@@ -116,10 +119,10 @@
             btnQuanLyPhongBan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnQuanLyPhongBan.Font = new Font("Segoe UI", 9F);
             btnQuanLyPhongBan.ForeColor = Color.White;
-            btnQuanLyPhongBan.Location = new Point(234, -2);
+            btnQuanLyPhongBan.Location = new Point(231, -2);
             btnQuanLyPhongBan.Name = "btnQuanLyPhongBan";
             btnQuanLyPhongBan.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnQuanLyPhongBan.Size = new Size(225, 56);
+            btnQuanLyPhongBan.Size = new Size(205, 56);
             btnQuanLyPhongBan.TabIndex = 1;
             btnQuanLyPhongBan.Text = "Quản Lý Phòng Ban";
             btnQuanLyPhongBan.Click += btnQuanLyPhongBan_Click;
@@ -133,10 +136,10 @@
             btnQuanLyTaiKhoan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnQuanLyTaiKhoan.Font = new Font("Segoe UI", 9F);
             btnQuanLyTaiKhoan.ForeColor = Color.White;
-            btnQuanLyTaiKhoan.Location = new Point(465, -2);
+            btnQuanLyTaiKhoan.Location = new Point(458, -2);
             btnQuanLyTaiKhoan.Name = "btnQuanLyTaiKhoan";
             btnQuanLyTaiKhoan.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnQuanLyTaiKhoan.Size = new Size(225, 56);
+            btnQuanLyTaiKhoan.Size = new Size(205, 56);
             btnQuanLyTaiKhoan.TabIndex = 2;
             btnQuanLyTaiKhoan.Text = "Quản Lý Tài Khoản";
             btnQuanLyTaiKhoan.Click += guna2Button3_Click;
@@ -480,19 +483,37 @@
             btnThongKeLuong.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnThongKeLuong.Font = new Font("Segoe UI", 9F);
             btnThongKeLuong.ForeColor = Color.White;
-            btnThongKeLuong.Location = new Point(696, -2);
+            btnThongKeLuong.Location = new Point(688, -2);
             btnThongKeLuong.Name = "btnThongKeLuong";
             btnThongKeLuong.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            btnThongKeLuong.Size = new Size(225, 56);
+            btnThongKeLuong.Size = new Size(205, 56);
             btnThongKeLuong.TabIndex = 27;
             btnThongKeLuong.Text = "Thống Kê Lương";
             btnThongKeLuong.Click += btnThongKeLuong_Click;
+            // 
+            // btnQuanLyNghiPhep
+            // 
+            btnQuanLyNghiPhep.CustomizableEdges = customizableEdges35;
+            btnQuanLyNghiPhep.DisabledState.BorderColor = Color.DarkGray;
+            btnQuanLyNghiPhep.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnQuanLyNghiPhep.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnQuanLyNghiPhep.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnQuanLyNghiPhep.Font = new Font("Segoe UI", 9F);
+            btnQuanLyNghiPhep.ForeColor = Color.White;
+            btnQuanLyNghiPhep.Location = new Point(916, -2);
+            btnQuanLyNghiPhep.Name = "btnQuanLyNghiPhep";
+            btnQuanLyNghiPhep.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btnQuanLyNghiPhep.Size = new Size(205, 56);
+            btnQuanLyNghiPhep.TabIndex = 28;
+            btnQuanLyNghiPhep.Text = "Quản lý nghỉ phép";
+            btnQuanLyNghiPhep.Click += btnQuanLyNghiPhep_Click;
             // 
             // frmMenuQuanTriVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1129, 503);
+            Controls.Add(btnQuanLyNghiPhep);
             Controls.Add(btnThongKeLuong);
             Controls.Add(txtMaNhanVien);
             Controls.Add(guna2HtmlLabel9);
@@ -554,5 +575,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2TextBox txtMaNhanVien;
         private Guna.UI2.WinForms.Guna2Button btnThongKeLuong;
+        private Guna.UI2.WinForms.Guna2Button btnQuanLyNghiPhep;
     }
 }

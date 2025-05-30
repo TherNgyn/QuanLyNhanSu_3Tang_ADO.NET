@@ -142,5 +142,11 @@ namespace QuanLyNhanSu_3Tang_ADO
             frmDangKyNghiPhep frmDKNP = new frmDangKyNghiPhep(userName);
             frmDKNP.Show();
         }
+
+        private void btnXemThongBao_Click(object sender, EventArgs e)
+        {
+            frmXemThongBao frmQLTB = new frmXemThongBao(userName, true);
+            frmQLTB.Show();
+        }
     }
 }
