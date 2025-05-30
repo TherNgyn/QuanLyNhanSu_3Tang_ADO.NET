@@ -14,6 +14,11 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
     {
         DBMain db = new DBMain();
 
+        public DataSet LayChucVuTheoTrP()
+        {
+            string sql = "SELECT * FROM ChucVu WHERE MaCV IN ('CV03', 'CV04')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
         public DataSet LayChucVu()
         {
             string sql = "SELECT * FROM ChucVu";

@@ -77,6 +77,22 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
             }
         }
 
+        public String LayRoleName(String username)
+        {
+            DataTable dt = new DataTable();
+
+            string sqlString = "SELECT TK.MaLoai, LTK.Ten " +
+                                   "FROM TaiKhoan TK JOIN LoaiTaiKhoan LTK ON TK.MaLoai = LTK.MaLoai " +
+                                   "WHERE TK.TenDangNhap = @Username";
+
+
+            SqlCommand cmd = new SqlCommand(sqlString);
+            cmd.Parameters.AddWithValue("@Username", username);
+            DataSet ds = db.ExecuteQueryDataSetWithCmd(cmd, CommandType.Text);
+            dt = ds.Tables[0];
+            return dt.Rows[0]["Ten"].ToString();
+
+        }
         public DataSet LayTenLoaiTaiKhoan()
         {
             return db.ExecuteQueryDataSet("SELECT DISTINCT TK.MaLoai ,Ten FROM TaiKhoan TK INNER JOIN LoaiTaiKhoan LTK ON TK.MaLoai = LTK.MaLoai", CommandType.Text);

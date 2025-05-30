@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BEBrG3Hdj5vfOeKslJLOL2vUNatUzxCFND5lk/ob5SJLwu4djDkqb9spYIp4hWrKxXwGC6vGtAzxcowZ/Bi0vw==",
+  "dgSpecHash": "v9tZvE1RNRuGzSvTI7kdvdBSkXaRWySkTrUInaLYZR5O+4gSzGHF0lkYz68c9xJl1mm0V0bt2voJSDczMg7/Lg==",
   "success": true,
-  "projectFilePath": "D:\\winform\\Final Winform Project\\QuanLyNhanSu_3Tang_ADO.NET\\QuanLyNhanSu_3Tang_ADO.csproj",
+  "projectFilePath": "E:\\PJCKWinADO\\QuanLyNhanSu_3Tang_ADO.NET\\QuanLyNhanSu_3Tang_ADO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

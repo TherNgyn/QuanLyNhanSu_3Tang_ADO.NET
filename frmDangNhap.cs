@@ -53,14 +53,20 @@ namespace QuanLyNhanSu_3Tang_ADO
                 MessageBox.Show($"Đăng nhập thành công! Chào mừng {roleName}.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (roleName == "NhanVien")
                 {
-                    frmMenuNhanVien menuNhanVien = new frmMenuNhanVien(username);
+                    frmMenuNhanVien menuNhanVien = new frmMenuNhanVien(username.ToUpper());
                     menuNhanVien.Show();
+                    this.Hide();
+                }
+                else if (roleName == "QuanTriVien")
+                {
+                    frmMenuQuanTriVien menuQuanTriVien = new frmMenuQuanTriVien(username.ToUpper());
+                    menuQuanTriVien.Show();
                     this.Hide();
                 }
                 else
                 {
-                    frmMenuQuanTriVien menuQuanTriVien = new frmMenuQuanTriVien(username);
-                    menuQuanTriVien.Show();
+                    frmMenuTruongPhong menuTruongPhong = new frmMenuTruongPhong(username.ToUpper());
+                    menuTruongPhong.Show();
                     this.Hide();
                 }
             }
