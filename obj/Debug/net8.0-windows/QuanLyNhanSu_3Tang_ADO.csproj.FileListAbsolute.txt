@@ -373,3 +373,4 @@ E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\refint\QuanLyN
 E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.pdb
 E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.genruntimeconfig.cache
 E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\ref\QuanLyNhanSu_3Tang_ADO.dll
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuTruongPhong.resources

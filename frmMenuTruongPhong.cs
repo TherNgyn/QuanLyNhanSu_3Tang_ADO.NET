@@ -124,5 +124,23 @@ namespace QuanLyNhanSu_3Tang_ADO
             frmQuanLyPhongBan.Show();
             this.Hide();
         }
+
+        private void btnChamCong_Click(object sender, EventArgs e)
+        {
+            frmChamCong frmCC = new frmChamCong(userName);
+            frmCC.Show();
+        }
+
+        private void btnXemLuong_Click(object sender, EventArgs e)
+        {
+            frmLuongNhanVien frmLuong = new frmLuongNhanVien(userName);
+            frmLuong.Show();
+        }
+
+        private void btnNghiPhep_Click(object sender, EventArgs e)
+        {
+            frmDangKyNghiPhep frmDKNP = new frmDangKyNghiPhep(userName);
+            frmDKNP.Show();
+        }
     }
 }

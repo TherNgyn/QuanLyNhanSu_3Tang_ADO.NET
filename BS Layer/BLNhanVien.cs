@@ -69,9 +69,10 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
         }
         public DataSet TongNhanVienTheoGioiTinh1PB(String MaTrP)
         {
-            return db.ExecuteQueryDataSet("SELECT GioiTinh,COUNT(*) as SoLuongNhanVien FROM NhanVien " +
-                "INNER JOIN PhongBan PB ON NV.MaPB = PB.MaPB and PB.MaTrP ='"+MaTrP+"' " +
-                "Group by GioiTinh", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT NV.GioiTinh, COUNT(*) as SoLuongNhanVien " +
+                 "FROM NhanVien NV " +
+                 "INNER JOIN PhongBan PB ON NV.MaPB = PB.MaPB AND PB.MaTrP = '" + MaTrP + "' " +
+                 "GROUP BY NV.GioiTinh", CommandType.Text);
         }
         public DataSet TongNhanVienTheoGioiTinh()
         {

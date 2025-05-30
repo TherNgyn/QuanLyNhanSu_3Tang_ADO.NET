@@ -22,17 +22,21 @@ namespace QuanLyNhanSu_3Tang_ADO
         BLNhanVien bLNhanVien;
         BLTaiKhoan bLTaiKhoan;
         BLChucVu bLChucVu;
-        BLPhongBan bLPhongBan;
+        BLPhongBan bLPhongBan=new BLPhongBan();
         String userName;
         String roleName;
+
         public frmQuanLyNV(String username)
         {
-            userName = username;
+            this.userName = username;
             bLNhanVien = new BLNhanVien();
             bLTaiKhoan = new BLTaiKhoan();
+            bLChucVu = new BLChucVu();
             InitializeComponent();
+            this.roleName = bLTaiKhoan.LayRoleName(username);
             LoadData();
-            roleName = bLTaiKhoan.LayRoleName(username);
+            
+            
         }
         void LoadData()
         {
@@ -53,8 +57,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnSua.Enabled = true;
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
-
-            if(roleName == "TruongPhong")
+           
+            if (roleName.Trim().Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
             {
                 dtNhanVien = new DataTable();
                 dtNhanVien.Clear();
@@ -412,6 +416,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             {
                 dtPhongBan = new DataTable();
                 dtPhongBan.Clear();
+                /*MessageBox.Show("" + userName);*/
+               
                 DataSet ds = bLPhongBan.LayPhongBanTheoTrP(userName);
                 dtPhongBan = ds.Tables[0];
 
@@ -421,6 +427,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 dtCV = new DataTable();
                 dtCV.Clear();
+               
                 DataSet ds2 = bLChucVu.LayChucVuTheoTrP();
                 dtCV = ds2.Tables[0];
 
