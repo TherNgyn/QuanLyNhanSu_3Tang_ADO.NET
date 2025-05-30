@@ -27,6 +27,10 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             dtThongBao = dbTB.LayThongBao().Tables[0];
             dgvThongBao.DataSource = dtThongBao;
+
+            if (dgvThongBao.Columns.Contains("MaPB"))
+                dgvThongBao.Columns["MaPB"].Visible = false;
+
             if (dgvThongBao.Columns.Contains("Id"))
                 dgvThongBao.Columns["Id"].Visible = true;
             dgvThongBao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -40,7 +44,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Reset
             txtTieuDe.Clear();
             txtNoiDung.Clear();
-            dtpNgayGui.Value = DateTime.Now; 
+            dtpNgayGui.Value = DateTime.Now;
 
             txtNoiDung.Enabled = false;
             txtTieuDe.Enabled = false;
@@ -52,6 +56,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnSua.Enabled = true;
             btnLamMoi.Enabled = true;
             btnXoa.Enabled = true;
+            btnXemTB.Enabled = true;
 
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
@@ -84,6 +89,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnThoat.Enabled = false;
+            btnXemTB.Enabled = false;
 
             txtTieuDe.Focus();
         }
@@ -107,6 +113,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnThoat.Enabled = false;
+            btnXemTB.Enabled = false;
 
             txtTieuDe.Focus();
         }
@@ -186,6 +193,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnThoat.Enabled = true;
+            btnXemTB.Enabled = true;
 
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
@@ -216,12 +224,28 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void dgvThongBao_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e == null || e.RowIndex < 0) return;
+
+            txtTieuDe.Text = dgvThongBao.Rows[e.RowIndex].Cells[1].Value?.ToString() ?? "";
+            txtNoiDung.Text = dgvThongBao.Rows[e.RowIndex].Cells[2].Value?.ToString() ?? "";
+            cbbPhongBan.SelectedValue = dgvThongBao.Rows[e.RowIndex].Cells[4].Value?.ToString() ?? "";
+            dtpNgayGui.Value = Convert.ToDateTime(dgvThongBao.Rows[e.RowIndex].Cells[3].Value);
+        }
+
+        private void btnXemTB_Click(object sender, EventArgs e)
+        {
+            if (dgvThongBao.CurrentRow != null)
             {
-                txtTieuDe.Text = dgvThongBao.Rows[e.RowIndex].Cells[1].Value?.ToString() ?? "";
-                txtNoiDung.Text = dgvThongBao.Rows[e.RowIndex].Cells[2].Value?.ToString() ?? "";
-                cbbPhongBan.SelectedValue = dgvThongBao.Rows[e.RowIndex].Cells[4].Value?.ToString() ?? "";
-                dtpNgayGui.Value = Convert.ToDateTime(dgvThongBao.Rows[e.RowIndex].Cells[3].Value);
+                string tieuDe = dgvThongBao.CurrentRow.Cells[1].Value?.ToString();
+                string noiDung = dgvThongBao.CurrentRow.Cells[2].Value?.ToString();
+                string ngayGui = dgvThongBao.CurrentRow.Cells[3].Value?.ToString();
+
+                string message = $"Tiêu đề: {tieuDe}\n\nNội dung:\n{noiDung}\n\nNgày gửi: {ngayGui}";
+                MessageBox.Show(message, "Chi tiết thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một thông báo để xem.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

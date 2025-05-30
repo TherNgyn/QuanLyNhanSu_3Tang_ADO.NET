@@ -14,4 +14,4 @@ namespace QuanLyNhanSu_3Tang_ADO
             Application.Run(new frmDangNhap());
         }
     }
-}
+}                                   N

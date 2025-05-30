@@ -67,6 +67,7 @@
             NoiDung = new DataGridViewTextBoxColumn();
             TenPB = new DataGridViewTextBoxColumn();
             NgayGui = new DataGridViewTextBoxColumn();
+            btnXemTB = new Button();
             guna2GroupBox3.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // guna2GroupBox3
             // 
+            guna2GroupBox3.Controls.Add(btnXemTB);
             guna2GroupBox3.Controls.Add(cbbPhongBan);
             guna2GroupBox3.Controls.Add(dtpNgayGui);
             guna2GroupBox3.Controls.Add(txtNoiDung);
@@ -455,6 +457,22 @@
             NgayGui.Name = "NgayGui";
             NgayGui.ReadOnly = true;
             // 
+            // btnXemTB
+            // 
+            btnXemTB.BackColor = Color.Navy;
+            btnXemTB.FlatStyle = FlatStyle.Flat;
+            btnXemTB.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnXemTB.ForeColor = Color.White;
+            btnXemTB.Location = new Point(537, 255);
+            btnXemTB.Margin = new Padding(4, 2, 4, 2);
+            btnXemTB.Name = "btnXemTB";
+            btnXemTB.Size = new Size(121, 30);
+            btnXemTB.TabIndex = 30;
+            btnXemTB.Text = "Xem";
+            btnXemTB.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnXemTB.UseVisualStyleBackColor = false;
+            btnXemTB.Click += btnXemTB_Click;
+            // 
             // frmQuanLyThongBao
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -501,5 +519,6 @@
         private DataGridViewTextBoxColumn NoiDung;
         private DataGridViewTextBoxColumn TenPB;
         private DataGridViewTextBoxColumn NgayGui;
+        private Button btnXemTB;
     }
 }
