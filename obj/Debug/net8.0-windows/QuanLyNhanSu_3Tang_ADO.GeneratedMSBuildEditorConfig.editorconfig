@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QuanLyNhanSu_3Tang_ADO
-build_property.ProjectDir = D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\
+build_property.ProjectDir = E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

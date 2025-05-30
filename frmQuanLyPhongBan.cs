@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyNhanSu_3Tang_ADO
 {
@@ -19,16 +20,22 @@ namespace QuanLyNhanSu_3Tang_ADO
         DataTable dtSoLuong;
         BLPhongBan bLPhongBan;
         BLNhanVien bLNhanVien;
+        BLTaiKhoan bLTaiKhoan;
         String userName;
         bool Them;
         string err;
+        String roleName = null;
+
         public frmQuanLyPhongBan(string userName)
         {
             InitializeComponent();
             bLPhongBan = new BLPhongBan();
             bLNhanVien = new BLNhanVien();
+            bLTaiKhoan = new BLTaiKhoan();
             this.userName = userName;
+            roleName = bLTaiKhoan.LayRoleName(userName);
             LoadData();
+
         }
 
         void LoadData()
@@ -46,25 +53,47 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
 
-            dtPhongBan = new DataTable();
-            dtPhongBan.Clear();
-            DataSet ds = bLPhongBan.LayPhongBan();
-            dtPhongBan = ds.Tables[0];
+            if (roleName == "TruongPhong")
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                dtPhongBan = new DataTable();
+                dtPhongBan.Clear();
+                DataSet ds = bLPhongBan.LayPhongBanTheoTrP(userName);
+                dtPhongBan = ds.Tables[0];
 
-            dgvPhongBan.DataSource = dtPhongBan;
+                dgvPhongBan.DataSource = dtPhongBan;
 
-            dtSoLuong = new DataTable();
-            dtSoLuong.Clear();
-            DataSet ds2 = bLPhongBan.TongSoLuongNhanVienTheoPhongBan();
-            dtSoLuong = ds2.Tables[0];
+                dtSoLuong = new DataTable();
+                dtSoLuong.Clear();
+                DataSet ds2 = bLPhongBan.TongSoLuongNhanVienCua1PhongBan(userName);
+                dtSoLuong = ds2.Tables[0];
 
-            dgvSoLuong.DataSource = dtSoLuong;
+                dgvSoLuong.DataSource = dtSoLuong;
+            }
+            else
+            {
+                dtPhongBan = new DataTable();
+                dtPhongBan.Clear();
+                DataSet ds = bLPhongBan.LayPhongBan();
+                dtPhongBan = ds.Tables[0];
+
+                dgvPhongBan.DataSource = dtPhongBan;
+
+                dtSoLuong = new DataTable();
+                dtSoLuong.Clear();
+                DataSet ds2 = bLPhongBan.TongSoLuongNhanVienTheoPhongBan();
+                dtSoLuong = ds2.Tables[0];
+
+                dgvSoLuong.DataSource = dtSoLuong;
+            }
+            
         }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dgvPhongBan.CurrentCell.RowIndex;
-            String MaPB = dgvPhongBan.Rows[r].Cells[0].Value.ToString();
-            txtMaPB.Text = MaPB;
+            String MaTrP = dgvPhongBan.Rows[r].Cells[3].Value.ToString();
+            txtMaPB.Text = dgvPhongBan.Rows[r].Cells[0].Value.ToString(); ;
             txtTenPB.Text = dgvPhongBan.Rows[r].Cells[1].Value.ToString();
             txtSDT.Text = dgvPhongBan.Rows[r].Cells[2].Value.ToString();
             cmbMaTrP.SelectedValue = dgvPhongBan.Rows[r].Cells[3].Value.ToString();
@@ -72,7 +101,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtTen.Text = dgvPhongBan.Rows[r].Cells[5].Value.ToString();
 
             dtSoLuong.Clear();
-            DataSet ds2 = bLPhongBan.TongSoLuongNhanVienCua1PhongBan(MaPB);
+            DataSet ds2 = bLPhongBan.TongSoLuongNhanVienCua1PhongBan(MaTrP);
             dtSoLuong = ds2.Tables[0];
 
             dgvSoLuong.DataSource = dtSoLuong;
@@ -131,6 +160,11 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
+            if(roleName == "TruongPhong")
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+            }    
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -156,12 +190,27 @@ namespace QuanLyNhanSu_3Tang_ADO
             this.AutoScroll = true;
             dtMaNV = new DataTable();
             dtMaNV.Clear();
-            DataSet ds2 = bLNhanVien.LayTatCaMaNhanVien();
-            dtMaNV = ds2.Tables[0];
+            if(roleName == "TruongPhong")
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("MaNV");
 
-            cmbMaTrP.DataSource = dtMaNV;
-            cmbMaTrP.DisplayMember = "MaNV";
-            cmbMaTrP.ValueMember = "MaNV";
+                dt.Rows.Add(userName); // gán cả mã và tên bằng userName
+
+                cmbMaTrP.DataSource = dt;
+                cmbMaTrP.DisplayMember = "MaNV";
+                cmbMaTrP.ValueMember = "MaNV";
+            }
+            else
+            {
+                DataSet ds2 = bLNhanVien.LayTatCaMaNhanVien();
+                dtMaNV = ds2.Tables[0];
+
+                cmbMaTrP.DataSource = dtMaNV;
+                cmbMaTrP.DisplayMember = "MaNV";
+                cmbMaTrP.ValueMember = "MaNV";
+            }
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -234,9 +283,19 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK)
             {
-                frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
-                frmMenuQuanTriVien.Show();
-                this.Hide();
+                if(roleName == "TruongPhong")
+                {
+                    frmMenuTruongPhong frmMenuTruongPhong = new frmMenuTruongPhong(userName);
+                    frmMenuTruongPhong.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                    frmMenuQuanTriVien.Show();
+                    this.Hide();
+                }    
+                
             }
         }
 
