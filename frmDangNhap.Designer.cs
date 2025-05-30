@@ -52,7 +52,7 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = SystemColors.ActiveCaptionText;
-            lblTitle.Location = new Point(193, 33);
+            lblTitle.Location = new Point(242, 35);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(250, 50);
             lblTitle.TabIndex = 0;
@@ -161,7 +161,7 @@
             lblMessage.BackColor = Color.Transparent;
             lblMessage.Location = new Point(200, 284);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(0, 0);
+            lblMessage.Size = new Size(3, 2);
             lblMessage.TabIndex = 4;
             lblMessage.Text = null;
             lblMessage.Click += guna2HtmlLabel1_Click;

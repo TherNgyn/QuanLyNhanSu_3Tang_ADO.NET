@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Microsoft.ReportingServices;
 using QuanLyNhanSu_3Tang_ADO.BS_Layer;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                 /*MessageBox.Show("" + maThang);*/
                 string err = "";
                 DataTable dt = blLuong.TinhLuongTheoThangAll(maThang, ref err);
-                dgvLuong.DataSource = dt;               
+                dgvLuong.DataSource = dt;
             }
             catch (Exception ex)
             {
@@ -52,6 +53,13 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void frmThongKeLuongNhanVien_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void btnXemReport_Click(object sender, EventArgs e)
+        {
+            frmReport frmRP = new frmReport();
+            frmRP.Show();
+
         }
     }
 }

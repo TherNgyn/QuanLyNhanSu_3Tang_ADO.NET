@@ -98,7 +98,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             traloi = MessageBox.Show("Chắc không?", "Trả lời",
             MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             // Kiểm tra có nhắp chọn nút Ok không?  
-            if (traloi == DialogResult.OK) this.Close();
+            if (traloi == DialogResult.OK) Application.Exit();
         }
     }
 }

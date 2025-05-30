@@ -35,8 +35,6 @@ namespace QuanLyNhanSu_3Tang_ADO
             InitializeComponent();
             this.roleName = bLTaiKhoan.LayRoleName(username);
             LoadData();
-            
-            
         }
         void LoadData()
         {

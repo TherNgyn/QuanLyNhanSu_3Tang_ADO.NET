@@ -64,11 +64,22 @@
     <Compile Update="frmQuanLyThuongPhat.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmThongKeLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmXemThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="QLNS.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

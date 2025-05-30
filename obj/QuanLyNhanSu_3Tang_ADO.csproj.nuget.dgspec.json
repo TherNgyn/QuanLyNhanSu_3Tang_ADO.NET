@@ -58,6 +58,14 @@
               "target": "Package",
               "version": "[6.0.2, )"
             },
+            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
+              "target": "Package",
+              "version": "[150.1652.0, )"
+            },
+            "Stimulsoft.Reports.Net": {
+              "target": "Package",
+              "version": "[2025.2.4, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.9.0, )"
