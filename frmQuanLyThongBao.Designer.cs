@@ -43,6 +43,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            btnXem = new Button();
             cbbPhongBan = new ComboBox();
             dtpNgayGui = new DateTimePicker();
             txtNoiDung = new Guna.UI2.WinForms.Guna2TextBox();
@@ -75,6 +76,7 @@
             // 
             // guna2GroupBox3
             // 
+            guna2GroupBox3.Controls.Add(btnXem);
             guna2GroupBox3.Controls.Add(cbbPhongBan);
             guna2GroupBox3.Controls.Add(dtpNgayGui);
             guna2GroupBox3.Controls.Add(txtNoiDung);
@@ -94,6 +96,22 @@
             guna2GroupBox3.Size = new Size(1128, 303);
             guna2GroupBox3.TabIndex = 43;
             guna2GroupBox3.Text = "THÔNG BÁO";
+            // 
+            // btnXem
+            // 
+            btnXem.BackColor = Color.Navy;
+            btnXem.FlatStyle = FlatStyle.Flat;
+            btnXem.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnXem.ForeColor = Color.White;
+            btnXem.Location = new Point(537, 257);
+            btnXem.Margin = new Padding(4, 2, 4, 2);
+            btnXem.Name = "btnXem";
+            btnXem.Size = new Size(121, 30);
+            btnXem.TabIndex = 13;
+            btnXem.Text = "Xem";
+            btnXem.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnXem.UseVisualStyleBackColor = false;
+            btnXem.Click += btnXem_Click;
             // 
             // cbbPhongBan
             // 
@@ -501,5 +519,6 @@
         private DataGridViewTextBoxColumn NoiDung;
         private DataGridViewTextBoxColumn TenPB;
         private DataGridViewTextBoxColumn NgayGui;
+        private Button btnXem;
     }
 }
