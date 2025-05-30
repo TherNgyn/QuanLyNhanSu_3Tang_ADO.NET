@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu_3Tang_ADO
 {
-    public partial class frmMenuQuanTriVien : Form
+    public partial class frmMenuTruongPhong : Form
     {
         String userName;
         BLNhanVien bLNhanVien;
         DataSet ds;
         string err;
-        public frmMenuQuanTriVien(String username)
+        public frmMenuTruongPhong(string userName)
         {
             InitializeComponent();
-            userName = username;
+            this.userName = userName;
         }
 
-        private void frmMenuQuanTriVien_Load(object sender, EventArgs e)
+        private void frmMenuTruongPhong_Load(object sender, EventArgs e)
         {
             bLNhanVien = new BLNhanVien();
             cmbGioiTinh.Items.Add("Nam");
@@ -59,68 +59,6 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtEmail.Text = dataRow["Email"].ToString();
             txtCCCD.Text = dataRow["CCCD"].ToString();
         }
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            frmQuanLyTaiKhoan frmQuanLyTaiKhoan = new frmQuanLyTaiKhoan(userName);
-            frmQuanLyTaiKhoan.Show();
-            this.Hide();
-        }
-
-        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            err = "";
-            DateTime ngaySinh = dtpNgaySinh.Value.Date;
-            bLNhanVien.CapNhatNhanVienCV(txtMaNhanVien.Text, txtHo.Text, txtTen.Text, cmbGioiTinh.SelectedItem.ToString(), ngaySinh,
-                txtDiaChi.Text, txtSoDT.Text, txtEmail.Text, txtCCCD.Text, ref err);
-            LoadData();
-        }
-
-        private void guna2Button3_Click_1(object sender, EventArgs e)
-        {
-            txtHo.ResetText();
-            txtTen.ResetText();
-            cmbGioiTinh.ResetText();
-            dtpNgaySinh.ResetText();
-            txtDiaChi.ResetText();
-            txtSoDT.ResetText();
-            txtEmail.ResetText();
-            txtCCCD.ResetText();
-
-            btnLuu.Enabled = false;
-            btnHuy.Enabled = false;
-            btnSua.Enabled = true;
-        }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             txtHo.Enabled = true;
@@ -139,9 +77,29 @@ namespace QuanLyNhanSu_3Tang_ADO
             this.txtHo.Focus();
         }
 
-        private void guna2HtmlLabel9_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
+            err = "";
+            DateTime ngaySinh = dtpNgaySinh.Value.Date;
+            bLNhanVien.CapNhatNhanVienCV(txtMaNhanVien.Text, txtHo.Text, txtTen.Text, cmbGioiTinh.SelectedItem.ToString(), ngaySinh,
+                txtDiaChi.Text, txtSoDT.Text, txtEmail.Text, txtCCCD.Text, ref err);
+            LoadData();
+        }
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtHo.ResetText();
+            txtTen.ResetText();
+            cmbGioiTinh.ResetText();
+            dtpNgaySinh.ResetText();
+            txtDiaChi.ResetText();
+            txtSoDT.ResetText();
+            txtEmail.ResetText();
+            txtCCCD.ResetText();
+
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
+            btnSua.Enabled = true;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -167,11 +125,22 @@ namespace QuanLyNhanSu_3Tang_ADO
             this.Hide();
         }
 
-        private void btnThongKeLuong_Click(object sender, EventArgs e)
+        private void btnChamCong_Click(object sender, EventArgs e)
         {
-            frmThongKeLuongNhanVien frmTK = new frmThongKeLuongNhanVien();
-            frmTK.Show();
-            this.Hide();
+            frmChamCong frmCC = new frmChamCong(userName);
+            frmCC.Show();
+        }
+
+        private void btnXemLuong_Click(object sender, EventArgs e)
+        {
+            frmLuongNhanVien frmLuong = new frmLuongNhanVien(userName);
+            frmLuong.Show();
+        }
+
+        private void btnNghiPhep_Click(object sender, EventArgs e)
+        {
+            frmDangKyNghiPhep frmDKNP = new frmDangKyNghiPhep(userName);
+            frmDKNP.Show();
         }
     }
 }

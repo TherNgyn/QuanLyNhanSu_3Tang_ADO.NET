@@ -93,7 +93,7 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.BackColor = Color.SkyBlue;
+            guna2Panel1.BackColor = Color.SteelBlue;
             guna2Panel1.Controls.Add(btnThoat);
             guna2Panel1.Controls.Add(guna2HtmlLabel1);
             guna2Panel1.CustomizableEdges = customizableEdges3;
@@ -132,7 +132,7 @@
             // 
             // guna2Panel2
             // 
-            guna2Panel2.BackColor = Color.DarkTurquoise;
+            guna2Panel2.BackColor = Color.SkyBlue;
             guna2Panel2.Controls.Add(cmbTenDangNhap);
             guna2Panel2.Controls.Add(cmbTenLoai);
             guna2Panel2.Controls.Add(txtTen);

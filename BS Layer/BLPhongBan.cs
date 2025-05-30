@@ -17,20 +17,27 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
         {
             db = new DBMain();
         }
+        public DataSet LayPhongBanTheoTrP(String MaTrP)
+        {
+            return db.ExecuteQueryDataSet("SELECT PB.MaPB,TenPB,PB.SDT,MaTrP,Ho,Ten " +
+                "FROM PhongBan PB LEFT JOIN NhanVien NV ON NV.MaNV = PB.MaTrP " +
+                "WHERE MaTrP ='"+MaTrP+"'", CommandType.Text);
+        }
         public DataSet LayPhongBan()
         {
             return db.ExecuteQueryDataSet("SELECT PB.MaPB,TenPB,PB.SDT,MaTrP,Ho,Ten FROM PhongBan PB LEFT JOIN NhanVien NV ON NV.MaNV = PB.MaTrP", CommandType.Text);
         }
+
         public DataSet TongSoLuongNhanVienTheoPhongBan()
         {
             return db.ExecuteQueryDataSet("SELECT TenPB, COUNT(*) " +
                 "FROM PhongBan PB INNER JOIN NhanVien NV ON NV.MaPB = PB.MaPB " +
                 "Group By TenPB", CommandType.Text);
         }
-        public DataSet TongSoLuongNhanVienCua1PhongBan(String MaPB)
+        public DataSet TongSoLuongNhanVienCua1PhongBan(String MaTrP)
         {
             return db.ExecuteQueryDataSet("SELECT TenPB, COUNT(*) " +
-                "FROM PhongBan PB INNER JOIN NhanVien NV ON NV.MaPB = PB.MaPB and PB.MaPB = '" +MaPB +"'"+
+                "FROM PhongBan PB INNER JOIN NhanVien NV ON NV.MaPB = PB.MaPB and PB.MaTrP = '" +MaTrP +"'"+
                 "Group By TenPB", CommandType.Text); 
         }
         public bool CapNhatPhongBan(String MaPB, String TenPB, String SDT, String MaTrP, ref string err)

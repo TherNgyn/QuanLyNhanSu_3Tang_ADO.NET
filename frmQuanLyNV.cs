@@ -16,18 +16,27 @@ namespace QuanLyNhanSu_3Tang_ADO
         DataTable dtNhanVien = null;
         DataTable dtGioiTinh = null;
         DataTable dtPhongBan = null;
-
+        DataTable dtCV;
         bool Them;
         string err;
         BLNhanVien bLNhanVien;
+        BLTaiKhoan bLTaiKhoan;
+        BLChucVu bLChucVu;
+        BLPhongBan bLPhongBan=new BLPhongBan();
         String userName;
+        String roleName;
+
         public frmQuanLyNV(String username)
         {
-            userName = username;
+            this.userName = username;
             bLNhanVien = new BLNhanVien();
+            bLTaiKhoan = new BLTaiKhoan();
+            bLChucVu = new BLChucVu();
             InitializeComponent();
+            this.roleName = bLTaiKhoan.LayRoleName(username);
             LoadData();
-
+            
+            
         }
         void LoadData()
         {
@@ -40,35 +49,62 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtSDT.Enabled = false;
             txtEmail.Enabled = false;
             txtCCCD.Enabled = false;
-            txtTenPB.Enabled = false;
-            txtTenCV.Enabled = false;
+            cmbTenPB.Enabled = false;
+            cmbTenCV.Enabled = false;
 
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
+           
+            if (roleName.Trim().Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
+            {
+                dtNhanVien = new DataTable();
+                dtNhanVien.Clear();
+                DataSet ds = bLNhanVien.LayNhanVien1PBCV(userName);
+                dtNhanVien = ds.Tables[0];
 
-            dtNhanVien = new DataTable();
-            dtNhanVien.Clear();
-            DataSet ds = bLNhanVien.LayNhanVienPBCV();
-            dtNhanVien = ds.Tables[0];
+                dgvNhanVien.DataSource = dtNhanVien;
 
-            dgvNhanVien.DataSource = dtNhanVien;
+                dtGioiTinh = new DataTable();
+                dtGioiTinh.Clear();
+                DataSet ds1 = bLNhanVien.TongNhanVienTheoGioiTinh1PB(userName);
+                dtGioiTinh = ds1.Tables[0];
 
-            dtGioiTinh = new DataTable();
-            dtGioiTinh.Clear();
-            DataSet ds1 = bLNhanVien.TongNhanVienTheoGioiTinh();
-            dtGioiTinh = ds1.Tables[0];
+                dgvGioiTinh.DataSource = dtGioiTinh;
 
-            dgvGioiTinh.DataSource = dtGioiTinh;
+                dtPhongBan = new DataTable();
+                dtPhongBan.Clear();
+                DataSet ds2 = bLNhanVien.TongNhanVienTheoPhongBan1PB(userName);
+                dtPhongBan = ds2.Tables[0];
 
-            dtPhongBan = new DataTable();
-            dtPhongBan.Clear();
-            DataSet ds2 = bLNhanVien.TongNhanVienTheoPhongBan();
-            dtPhongBan = ds2.Tables[0];
+                dgvPhongBan.DataSource = dtPhongBan;
+            }
+            else
+            {
+                dtNhanVien = new DataTable();
+                dtNhanVien.Clear();
+                DataSet ds = bLNhanVien.LayNhanVienPBCV();
+                dtNhanVien = ds.Tables[0];
 
-            dgvPhongBan.DataSource = dtPhongBan;
+                dgvNhanVien.DataSource = dtNhanVien;
+
+                dtGioiTinh = new DataTable();
+                dtGioiTinh.Clear();
+                DataSet ds1 = bLNhanVien.TongNhanVienTheoGioiTinh();
+                dtGioiTinh = ds1.Tables[0];
+
+                dgvGioiTinh.DataSource = dtGioiTinh;
+
+                dtPhongBan = new DataTable();
+                dtPhongBan.Clear();
+                DataSet ds2 = bLNhanVien.TongNhanVienTheoPhongBan();
+                dtPhongBan = ds2.Tables[0];
+
+                dgvPhongBan.DataSource = dtPhongBan;
+            }
+            
 
         }
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -157,8 +193,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtSDT.Enabled = false;
             txtEmail.Enabled = false;
             txtCCCD.Enabled = false;
-            txtTenPB.Enabled = false;
-            txtTenCV.Enabled = false;
+            cmbTenPB.Enabled = false;
+            cmbTenCV.Enabled = false;
 
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
@@ -179,8 +215,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtSDT.ResetText();
             txtEmail.ResetText();
             txtCCCD.ResetText();
-            txtTenPB.ResetText();
-            txtTenCV.ResetText();
+            cmbTenPB.ResetText();
+            cmbTenCV.ResetText();
 
             txtMaNhanVien.Enabled = true;
             txtHo.Enabled = true;
@@ -191,8 +227,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtSDT.Enabled = true;
             txtEmail.Enabled = true;
             txtCCCD.Enabled = true;
-            txtTenPB.Enabled = true;
-            txtTenCV.Enabled = true;
+            cmbTenPB.Enabled = true;
+            cmbTenCV.Enabled = true;
 
             btnHuy.Enabled = true;
             btnLuu.Enabled = true;
@@ -234,9 +270,18 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             dtNhanVien = new DataTable();
             dtNhanVien.Clear();
-            DataSet ds = bLNhanVien.TimNhanVienTheoMa(txtTimKiem.Text);
-            dtNhanVien = ds.Tables[0];
+            DataSet ds = new DataSet();
+            if(roleName == "TruongPhong")
+            {
+                ds = bLNhanVien.TimNhanVienTheoMa1PB(txtTimKiem.Text,userName);
 
+            }
+            else
+            {
+                ds = bLNhanVien.TimNhanVienTheoMa(txtTimKiem.Text);
+
+            }
+            dtNhanVien = ds.Tables[0];
             dgvNhanVien.DataSource = dtNhanVien;
         }
 
@@ -258,8 +303,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtSDT.Text = dgvNhanVien.Rows[r].Cells[6].Value.ToString();
             txtEmail.Text = dgvNhanVien.Rows[r].Cells[7].Value.ToString();
             txtCCCD.Text = dgvNhanVien.Rows[r].Cells[8].Value.ToString();
-            txtTenPB.Text = dgvNhanVien.Rows[r].Cells[9].Value.ToString();
-            txtTenCV.Text = dgvNhanVien.Rows[r].Cells[10].Value.ToString();
+            cmbTenPB.SelectedValue = dgvNhanVien.Rows[r].Cells[9].Value.ToString();
+            cmbTenCV.SelectedValue = dgvNhanVien.Rows[r].Cells[10].Value.ToString();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -267,6 +312,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             if (Them)
             {
                 string err = "";
+                
                 bool themThanhCong = bLNhanVien.ThemNhanVien(
                     txtMaNhanVien.Text,
                     txtHo.Text, txtTen.Text,
@@ -276,6 +322,8 @@ namespace QuanLyNhanSu_3Tang_ADO
                     txtSDT.Text,
                     txtEmail.Text,
                     txtCCCD.Text,
+                    cmbTenPB.SelectedValue.ToString(),
+                    cmbTenCV.SelectedValue.ToString(),
                     ref err);
                 if (themThanhCong)
                 {
@@ -296,7 +344,10 @@ namespace QuanLyNhanSu_3Tang_ADO
                     txtDiaChi.Text,
                     txtSDT.Text,
                     txtEmail.Text,
-                    txtCCCD.Text, ref err);
+                    txtCCCD.Text,
+                    cmbTenPB.SelectedValue.ToString(),
+                    cmbTenCV.SelectedValue.ToString(),
+                    ref err);
                 LoadData();
                 MessageBox.Show("Đã sửa xong!");
             }
@@ -317,8 +368,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtSDT.Enabled = true;
             txtEmail.Enabled = true;
             txtCCCD.Enabled = true;
-            txtTenPB.Enabled = true;
-            txtTenCV.Enabled = true;
+            cmbTenPB.Enabled = true;
+            cmbTenCV.Enabled = true;
 
             btnHuy.Enabled = true;
             btnLuu.Enabled = true;
@@ -361,7 +412,50 @@ namespace QuanLyNhanSu_3Tang_ADO
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             this.AutoScroll = true;
+            if(roleName == "TruongPhong")
+            {
+                dtPhongBan = new DataTable();
+                dtPhongBan.Clear();
+                /*MessageBox.Show("" + userName);*/
+               
+                DataSet ds = bLPhongBan.LayPhongBanTheoTrP(userName);
+                dtPhongBan = ds.Tables[0];
 
+                cmbTenPB.DataSource = dtPhongBan;
+                cmbTenPB.DisplayMember = "TenPB";     // Hiển thị chữ
+                cmbTenPB.ValueMember = "MaPB";
+
+                dtCV = new DataTable();
+                dtCV.Clear();
+               
+                DataSet ds2 = bLChucVu.LayChucVuTheoTrP();
+                dtCV = ds2.Tables[0];
+
+                cmbTenCV.DataSource = dtCV;
+                cmbTenCV.DisplayMember = "TenCV";
+                cmbTenCV.ValueMember = "MaCV";
+            }
+            else
+            {
+                dtPhongBan = new DataTable();
+                dtPhongBan.Clear();
+                DataSet ds = bLPhongBan.LayPhongBan();
+                dtPhongBan = ds.Tables[0];
+
+                cmbTenPB.DataSource = dtPhongBan;
+                cmbTenPB.DisplayMember = "TenPB";     // Hiển thị chữ
+                cmbTenPB.ValueMember = "MaPB";
+
+                dtCV = new DataTable();
+                dtCV.Clear();
+                DataSet ds2 = bLChucVu.LayChucVu();
+                dtCV = ds2.Tables[0];
+
+                cmbTenCV.DataSource = dtCV;
+                cmbTenCV.DisplayMember = "TenCV";
+                cmbTenCV.ValueMember = "MaCV";
+            }    
+            
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

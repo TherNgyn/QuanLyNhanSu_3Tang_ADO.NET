@@ -10,7 +10,7 @@ namespace QuanLyNhanSu_3Tang_ADO.DB_Layer
 {
     class DBMain
     {
-        public static string connectString = "Data Source=PHUONG;Initial Catalog=QuanLyNhanSu;Integrated Security=True;Encrypt=False";
+        public static string connectString = "Data Source=DESKTOP-0PJCAJ8\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True;Encrypt=False";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
