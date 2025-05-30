@@ -118,8 +118,13 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnXemThongBao_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             frmXemThongBao frm = new frmXemThongBao(userName);
             frm.ShowDialog();
+=======
+            frmXemThongBao frmXTB = new frmXemThongBao(userName,false);
+            frmXTB.Show();
+>>>>>>> 74c9f8e65f5007667c78fd3a003dbafae503f546
         }
 
         private void lblChucVu_Click(object sender, EventArgs e)

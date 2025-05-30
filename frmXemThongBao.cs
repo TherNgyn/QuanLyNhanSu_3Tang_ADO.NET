@@ -1,44 +1,51 @@
 ﻿using QuanLyNhanSu_3Tang_ADO.BS_Layer;
 using QuanLyNhanSu_3Tang_ADO.DB_Layer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
 namespace QuanLyNhanSu_3Tang_ADO
 {
     public partial class frmXemThongBao : Form
     {
-        private string maNhanVien;
-        private BLThongBao dbThongBao = new BLThongBao();
-        DBMain db = new DBMain();
+        string userName;          
+        bool isTruongPhong;
+        BLThongBao dbThongBao = new BLThongBao();
+        DBMain db = new DBMain(); 
 
-        public frmXemThongBao(string maNV)
+        public frmXemThongBao(string userName, bool isTruongPhong)
         {
             InitializeComponent();
-            maNhanVien = maNV;
+            this.userName = userName;
+            this.isTruongPhong = isTruongPhong;
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-
+        { 
+            LoadThongBao();
         }
 
         private void btnXemTB_Click(object sender, EventArgs e)
         {
             if (dgvThongBao.CurrentRow != null)
             {
-                string tieuDe = dgvThongBao.CurrentRow.Cells[0].Value?.ToString();
-                string noiDung = dgvThongBao.CurrentRow.Cells[1].Value?.ToString();
-                string ngayGui = dgvThongBao.CurrentRow.Cells[2].Value?.ToString();
+                string tieuDe = "", noiDung = "", ngayGui = "";
 
-                string message = $"Tiêu đề: {tieuDe}\n\nNội dung:\n{noiDung}\n\nNgày nhận: {ngayGui}";
+                if (isTruongPhong)
+                { 
+                    tieuDe = dgvThongBao.CurrentRow.Cells["TieuDe"].Value?.ToString();
+                    noiDung = dgvThongBao.CurrentRow.Cells["NoiDung"].Value?.ToString();
+                    ngayGui = dgvThongBao.CurrentRow.Cells["NgayGui"].Value?.ToString();
+                }
+                else
+                { 
+                    tieuDe = dgvThongBao.CurrentRow.Cells["Tiêu đề thông báo"].Value?.ToString();
+                    noiDung = dgvThongBao.CurrentRow.Cells["Nội dung thông báo"].Value?.ToString();
+                    ngayGui = dgvThongBao.CurrentRow.Cells["Ngày nhận"].Value?.ToString();
+                }
+
+                string message = $"Tiêu đề: {tieuDe}\n\nNội dung:\n{noiDung}\n\nNgày gửi: {ngayGui}";
                 MessageBox.Show(message, "Chi tiết thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -47,42 +54,54 @@ namespace QuanLyNhanSu_3Tang_ADO
             }
         }
 
-        private void LayMaPhongBanVaLoadThongBao(string maNV)
+        private void LoadThongBao()
         {
-            string maPB = "";
-            using (var conn = new SqlConnection(DBMain.connectString))
+            DataTable dt = null;
+            if (isTruongPhong)
             {
-                string sql = "SELECT MaPB FROM NhanVien WHERE MaNV = @MaNV";
-                using (var cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@MaNV", maNV);
-                    conn.Open();
-                    var result = cmd.ExecuteScalar();
-                    if (result != null)
-                        maPB = result.ToString();
-                }
+                DataSet ds = dbThongBao.LayThongBao();
+                if (ds != null && ds.Tables.Count > 0)
+                    dt = ds.Tables[0];
+            }
+            else
+            {
+                dt = dbThongBao.LayThongBaoChoNV(userName);
             }
 
-            if (!string.IsNullOrEmpty(maPB))
+            if (dt != null)
             {
-                string sql = @"SELECT TieuDe AS [Tiêu đề thông báo], NoiDung AS [Nội dung thông báo], 
-                               CONVERT(varchar, NgayGui, 103) AS [Ngày nhận]
-                               FROM ThongBao WHERE MaPB = @MaPB ORDER BY NgayGui DESC";
-                using (var conn = new SqlConnection(DBMain.connectString))
-                using (var da = new SqlDataAdapter(sql, conn))
+                dgvThongBao.DataSource = dt;
+                dgvThongBao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                if (isTruongPhong)
                 {
-                    da.SelectCommand.Parameters.AddWithValue("@MaPB", maPB);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dgvThongBao.DataSource = dt;
-                    dgvThongBao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    // đổi tên header
+                    if (dgvThongBao.Columns.Contains("TieuDe"))
+                        dgvThongBao.Columns["TieuDe"].HeaderText = "Tiêu đề thông báo";
+                    if (dgvThongBao.Columns.Contains("NoiDung"))
+                        dgvThongBao.Columns["NoiDung"].HeaderText = "Nội dung thông báo";
+                    if (dgvThongBao.Columns.Contains("NgayGui"))
+                        dgvThongBao.Columns["NgayGui"].HeaderText = "Ngày nhận";
+                    if (dgvThongBao.Columns.Contains("MaPB"))
+                        dgvThongBao.Columns["MaPB"].HeaderText = "Mã phòng ban";
+                    if (dgvThongBao.Columns.Contains("TenPB"))
+                        dgvThongBao.Columns["TenPB"].HeaderText = "Tên phòng ban";
+                }
+                else
+                { 
+                    if (dgvThongBao.Columns.Contains("Tiêu đề thông báo"))
+                        dgvThongBao.Columns["Tiêu đề thông báo"].HeaderText = "Tiêu đề thông báo";
+                    if (dgvThongBao.Columns.Contains("Nội dung thông báo"))
+                        dgvThongBao.Columns["Nội dung thông báo"].HeaderText = "Nội dung thông báo";
+                    if (dgvThongBao.Columns.Contains("Ngày nhận"))
+                        dgvThongBao.Columns["Ngày nhận"].HeaderText = "Ngày nhận";
                 }
             }
         }
 
         private void frmXemThongBao_Load(object sender, EventArgs e)
         {
-            LayMaPhongBanVaLoadThongBao(maNhanVien);
+            LoadThongBao();
         }
     }
 }
