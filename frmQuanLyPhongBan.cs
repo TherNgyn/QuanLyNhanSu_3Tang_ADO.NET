@@ -87,7 +87,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 dgvSoLuong.DataSource = dtSoLuong;
             }
-            
+
         }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -160,11 +160,11 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
-            if(roleName == "TruongPhong")
+            if (roleName == "TruongPhong")
             {
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;
-            }    
+            }
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -190,7 +190,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             this.AutoScroll = true;
             dtMaNV = new DataTable();
             dtMaNV.Clear();
-            if(roleName == "TruongPhong")
+            if (roleName == "TruongPhong")
             {
                 DataTable dt = new DataTable();
                 dt.Columns.Add("MaNV");
@@ -210,7 +210,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                 cmbMaTrP.DisplayMember = "MaNV";
                 cmbMaTrP.ValueMember = "MaNV";
             }
-            
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -283,25 +283,30 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK)
             {
-                if(roleName == "TruongPhong")
-                {
-                    frmMenuTruongPhong frmMenuTruongPhong = new frmMenuTruongPhong(userName);
-                    frmMenuTruongPhong.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
-                    frmMenuQuanTriVien.Show();
-                    this.Hide();
-                }    
-                
+                this.Close();
+
             }
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmQuanLyPhongBan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (roleName == "TruongPhong")
+            {
+                frmMenuTruongPhong frmMenuTruongPhong = new frmMenuTruongPhong(userName);
+                frmMenuTruongPhong.Show();
+                this.Hide();
+            }
+            else
+            {
+                frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                frmMenuQuanTriVien.Show();
+                this.Hide();
+            }
         }
     }
 }

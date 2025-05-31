@@ -503,6 +503,7 @@
             Controls.Add(guna2Panel1);
             Name = "frmQuanLyTaiKhoan";
             Text = "frmQuanLyTaiKhoan";
+            FormClosing += frmQuanLyTaiKhoan_FormClosing;
             Load += frmQuanLyTaiKhoan_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

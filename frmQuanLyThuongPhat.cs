@@ -33,17 +33,18 @@ namespace QuanLyNhanSu_3Tang_ADO
         string maTP = "";
         string maThang = "";
         int ngayTP = 0;
-
-        public frmQuanLyThuongPhat()
+        string MaNV;
+        public frmQuanLyThuongPhat(string maNV)
         {
             InitializeComponent();
+            MaNV = maNV;
         }
 
         private void load()
         {
             try
             {
-               
+
                 dtTP.Clear();
                 dtCTTP.Clear();
                 dtNV.Clear();
@@ -428,7 +429,13 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+                /*frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+                frm.ShowDialog();*/
+                this.Close();
+            }
         }
 
         private void btnXemThuongHayPhat_Click(object sender, EventArgs e)
@@ -447,7 +454,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 DataSet ds = blTP.LocThuongPhatNhanVien(maNV, loai);
                 DataTable dt = ds.Tables[0];
-                
+
 
                 this.panelFormCTThuongPhat.Visible = true;
                 frmChiTietThuongPhat formCTThuongPhat = new frmChiTietThuongPhat();
@@ -469,7 +476,13 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void rbThuongPhat_CheckedChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void frmQuanLyThuongPhat_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+            frm.Show();
         }
     }
 }

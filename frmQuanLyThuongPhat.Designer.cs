@@ -581,6 +581,7 @@
             Name = "frmQuanLyThuongPhat";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormThemThuongPhat";
+            FormClosing += frmQuanLyThuongPhat_FormClosing;
             Load += FormThuongPhat_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();

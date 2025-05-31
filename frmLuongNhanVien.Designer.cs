@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnTinhLuong = new Button();
             btnThoat = new Button();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -73,7 +73,6 @@
             txtThucLanh = new TextBox();
             txtMaNV = new TextBox();
             txtLuongCoBan = new TextBox();
-            btnChiTiet = new Button();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
@@ -126,13 +125,13 @@
             guna2GroupBox1.Controls.Add(txtMaNV);
             guna2GroupBox1.Controls.Add(txtLuongCoBan);
             guna2GroupBox1.CustomBorderColor = Color.SteelBlue;
-            guna2GroupBox1.CustomizableEdges = customizableEdges15;
+            guna2GroupBox1.CustomizableEdges = customizableEdges7;
             guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox1.ForeColor = Color.Black;
             guna2GroupBox1.Location = new Point(12, 11);
             guna2GroupBox1.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2GroupBox1.Size = new Size(976, 732);
             guna2GroupBox1.TabIndex = 4;
             guna2GroupBox1.Text = "THÔNG TIN LƯƠNG";
@@ -153,13 +152,13 @@
             guna2GroupBox3.Controls.Add(lblThuongPhat);
             guna2GroupBox3.Controls.Add(txtThuongPhat);
             guna2GroupBox3.CustomBorderColor = Color.SteelBlue;
-            guna2GroupBox3.CustomizableEdges = customizableEdges11;
+            guna2GroupBox3.CustomizableEdges = customizableEdges3;
             guna2GroupBox3.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox3.ForeColor = Color.Black;
             guna2GroupBox3.Location = new Point(513, 75);
             guna2GroupBox3.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox3.Name = "guna2GroupBox3";
-            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GroupBox3.Size = new Size(445, 478);
             guna2GroupBox3.TabIndex = 25;
             guna2GroupBox3.Text = "CHẤM CÔNG";
@@ -179,7 +178,7 @@
             guna2DateTimePicker1.BorderThickness = 1;
             guna2DateTimePicker1.Checked = true;
             guna2DateTimePicker1.CustomFormat = "\"MM/yyyy\"";
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges9;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
             guna2DateTimePicker1.FillColor = Color.White;
             guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
@@ -188,7 +187,7 @@
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2DateTimePicker1.Size = new Size(195, 45);
             guna2DateTimePicker1.TabIndex = 24;
             guna2DateTimePicker1.Value = new DateTime(2024, 10, 24, 13, 37, 28, 220);
@@ -327,13 +326,13 @@
             guna2GroupBox2.Controls.Add(txtBHYT);
             guna2GroupBox2.Controls.Add(lblBHXH);
             guna2GroupBox2.CustomBorderColor = Color.SteelBlue;
-            guna2GroupBox2.CustomizableEdges = customizableEdges13;
+            guna2GroupBox2.CustomizableEdges = customizableEdges5;
             guna2GroupBox2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox2.ForeColor = Color.Black;
             guna2GroupBox2.Location = new Point(19, 354);
             guna2GroupBox2.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox2.Name = "guna2GroupBox2";
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2GroupBox2.Size = new Size(464, 338);
             guna2GroupBox2.TabIndex = 23;
             guna2GroupBox2.Text = "BẢO HIỂM";
@@ -545,15 +544,12 @@
             txtLuongCoBan.Size = new Size(193, 30);
             txtLuongCoBan.TabIndex = 13;
             // 
-            
-            // 
             // frmLuongNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1001, 833);
-            Controls.Add(btnChiTiet);
             Controls.Add(btnThoat);
             Controls.Add(btnTinhLuong);
             Controls.Add(guna2GroupBox1);
@@ -562,6 +558,7 @@
             Name = "frmLuongNhanVien";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLuongNhanVien";
+            FormClosing += frmLuongNhanVien_FormClosing;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
             guna2GroupBox3.ResumeLayout(false);
@@ -610,6 +607,5 @@
         private System.Windows.Forms.Label lblTongBHYT;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Button btnChiTiet;
     }
 }

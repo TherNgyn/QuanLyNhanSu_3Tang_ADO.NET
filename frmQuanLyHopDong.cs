@@ -18,9 +18,12 @@ namespace QuanLyNhanSu_3Tang_ADO
         bool Them;
         string err;
         BLHopDong dbHopDong = new BLHopDong();
-        public frmQuanLyHopDong()
+        string NV;
+        public frmQuanLyHopDong(string maNV)
         {
             InitializeComponent();
+
+            this.NV = maNV;
         }
         void LoadData()
         {
@@ -72,11 +75,13 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void btnThoat_Click(object sender, EventArgs e)
         {
 
-            DialogResult traloi;
-            traloi = MessageBox.Show("Chắc không?", "Trả lời",
-            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            // Kiểm tra có nhắp chọn nút Ok không?  
-            if (traloi == DialogResult.OK) this.Close();
+            DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+               /* frmMenuQuanTriVien frm = new frmMenuQuanTriVien(NV);
+                frm.ShowDialog();*/
+                this.Close();
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -172,7 +177,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Không cho thao tác trên các nút Lưu / Hủy / Panel  
             this.btnLuu.Enabled = false;
             this.btnHuy.Enabled = false;
-            
+
             dataGridViewHopDong_CellClick(null, null);
 
         }
@@ -272,10 +277,10 @@ namespace QuanLyNhanSu_3Tang_ADO
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     dtHopDong = ds.Tables[0];
-                    
+
                     dataGridViewHopDong.DataSource = dtHopDong;
                     MessageBox.Show("Có " + dtHopDong.Rows.Count + " hợp đồng sắp hết hạn.");
-                    
+
                 }
                 else
                 {
@@ -286,6 +291,12 @@ namespace QuanLyNhanSu_3Tang_ADO
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+        }
+
+        private void frmQuanLyHopDong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuQuanTriVien frm = new frmMenuQuanTriVien(NV);
+            frm.Show();
         }
     }
 }

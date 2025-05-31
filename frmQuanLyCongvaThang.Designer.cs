@@ -430,6 +430,7 @@
             Name = "frmQuanLyCongvaThang";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormQuanLyCong";
+            FormClosing += frmQuanLyCongvaThang_FormClosing;
             Load += FormQuanLyThangCong_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();

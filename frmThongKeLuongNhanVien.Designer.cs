@@ -30,10 +30,6 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvLuong = new DataGridView();
-            cbbMaThang = new ComboBox();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            btnXemLuong = new Button();
             MaNV = new DataGridViewTextBoxColumn();
             Ho = new DataGridViewTextBoxColumn();
             Ten = new DataGridViewTextBoxColumn();
@@ -41,6 +37,11 @@
             LuongChiuThue = new DataGridViewTextBoxColumn();
             Thue = new DataGridViewTextBoxColumn();
             LuongThucLanh = new DataGridViewTextBoxColumn();
+            cbbMaThang = new ComboBox();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            btnXemLuong = new Button();
+            btnXemReport = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvLuong).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -66,50 +67,6 @@
             dgvLuong.RowHeadersWidth = 120;
             dgvLuong.Size = new Size(1018, 378);
             dgvLuong.TabIndex = 3;
-            // 
-            // cbbMaThang
-            // 
-            cbbMaThang.FormattingEnabled = true;
-            cbbMaThang.Location = new Point(116, 27);
-            cbbMaThang.Margin = new Padding(3, 2, 3, 2);
-            cbbMaThang.Name = "cbbMaThang";
-            cbbMaThang.Size = new Size(251, 28);
-            cbbMaThang.TabIndex = 9;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.salary;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(38, 75);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(72, 57);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.calendar;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(38, 12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(72, 57);
-            pictureBox2.TabIndex = 11;
-            pictureBox2.TabStop = false;
-            // 
-            // btnXemLuong
-            // 
-            btnXemLuong.BackColor = Color.Navy;
-            btnXemLuong.FlatStyle = FlatStyle.Flat;
-            btnXemLuong.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            btnXemLuong.ForeColor = Color.White;
-            btnXemLuong.Location = new Point(138, 81);
-            btnXemLuong.Name = "btnXemLuong";
-            btnXemLuong.Size = new Size(207, 44);
-            btnXemLuong.TabIndex = 12;
-            btnXemLuong.Text = "Xem lương";
-            btnXemLuong.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnXemLuong.UseVisualStyleBackColor = false;
-            btnXemLuong.Click += btnXemLuong_Click;
             // 
             // MaNV
             // 
@@ -162,12 +119,72 @@
             LuongThucLanh.Name = "LuongThucLanh";
             LuongThucLanh.Width = 155;
             // 
+            // cbbMaThang
+            // 
+            cbbMaThang.FormattingEnabled = true;
+            cbbMaThang.Location = new Point(116, 27);
+            cbbMaThang.Margin = new Padding(3, 2, 3, 2);
+            cbbMaThang.Name = "cbbMaThang";
+            cbbMaThang.Size = new Size(251, 28);
+            cbbMaThang.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.salary;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(38, 75);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(72, 57);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.calendar;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(38, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(72, 57);
+            pictureBox2.TabIndex = 11;
+            pictureBox2.TabStop = false;
+            // 
+            // btnXemLuong
+            // 
+            btnXemLuong.BackColor = Color.Navy;
+            btnXemLuong.FlatStyle = FlatStyle.Flat;
+            btnXemLuong.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            btnXemLuong.ForeColor = Color.White;
+            btnXemLuong.Location = new Point(138, 81);
+            btnXemLuong.Name = "btnXemLuong";
+            btnXemLuong.Size = new Size(207, 44);
+            btnXemLuong.TabIndex = 12;
+            btnXemLuong.Text = "Xem lương";
+            btnXemLuong.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnXemLuong.UseVisualStyleBackColor = false;
+            btnXemLuong.Click += btnXemLuong_Click;
+            // 
+            // btnXemReport
+            // 
+            btnXemReport.BackColor = Color.Navy;
+            btnXemReport.FlatStyle = FlatStyle.Flat;
+            btnXemReport.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            btnXemReport.ForeColor = Color.White;
+            btnXemReport.Location = new Point(823, 39);
+            btnXemReport.Name = "btnXemReport";
+            btnXemReport.Size = new Size(207, 44);
+            btnXemReport.TabIndex = 13;
+            btnXemReport.Text = "Xem báo cáo lương ";
+            btnXemReport.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnXemReport.UseVisualStyleBackColor = false;
+            btnXemReport.Click += btnXemReport_Click;
+            // 
             // frmThongKeLuongNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1042, 527);
+            Controls.Add(btnXemReport);
             Controls.Add(btnXemLuong);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -177,12 +194,12 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmThongKeLuongNhanVien";
             Text = "FormThongKeLuong";
+            FormClosing += frmThongKeLuongNhanVien_FormClosing;
             Load += frmThongKeLuongNhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dgvLuong).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
@@ -198,5 +215,7 @@
         private DataGridViewTextBoxColumn LuongChiuThue;
         private DataGridViewTextBoxColumn Thue;
         private DataGridViewTextBoxColumn LuongThucLanh;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Button btnXemReport;
     }
 }

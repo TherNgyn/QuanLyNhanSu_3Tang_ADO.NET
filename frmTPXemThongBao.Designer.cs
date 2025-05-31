@@ -74,6 +74,7 @@
             btnXemTB.Text = "Xem";
             btnXemTB.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnXemTB.UseVisualStyleBackColor = false;
+            btnXemTB.Click += btnXemTB_Click;
             // 
             // btnLamMoi
             // 
@@ -149,6 +150,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "frmTPXemThongBao";
             Text = "Xem thông báo";
+            FormClosing += frmTPXemThongBao_FormClosing;
             Load += frmTPXemThongBao_Load;
             guna2Panel1.ResumeLayout(false);
             guna2GroupBox1.ResumeLayout(false);

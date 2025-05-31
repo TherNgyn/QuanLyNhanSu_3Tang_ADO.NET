@@ -220,8 +220,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK)
             {
-                frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
-                frmMenuQuanTriVien.Show();
+                /*frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                frmMenuQuanTriVien.Show();*/
                 this.Hide();
             }
         }
@@ -257,6 +257,13 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void cmbTenLoai_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtMaLoai.Text = cmbTenLoai.SelectedValue.ToString();
+        }
+
+        private void frmQuanLyTaiKhoan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+            frmMenuQuanTriVien.Show();
+            this.Hide();
         }
     }
 }

@@ -17,10 +17,11 @@ namespace QuanLyNhanSu_3Tang_ADO
         BLThongBao dbTB = new BLThongBao();
         bool Them;
         string err;
-
-        public frmQuanLyThongBao()
+        string MaNV;
+        public frmQuanLyThongBao(string maNV)
         {
             InitializeComponent();
+            MaNV = maNV;
         }
 
         void LoadData()
@@ -219,7 +220,12 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (traloi == DialogResult.OK) this.Close();
+            if (traloi == DialogResult.OK)
+            {
+               /* frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+                frm.ShowDialog();*/
+                this.Close();
+            }
         }
 
         private void dgvThongBao_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -264,6 +270,12 @@ namespace QuanLyNhanSu_3Tang_ADO
             {
                 MessageBox.Show("Vui lòng chọn một thông báo để xem.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void frmQuanLyThongBao_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+            frm.Show();
         }
     }
 }
