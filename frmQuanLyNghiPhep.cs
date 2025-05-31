@@ -24,11 +24,12 @@ namespace QuanLyNhanSu_3Tang_ADO
         string err;
         BLNghiPhep dbNP = new BLNghiPhep();
         private DataTable dtThang;
+        string MaNV;
 
-
-        public frmQuanLyNghiPhep()
+        public frmQuanLyNghiPhep(string maNV)
         {
             InitializeComponent();
+            MaNV = maNV;
         }
 
         void LoadData()
@@ -253,7 +254,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtNgayNghi.Clear();
             txtLyDo.Clear();
             txtTimKiemMaNV.Clear();
-            cbbMaThang.SelectedIndex = -1; 
+            cbbMaThang.SelectedIndex = -1;
 
             LoadData();
         }
@@ -262,7 +263,12 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
 
             DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (traloi == DialogResult.OK) this.Close();
+            if (traloi == DialogResult.OK)
+            {
+                /*frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+                frm.ShowDialog();*/
+                this.Close();
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -281,6 +287,12 @@ namespace QuanLyNhanSu_3Tang_ADO
                 MessageBox.Show("Không tìm thấy mã nhân viên này!");
                 dgvNghiPhep.DataSource = dtNP;
             }
+        }
+
+        private void frmQuanLyNghiPhep_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+            frm.Show();
         }
     }
 }

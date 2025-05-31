@@ -46,9 +46,6 @@
     <Compile Update="frmQuanLyNghiPhep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmQuanLyNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="frmQuanLyThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +67,7 @@
     <Compile Update="frmThongKeLuongNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-    <Compile Update="frmTrangChu.cs">
-=======
     <Compile Update="frmTPXemThongBao.cs">
->>>>>>> 74c9f8e65f5007667c78fd3a003dbafae503f546
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmXemThongBao.cs">

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvLuong = new DataGridView();
             MaNV = new DataGridViewTextBoxColumn();
             Ho = new DataGridViewTextBoxColumn();
@@ -50,14 +50,14 @@
             // dgvLuong
             // 
             dgvLuong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvLuong.ColumnHeadersHeight = 34;
             dgvLuong.Columns.AddRange(new DataGridViewColumn[] { MaNV, Ho, Ten, LuongCoBan, LuongChiuThue, Thue, LuongThucLanh });
             dgvLuong.Location = new Point(12, 137);
@@ -194,6 +194,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmThongKeLuongNhanVien";
             Text = "FormThongKeLuong";
+            FormClosing += frmThongKeLuongNhanVien_FormClosing;
             Load += frmThongKeLuongNhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dgvLuong).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

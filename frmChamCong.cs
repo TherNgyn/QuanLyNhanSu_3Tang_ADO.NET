@@ -22,7 +22,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             InitializeComponent();
             this.MaNV = username;
-            
+
         }
         void LoadData()
         {
@@ -32,7 +32,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                 DataTable dtDSCC = new DataTable();
                 dtDSCC = dsCC.Tables[0];
                 dataGridViewChamCong.DataSource = dtDSCC;
-                   
+
                 DataSet dsLoaiCong = new DataSet();
                 dsLoaiCong = blCC.LayDSChamCong();
                 DataTable dtCong = new DataTable();
@@ -85,7 +85,18 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void frmChamCong_Load(object sender, EventArgs e)
         {
             LoadData();
-            
+
+        }
+
+        private void frmChamCong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuTruongPhong frm = new frmMenuTruongPhong(this.MaNV);
+            frm.Show();
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

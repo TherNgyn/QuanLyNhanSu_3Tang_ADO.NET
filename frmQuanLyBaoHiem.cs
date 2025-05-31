@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Microsoft.Data.SqlClient; 
 using QuanLyNhanSu_3Tang_ADO.DB_Layer;
 using Guna.UI2.WinForms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyNhanSu_3Tang_ADO
 {
@@ -22,10 +23,13 @@ namespace QuanLyNhanSu_3Tang_ADO
         bool Them;
         string err;
         BLBaoHiem dbBH = new BLBaoHiem();
+        BLTaiKhoan BLTaiKhoan = new BLTaiKhoan();
+        string MaNV;
 
-        public frmQuanLyBaoHiem()
+        public frmQuanLyBaoHiem(string maNV)
         {
             InitializeComponent();
+            MaNV = maNV;
         }
 
         private void LoadData()
@@ -39,11 +43,11 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 txtMaBH.ResetText();
                 txtMaNV.ResetText();
-     
+
 
                 txtMaNV.ResetText();
                 txtMaBH.ResetText();
-                
+
                 dtpNgayBD.Value = DateTime.Today;
                 dtpNgayKT.Value = DateTime.Today;
                 txtTimKiemMaBH.ResetText();
@@ -80,10 +84,6 @@ namespace QuanLyNhanSu_3Tang_ADO
             cbbLoaiBH.DisplayMember = "TenBH";
             cbbLoaiBH.ValueMember = "MaLoai";
         }
-
-
-
-
 
         private void guna2GroupBox3_Click(object sender, EventArgs e)
         {
@@ -137,7 +137,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             btnTimKiem.Enabled = false;
-            txtTimKiemMaBH.Enabled=false;
+            txtTimKiemMaBH.Enabled = false;
             btnThoat.Enabled = false;
 
             txtMaNV.Focus();
@@ -150,8 +150,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnHuy.Enabled = true;
             btnLuu.Enabled = true;
             guna2Panel1.Enabled = true;
-            dgvBaoHiem_CellContentClick(null, null); 
-            txtMaNV.Enabled = true; 
+            dgvBaoHiem_CellContentClick(null, null);
+            txtMaNV.Enabled = true;
             cbbLoaiBH.Enabled = true;
             dtpNgayBD.Enabled = true;
             dtpNgayKT.Enabled = true;
@@ -159,7 +159,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
             btnThem.Enabled = false;
             btnSua.Enabled = false;
-            btnXoa.Enabled=false;
+            btnXoa.Enabled = false;
             btnTimKiem.Enabled = false;
             txtTimKiemMaBH.Enabled = false;
 
@@ -273,7 +273,12 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (traloi == DialogResult.OK) this.Close();
+            if (traloi == DialogResult.OK)
+            {
+                /*frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+                frm.Show();*/
+                this.Close();
+            }     
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -292,6 +297,14 @@ namespace QuanLyNhanSu_3Tang_ADO
                 MessageBox.Show("Không tìm thấy mã bảo hiểm này!");
                 dgvBaoHiem.DataSource = dtBH;
             }
+        }
+
+        private void frmQuanLyBaoHiem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+            frm.Show();
+
         }
     }
 }

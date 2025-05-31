@@ -77,7 +77,8 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void btnDangKyNghiPhep_Click(object sender, EventArgs e)
         {
             frmDangKyNghiPhep frm = new frmDangKyNghiPhep(userName);
-            frm.ShowDialog();
+            frm.Show();
+            this.Hide();
         }
 
         private void btnChamCong_Click(object sender, EventArgs e)
@@ -98,14 +99,14 @@ namespace QuanLyNhanSu_3Tang_ADO
             MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK) this.Close();
-            frmDangNhap frm = new frmDangNhap();
-            frm.ShowDialog();
+
         }
 
         private void btnXemLuong_Click(object sender, EventArgs e)
         {
             frmLuongNhanVien frmLuongNhanVien = new frmLuongNhanVien(userName);
-            frmLuongNhanVien.ShowDialog();
+            frmLuongNhanVien.Show();
+            this.Hide();
 
         }
 
@@ -118,18 +119,20 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnXemThongBao_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            frmXemThongBao frm = new frmXemThongBao(userName);
-            frm.ShowDialog();
-=======
-            frmXemThongBao frmXTB = new frmXemThongBao(userName,false);
+            frmXemThongBao frmXTB = new frmXemThongBao(userName, false);
             frmXTB.Show();
->>>>>>> 74c9f8e65f5007667c78fd3a003dbafae503f546
+            this.Hide();
         }
 
         private void lblChucVu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmMenuNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmDangNhap frm = new frmDangNhap();
+            frm.Show();
         }
     }
 }

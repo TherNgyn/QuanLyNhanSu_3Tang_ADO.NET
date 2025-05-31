@@ -23,10 +23,12 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         DataTable dtCong = new DataTable();
         DataTable dtThang = new DataTable();
+        string MaNV;
 
-        public frmQuanLyCongvaThang()
+        public frmQuanLyCongvaThang(string maNV)
         {
             InitializeComponent();
+            MaNV = maNV;
         }
         private void load()
         {
@@ -68,7 +70,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnThemThang_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 if (string.IsNullOrWhiteSpace(txtMaThang.Text) ||
@@ -97,7 +99,8 @@ namespace QuanLyNhanSu_3Tang_ADO
                 }
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageDialog.Show("Lỗi: " + ex);
             }
 
@@ -105,7 +108,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void dataGVThang_DoubleClick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnSuaThang_Click(object sender, EventArgs e)
@@ -158,7 +161,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 if (themThanhCong)
                 {
-                    load(); 
+                    load();
                     MessageBox.Show("Đã thêm loại chấm công thành công!", "Thông báo",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -184,7 +187,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             try
             {
-             
+
                 if (string.IsNullOrWhiteSpace(txtMaCC.Text) ||
                     string.IsNullOrWhiteSpace(txtMoTaCong.Text) ||
                     string.IsNullOrWhiteSpace(txtHeSo.Text))
@@ -194,7 +197,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                     return;
                 }
 
-          
+
                 float heSo;
                 if (!float.TryParse(txtHeSo.Text, out heSo))
                 {
@@ -214,7 +217,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 if (suaThanhCong)
                 {
-                    load(); 
+                    load();
                     MessageBox.Show("Đã cập nhật loại chấm công thành công!", "Thông báo",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtMaCC.Text = "";
@@ -238,7 +241,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void dataGVCong_DoubleClick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnLamMoiCong_Click(object sender, EventArgs e)
@@ -255,7 +258,13 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+                /*frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+                frm.Show();*/
+                this.Close();
+            }
         }
 
         private void dataGVThang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -272,6 +281,12 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtMaCC.Text = dataGVCong.CurrentRow.Cells[0].Value.ToString();
             txtMoTaCong.Text = dataGVCong.CurrentRow.Cells[1].Value.ToString();
             txtHeSo.Text = dataGVCong.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void frmQuanLyCongvaThang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+            frm.Show();
         }
     }
 }

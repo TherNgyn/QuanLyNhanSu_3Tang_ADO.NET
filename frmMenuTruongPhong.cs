@@ -17,10 +17,12 @@ namespace QuanLyNhanSu_3Tang_ADO
         BLNhanVien bLNhanVien;
         DataSet ds;
         string err;
+        bool isLoggingOut = false;
         public frmMenuTruongPhong(string userName)
         {
             InitializeComponent();
             this.userName = userName;
+
         }
 
         private void frmMenuTruongPhong_Load(object sender, EventArgs e)
@@ -58,6 +60,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             txtSoDT.Text = dataRow["SDT"].ToString();
             txtEmail.Text = dataRow["Email"].ToString();
             txtCCCD.Text = dataRow["CCCD"].ToString();
+
+            lblTenTP.Text = dataRow["Ten"].ToString();
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -108,45 +112,62 @@ namespace QuanLyNhanSu_3Tang_ADO
             traloi = MessageBox.Show("Chắc không?", "Trả lời",
             MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             // Kiểm tra có nhắp chọn nút Ok không?  
-            if (traloi == DialogResult.OK) this.Close();
+            if (traloi == DialogResult.OK)
+            {
+                isLoggingOut = true;
+                this.Close();
+            }
         }
 
         private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
         {
             frmQuanLyNV frmQuanLyNV = new frmQuanLyNV(userName);
             frmQuanLyNV.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnQuanLyPhongBan_Click(object sender, EventArgs e)
         {
             frmQuanLyPhongBan frmQuanLyPhongBan = new frmQuanLyPhongBan(userName);
             frmQuanLyPhongBan.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnChamCong_Click(object sender, EventArgs e)
         {
             frmChamCong frmCC = new frmChamCong(userName);
             frmCC.Show();
+            this.Close();
         }
 
         private void btnXemLuong_Click(object sender, EventArgs e)
         {
             frmLuongNhanVien frmLuong = new frmLuongNhanVien(userName);
             frmLuong.Show();
+            this.Close();
         }
 
         private void btnNghiPhep_Click(object sender, EventArgs e)
         {
             frmDangKyNghiPhep frmDKNP = new frmDangKyNghiPhep(userName);
             frmDKNP.Show();
+            this.Close();
         }
 
         private void btnXemThongBao_Click(object sender, EventArgs e)
         {
             frmXemThongBao frmQLTB = new frmXemThongBao(userName, true);
             frmQLTB.Show();
+            this.Close();
+        }
+
+        private void frmMenuTruongPhong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isLoggingOut)
+            {
+                frmDangNhap frm = new frmDangNhap();
+                frm.Show();
+            }
         }
     }
 }

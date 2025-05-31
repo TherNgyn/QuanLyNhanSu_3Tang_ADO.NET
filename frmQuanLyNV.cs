@@ -22,7 +22,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         BLNhanVien bLNhanVien;
         BLTaiKhoan bLTaiKhoan;
         BLChucVu bLChucVu;
-        BLPhongBan bLPhongBan=new BLPhongBan();
+        BLPhongBan bLPhongBan = new BLPhongBan();
         String userName;
         String roleName;
 
@@ -55,7 +55,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             btnSua.Enabled = true;
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
-           
+
             if (roleName.Trim().Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
             {
                 dtNhanVien = new DataTable();
@@ -102,7 +102,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 dgvPhongBan.DataSource = dtPhongBan;
             }
-            
+
 
         }
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -243,9 +243,20 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK)
             {
-                frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
-                frmMenuQuanTriVien.Show();
-                this.Hide();
+                IsClosingFromBackButton = true;
+                if (roleName.Trim().Equals("QuanTriVien", StringComparison.OrdinalIgnoreCase))
+                {
+                    frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                    frmMenuQuanTriVien.Show();
+                    this.Close();
+                }
+                else
+                {
+                    frmMenuTruongPhong frmTP = new frmMenuTruongPhong(userName);
+                    frmTP.Show();
+                    this.Close();
+                }
+
             }
         }
 
@@ -269,9 +280,9 @@ namespace QuanLyNhanSu_3Tang_ADO
             dtNhanVien = new DataTable();
             dtNhanVien.Clear();
             DataSet ds = new DataSet();
-            if(roleName == "TruongPhong")
+            if (roleName == "TruongPhong")
             {
-                ds = bLNhanVien.TimNhanVienTheoMa1PB(txtTimKiem.Text,userName);
+                ds = bLNhanVien.TimNhanVienTheoMa1PB(txtTimKiem.Text, userName);
 
             }
             else
@@ -310,7 +321,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             if (Them)
             {
                 string err = "";
-                
+
                 bool themThanhCong = bLNhanVien.ThemNhanVien(
                     txtMaNhanVien.Text,
                     txtHo.Text, txtTen.Text,
@@ -410,12 +421,12 @@ namespace QuanLyNhanSu_3Tang_ADO
             cmbGioiTinh.Items.Add("Nam");
             cmbGioiTinh.Items.Add("Nữ");
             this.AutoScroll = true;
-            if(roleName == "TruongPhong")
+            if (roleName == "TruongPhong")
             {
                 dtPhongBan = new DataTable();
                 dtPhongBan.Clear();
                 /*MessageBox.Show("" + userName);*/
-               
+
                 DataSet ds = bLPhongBan.LayPhongBanTheoTrP(userName);
                 dtPhongBan = ds.Tables[0];
 
@@ -425,7 +436,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
                 dtCV = new DataTable();
                 dtCV.Clear();
-               
+
                 DataSet ds2 = bLChucVu.LayChucVuTheoTrP();
                 dtCV = ds2.Tables[0];
 
@@ -452,8 +463,8 @@ namespace QuanLyNhanSu_3Tang_ADO
                 cmbTenCV.DataSource = dtCV;
                 cmbTenCV.DisplayMember = "TenCV";
                 cmbTenCV.ValueMember = "MaCV";
-            }    
-            
+            }
+
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -465,5 +476,30 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
 
         }
+
+        private void frmQuanLyNV_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                
+                if (!IsClosingFromBackButton)
+                {
+                    if (roleName.Trim().Equals("QuanTriVien", StringComparison.OrdinalIgnoreCase))
+                    {
+                        frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                        frmMenuQuanTriVien.Show();
+                        
+                    }
+                    else if (roleName.Trim().Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
+                    {
+                        frmMenuTruongPhong frmTP = new frmMenuTruongPhong(userName);
+                        frmTP.Show();
+                        
+                    }
+                }
+            }
+        }
+        private bool IsClosingFromBackButton = false;
     }
 }

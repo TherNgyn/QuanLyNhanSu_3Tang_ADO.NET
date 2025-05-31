@@ -483,6 +483,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "frmQuanLyThongBao";
             Text = "Quản lý thông báo";
+            FormClosing += frmQuanLyThongBao_FormClosing;
             Load += frmQuanLyThongBao_Load;
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox3.PerformLayout();

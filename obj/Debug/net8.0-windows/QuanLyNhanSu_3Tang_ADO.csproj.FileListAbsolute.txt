@@ -59,7 +59,6 @@ C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtime
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.csproj.AssemblyReference.cache
-C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmQuanLyNhanVien.resources
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.csproj.GenerateResource.cache
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.AssemblyInfoInputs.cache
@@ -374,7 +373,6 @@ E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3
 E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.genruntimeconfig.cache
 E:\PJCKWinADO\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\ref\QuanLyNhanSu_3Tang_ADO.dll
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuTruongPhong.resources
-<<<<<<< HEAD
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
@@ -500,8 +498,6 @@ C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtime
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmReport.resources
-C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmTrangChu.resources
-=======
 D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmMenuTruongPhong.resources
 D:\winform\Final Winform Project\QuanLyNhanSu_3Tang_ADO.NET\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmTPXemThongBao.resources
->>>>>>> 74c9f8e65f5007667c78fd3a003dbafae503f546
+C:\Users\HP\source\repos\QuanLyNhanSu_3Tang_ADO\obj\Debug\net8.0-windows\QuanLyNhanSu_3Tang_ADO.frmTPXemThongBao.resources

@@ -18,9 +18,21 @@ namespace QuanLyNhanSu_3Tang_ADO
 {
     public partial class frmReport : Form
     {
-        public frmReport()
+        string MaNV;
+        private Form parentForm = null; // Thêm biến lưu form cha
+
+        public frmReport(string maNV)
         {
             InitializeComponent();
+            MaNV = maNV;
+        }
+
+        
+        public frmReport(string maNV, Form parent)
+        {
+            InitializeComponent();
+            MaNV = maNV;
+            parentForm = parent;
         }
 
         private void frmReport_Load(object sender, EventArgs e)
@@ -44,5 +56,19 @@ namespace QuanLyNhanSu_3Tang_ADO
             }
         }
 
+        private void frmReport_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (parentForm != null)
+            {
+                
+                parentForm.Show();
+            }
+            else
+            {
+                
+                frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+                frm.Show();
+            }
+        }
     }
 }

@@ -150,6 +150,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "frmXemThongBao";
             Text = "Xem thông báo";
+            FormClosing += frmXemThongBao_FormClosing;
             Load += frmXemThongBao_Load;
             ((System.ComponentModel.ISupportInitialize)dgvThongBao).EndInit();
             guna2GroupBox1.ResumeLayout(false);

@@ -358,7 +358,7 @@
             dgvChucVu.RowTemplate.Height = 24;
             dgvChucVu.Size = new Size(1122, 274);
             dgvChucVu.TabIndex = 10;
-            this.dgvChucVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChucVu_CellClick);
+            dgvChucVu.CellClick += dgvChucVu_CellClick;
             // 
             // MaCV
             // 
@@ -385,6 +385,7 @@
             Controls.Add(guna2GroupBox1);
             Name = "frmQuanLyChucVu";
             Text = "Quản lý chức vụ";
+            FormClosing += frmQuanLyChucVu_FormClosing;
             Load += frmQuanLyChucVu_Load;
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox3.PerformLayout();

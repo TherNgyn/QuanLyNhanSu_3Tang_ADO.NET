@@ -39,12 +39,12 @@
             HeSo = new DataGridViewTextBoxColumn();
             fontDialog1 = new FontDialog();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label1 = new Label();
+            cbbLoaiChamCong = new ComboBox();
             btnChamCong = new Button();
             txtMaNV = new TextBox();
             lblMaNV = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            cbbLoaiChamCong = new ComboBox();
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewChamCong).BeginInit();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
@@ -113,6 +113,25 @@
             guna2GroupBox1.Size = new Size(877, 243);
             guna2GroupBox1.TabIndex = 10;
             guna2GroupBox1.Text = "THÔNG TIN CHẤM CÔNG";
+            guna2GroupBox1.Click += guna2GroupBox1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            label1.Location = new Point(547, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(140, 22);
+            label1.TabIndex = 14;
+            label1.Text = "Loại chấm công:";
+            // 
+            // cbbLoaiChamCong
+            // 
+            cbbLoaiChamCong.FormattingEnabled = true;
+            cbbLoaiChamCong.Location = new Point(692, 95);
+            cbbLoaiChamCong.Name = "cbbLoaiChamCong";
+            cbbLoaiChamCong.Size = new Size(151, 31);
+            cbbLoaiChamCong.TabIndex = 13;
             // 
             // btnChamCong
             // 
@@ -161,24 +180,6 @@
             guna2GroupBox2.TabIndex = 11;
             guna2GroupBox2.Text = "DANH SÁCH CHẤM CÔNG";
             // 
-            // cbbLoaiChamCong
-            // 
-            cbbLoaiChamCong.FormattingEnabled = true;
-            cbbLoaiChamCong.Location = new Point(692, 95);
-            cbbLoaiChamCong.Name = "cbbLoaiChamCong";
-            cbbLoaiChamCong.Size = new Size(151, 31);
-            cbbLoaiChamCong.TabIndex = 13;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label1.Location = new Point(547, 99);
-            label1.Name = "label1";
-            label1.Size = new Size(140, 22);
-            label1.TabIndex = 14;
-            label1.Text = "Loại chấm công:";
-            // 
             // frmChamCong
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
@@ -193,6 +194,7 @@
             Name = "frmChamCong";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormChamCong";
+            FormClosing += frmChamCong_FormClosing;
             Load += frmChamCong_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewChamCong).EndInit();
             guna2GroupBox1.ResumeLayout(false);

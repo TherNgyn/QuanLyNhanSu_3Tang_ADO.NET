@@ -51,6 +51,7 @@
             Controls.Add(stiRibbonViewerControl1);
             Name = "frmReport";
             Text = "frmReport";
+            FormClosing += frmReport_FormClosing;
             Load += frmReport_Load;
             ResumeLayout(false);
         }

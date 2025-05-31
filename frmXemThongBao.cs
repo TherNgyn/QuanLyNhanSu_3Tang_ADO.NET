@@ -9,20 +9,24 @@ namespace QuanLyNhanSu_3Tang_ADO
 {
     public partial class frmXemThongBao : Form
     {
-        string userName;          
+        string userName;
         bool isTruongPhong;
         BLThongBao dbThongBao = new BLThongBao();
-        DBMain db = new DBMain(); 
+        BLTaiKhoan bLTaiKhoan = new BLTaiKhoan();
+        DBMain db = new DBMain();
+        private string userRole;
 
         public frmXemThongBao(string userName, bool isTruongPhong)
         {
             InitializeComponent();
             this.userName = userName;
             this.isTruongPhong = isTruongPhong;
+            this.userRole = bLTaiKhoan.LayRoleName(userName);
+
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
-        { 
+        {
             LoadThongBao();
         }
 
@@ -33,13 +37,13 @@ namespace QuanLyNhanSu_3Tang_ADO
                 string tieuDe = "", noiDung = "", ngayGui = "";
 
                 if (isTruongPhong)
-                { 
+                {
                     tieuDe = dgvThongBao.CurrentRow.Cells["TieuDe"].Value?.ToString();
                     noiDung = dgvThongBao.CurrentRow.Cells["NoiDung"].Value?.ToString();
                     ngayGui = dgvThongBao.CurrentRow.Cells["NgayGui"].Value?.ToString();
                 }
                 else
-                { 
+                {
                     tieuDe = dgvThongBao.CurrentRow.Cells["Tiêu đề thông báo"].Value?.ToString();
                     noiDung = dgvThongBao.CurrentRow.Cells["Nội dung thông báo"].Value?.ToString();
                     ngayGui = dgvThongBao.CurrentRow.Cells["Ngày nhận"].Value?.ToString();
@@ -88,7 +92,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                         dgvThongBao.Columns["TenPB"].HeaderText = "Tên phòng ban";
                 }
                 else
-                { 
+                {
                     if (dgvThongBao.Columns.Contains("Tiêu đề thông báo"))
                         dgvThongBao.Columns["Tiêu đề thông báo"].HeaderText = "Tiêu đề thông báo";
                     if (dgvThongBao.Columns.Contains("Nội dung thông báo"))
@@ -102,6 +106,21 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void frmXemThongBao_Load(object sender, EventArgs e)
         {
             LoadThongBao();
+        }
+
+        private void frmXemThongBao_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (userRole.Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
+            {
+                frmMenuTruongPhong frm = new frmMenuTruongPhong(userName);
+                frm.Show();
+            }
+            else if (userRole.Equals("NhanVien", StringComparison.OrdinalIgnoreCase))
+            {
+                frmMenuNhanVien frm = new frmMenuNhanVien(userName);
+                frm.Show();
+            }
+
         }
     }
 }

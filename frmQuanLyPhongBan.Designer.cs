@@ -572,6 +572,7 @@
             Controls.Add(guna2Panel1);
             Name = "frmQuanLyPhongBan";
             Text = "frmQuanLyPhongBan";
+            FormClosing += frmQuanLyPhongBan_FormClosing;
             Load += frmQuanLyPhongBan_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

@@ -42,9 +42,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK)
             {
-                frmMenuNhanVien frmMenuNhanVien = new frmMenuNhanVien(userName);
-                frmMenuNhanVien.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -65,6 +63,12 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             txtTaiKhoan.Text = userName;
             txtTaiKhoan.Enabled = false;
+        }
+
+        private void frmCapNhatMatKhau_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuNhanVien frmMenuNhanVien = new frmMenuNhanVien(userName);
+            frmMenuNhanVien.Show();
         }
     }
 }

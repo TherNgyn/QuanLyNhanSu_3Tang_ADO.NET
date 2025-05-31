@@ -17,10 +17,11 @@ namespace QuanLyNhanSu_3Tang_ADO
         BLChucVu dbCV = new BLChucVu();
         bool Them;
         string err;
-
-        public frmQuanLyChucVu()
+        string MaNV;
+        public frmQuanLyChucVu(string maNV)
         {
             InitializeComponent();
+            MaNV = maNV;
         }
 
         void LoadData()
@@ -82,7 +83,7 @@ namespace QuanLyNhanSu_3Tang_ADO
 
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
-            txtTenCV.Enabled=true;
+            txtTenCV.Enabled = true;
 
             btnThem.Enabled = false;
             btnSua.Enabled = false;
@@ -144,7 +145,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void btnHuy_Click(object sender, EventArgs e)
         {
             txtMaCV.ResetText();
-            txtTenCV.ResetText(); 
+            txtTenCV.ResetText();
 
             btnThem.Enabled = true;
             btnSua.Enabled = true;
@@ -170,9 +171,14 @@ namespace QuanLyNhanSu_3Tang_ADO
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (traloi == DialogResult.OK) this.Close();
+            if (traloi == DialogResult.OK)
+            {
+                /*frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+                frm.ShowDialog();*/
+                this.Close();
+            }
         }
-         
+
 
         private void frmQuanLyChucVu_Load(object sender, EventArgs e)
         {
@@ -184,6 +190,12 @@ namespace QuanLyNhanSu_3Tang_ADO
             int r = dgvChucVu.CurrentCell.RowIndex;
             txtMaCV.Text = dgvChucVu.Rows[r].Cells[0].Value.ToString();
             txtTenCV.Text = dgvChucVu.Rows[r].Cells[1].Value.ToString();
+        }
+
+        private void frmQuanLyChucVu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMenuQuanTriVien frm = new frmMenuQuanTriVien(MaNV);
+            frm.Show();
         }
     }
 }

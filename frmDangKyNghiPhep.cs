@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLyNhanSu_3Tang_ADO
 {
@@ -17,12 +18,15 @@ namespace QuanLyNhanSu_3Tang_ADO
     {
         private string maNhanVien;
         private BLNghiPhep dbNP = new BLNghiPhep();
+        BLTaiKhoan bLTaiKhoan = new BLTaiKhoan();
         private string err;
+        private string userRole;
 
         public frmDangKyNghiPhep(string maNV)
         {
             InitializeComponent();
             maNhanVien = maNV;
+            this.userRole = bLTaiKhoan.LayRoleName(maNV);
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -91,6 +95,20 @@ namespace QuanLyNhanSu_3Tang_ADO
 
             LoadComboBoxThang();
             LoadLichSuNghiPhep();
+        }
+
+        private void frmDangKyNghiPhep_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (userRole.Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
+            {
+                frmMenuTruongPhong frm = new frmMenuTruongPhong(maNhanVien);
+                frm.Show();
+            }
+            else if (userRole.Equals("NhanVien", StringComparison.OrdinalIgnoreCase))
+            {
+                frmMenuNhanVien frm = new frmMenuNhanVien(maNhanVien);
+                frm.Show();
+            }
         }
     }
 }

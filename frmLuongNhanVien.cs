@@ -9,6 +9,8 @@ namespace QuanLyNhanSu_3Tang_ADO
     {
         BLLuong blLuong = new BLLuong();
         string maNV = "";
+        private string userRole;
+        BLTaiKhoan bLTaiKhoan = new BLTaiKhoan();
 
         public frmLuongNhanVien(string maNV)
         {
@@ -19,6 +21,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Định dạng DateTimePicker để chọn tháng/năm
             this.guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
             guna2DateTimePicker1.CustomFormat = "MM/yyyy";
+            this.userRole = bLTaiKhoan.LayRoleName(maNV);
         }
 
         private void frmLuongNhanVien_Load(object sender, EventArgs e)
@@ -51,7 +54,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             try
             {
-                
+
                 string maThang = guna2DateTimePicker1.Value.ToString("MMyyyy");
                 string err = "";
                 DataTable dt = blLuong.TinhLuongTheoThang(maNV, maThang, ref err);
@@ -59,7 +62,7 @@ namespace QuanLyNhanSu_3Tang_ADO
                 if (dt != null && dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];
-                    
+
                     txtMaNV.Text = row["MaNV"].ToString();
                     txtLuongCoBan.Text = row["LuongCoBan"].ToString();
                     txtBHYT.Text = row["BH01"].ToString();
@@ -89,14 +92,29 @@ namespace QuanLyNhanSu_3Tang_ADO
             }
         }
 
-        
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
-           
+            DialogResult traloi = MessageBox.Show("Chắc chắn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
-        
+        private void frmLuongNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (userRole.Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
+            {
+                frmMenuTruongPhong frm = new frmMenuTruongPhong(maNV);
+                frm.Show();
+            }
+            else if (userRole.Equals("NhanVien", StringComparison.OrdinalIgnoreCase))
+            {
+                frmMenuNhanVien frm = new frmMenuNhanVien(maNV);
+                frm.Show();
+            }
+        }
     }
 }

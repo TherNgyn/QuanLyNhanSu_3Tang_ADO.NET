@@ -80,10 +80,10 @@
             btnThem = new Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btnKTHDHetHan = new Button();
             btnThoat = new Button();
             btnHuy = new Button();
             btnLuu = new Button();
-            btnKTHDHetHan = new Button();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewHopDong).BeginInit();
             guna2GroupBox1.SuspendLayout();
@@ -534,6 +534,22 @@
             guna2Panel1.Size = new Size(1125, 116);
             guna2Panel1.TabIndex = 33;
             // 
+            // btnKTHDHetHan
+            // 
+            btnKTHDHetHan.BackColor = Color.Navy;
+            btnKTHDHetHan.FlatStyle = FlatStyle.Flat;
+            btnKTHDHetHan.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnKTHDHetHan.ForeColor = Color.White;
+            btnKTHDHetHan.Location = new Point(711, 62);
+            btnKTHDHetHan.Margin = new Padding(4, 2, 4, 2);
+            btnKTHDHetHan.Name = "btnKTHDHetHan";
+            btnKTHDHetHan.Size = new Size(306, 48);
+            btnKTHDHetHan.TabIndex = 12;
+            btnKTHDHetHan.Text = "Hợp đồng sắp hết hạn";
+            btnKTHDHetHan.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnKTHDHetHan.UseVisualStyleBackColor = false;
+            btnKTHDHetHan.Click += btnKTHDHetHan_Click;
+            // 
             // btnThoat
             // 
             btnThoat.BackColor = Color.Navy;
@@ -582,22 +598,6 @@
             btnLuu.UseVisualStyleBackColor = false;
             btnLuu.Click += btnLuu_Click;
             // 
-            // btnKTHDHetHan
-            // 
-            btnKTHDHetHan.BackColor = Color.Navy;
-            btnKTHDHetHan.FlatStyle = FlatStyle.Flat;
-            btnKTHDHetHan.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
-            btnKTHDHetHan.ForeColor = Color.White;
-            btnKTHDHetHan.Location = new Point(711, 62);
-            btnKTHDHetHan.Margin = new Padding(4, 2, 4, 2);
-            btnKTHDHetHan.Name = "btnKTHDHetHan";
-            btnKTHDHetHan.Size = new Size(306, 48);
-            btnKTHDHetHan.TabIndex = 12;
-            btnKTHDHetHan.Text = "Hợp đồng sắp hết hạn";
-            btnKTHDHetHan.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnKTHDHetHan.UseVisualStyleBackColor = false;
-            btnKTHDHetHan.Click += btnKTHDHetHan_Click;
-            // 
             // frmQuanLyHopDong
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -613,6 +613,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmQuanLyHopDong";
             Text = "FormQuanLyHopDong";
+            FormClosing += frmQuanLyHopDong_FormClosing;
             Load += frmQuanLyHopDong_Load;
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox3.PerformLayout();

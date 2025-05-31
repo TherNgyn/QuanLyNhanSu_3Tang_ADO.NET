@@ -26,5 +26,15 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
 
         }
+
+        private void frmTPXemThongBao_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void btnXemTB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

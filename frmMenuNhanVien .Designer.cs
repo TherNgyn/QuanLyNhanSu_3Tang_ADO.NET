@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             btnXemThongBao = new Guna.UI2.WinForms.Guna2CircleButton();
             label2 = new Label();
@@ -90,7 +90,7 @@
             btnXemThongBao.Image = Properties.Resources.icons8_notification_962;
             btnXemThongBao.Location = new Point(1228, 24);
             btnXemThongBao.Name = "btnXemThongBao";
-            btnXemThongBao.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnXemThongBao.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnXemThongBao.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnXemThongBao.Size = new Size(40, 40);
             btnXemThongBao.TabIndex = 3;
@@ -142,7 +142,7 @@
             // btnThoat
             // 
             btnThoat.Cursor = Cursors.Hand;
-            btnThoat.CustomizableEdges = customizableEdges13;
+            btnThoat.CustomizableEdges = customizableEdges2;
             btnThoat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnThoat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnThoat.Dock = DockStyle.Top;
@@ -154,7 +154,7 @@
             btnThoat.Location = new Point(0, 168);
             btnThoat.Name = "btnThoat";
             btnThoat.PressedColor = Color.FromArgb(233, 235, 244);
-            btnThoat.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnThoat.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnThoat.Size = new Size(242, 56);
             btnThoat.TabIndex = 5;
             btnThoat.Text = "Thoát";
@@ -165,7 +165,7 @@
             // btnDoiMatKhauNhanVien
             // 
             btnDoiMatKhauNhanVien.Cursor = Cursors.Hand;
-            btnDoiMatKhauNhanVien.CustomizableEdges = customizableEdges15;
+            btnDoiMatKhauNhanVien.CustomizableEdges = customizableEdges4;
             btnDoiMatKhauNhanVien.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDoiMatKhauNhanVien.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDoiMatKhauNhanVien.Dock = DockStyle.Top;
@@ -177,7 +177,7 @@
             btnDoiMatKhauNhanVien.Location = new Point(0, 112);
             btnDoiMatKhauNhanVien.Name = "btnDoiMatKhauNhanVien";
             btnDoiMatKhauNhanVien.PressedColor = Color.FromArgb(233, 235, 244);
-            btnDoiMatKhauNhanVien.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnDoiMatKhauNhanVien.ShadowDecoration.CustomizableEdges = customizableEdges5;
             btnDoiMatKhauNhanVien.Size = new Size(242, 56);
             btnDoiMatKhauNhanVien.TabIndex = 4;
             btnDoiMatKhauNhanVien.Text = "Đổi mật khẩu";
@@ -188,7 +188,7 @@
             // btnXemLuong
             // 
             btnXemLuong.Cursor = Cursors.Hand;
-            btnXemLuong.CustomizableEdges = customizableEdges17;
+            btnXemLuong.CustomizableEdges = customizableEdges6;
             btnXemLuong.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnXemLuong.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnXemLuong.Dock = DockStyle.Top;
@@ -200,7 +200,7 @@
             btnXemLuong.Location = new Point(0, 56);
             btnXemLuong.Name = "btnXemLuong";
             btnXemLuong.PressedColor = Color.FromArgb(233, 235, 244);
-            btnXemLuong.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnXemLuong.ShadowDecoration.CustomizableEdges = customizableEdges7;
             btnXemLuong.Size = new Size(242, 56);
             btnXemLuong.TabIndex = 3;
             btnXemLuong.Text = "Xem Lương";
@@ -211,7 +211,7 @@
             // btnDangKyNghiPhep
             // 
             btnDangKyNghiPhep.Cursor = Cursors.Hand;
-            btnDangKyNghiPhep.CustomizableEdges = customizableEdges19;
+            btnDangKyNghiPhep.CustomizableEdges = customizableEdges8;
             btnDangKyNghiPhep.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDangKyNghiPhep.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDangKyNghiPhep.Dock = DockStyle.Top;
@@ -223,7 +223,7 @@
             btnDangKyNghiPhep.Location = new Point(0, 0);
             btnDangKyNghiPhep.Name = "btnDangKyNghiPhep";
             btnDangKyNghiPhep.PressedColor = Color.FromArgb(233, 235, 244);
-            btnDangKyNghiPhep.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnDangKyNghiPhep.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnDangKyNghiPhep.Size = new Size(242, 56);
             btnDangKyNghiPhep.TabIndex = 2;
             btnDangKyNghiPhep.Text = "Đăng Ký Nghỉ Phép";
@@ -281,11 +281,11 @@
             // 
             guna2PanelLoad.BorderRadius = 20;
             guna2PanelLoad.Controls.Add(label7);
-            guna2PanelLoad.CustomizableEdges = customizableEdges21;
+            guna2PanelLoad.CustomizableEdges = customizableEdges10;
             guna2PanelLoad.FillColor = Color.AliceBlue;
             guna2PanelLoad.Location = new Point(248, 86);
             guna2PanelLoad.Name = "guna2PanelLoad";
-            guna2PanelLoad.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2PanelLoad.ShadowDecoration.CustomizableEdges = customizableEdges11;
             guna2PanelLoad.Size = new Size(1020, 591);
             guna2PanelLoad.TabIndex = 3;
             // 
@@ -316,6 +316,7 @@
             Name = "frmMenuNhanVien";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu - Nhân Viên";
+            FormClosing += frmMenuNhanVien_FormClosing;
             Load += frmMenuNhanVien_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
