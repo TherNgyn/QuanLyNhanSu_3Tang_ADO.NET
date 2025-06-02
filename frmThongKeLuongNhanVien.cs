@@ -26,7 +26,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             mNV = maNV;
         }
 
-        // Constructor mới có tham số form cha
+        
         public frmThongKeLuongNhanVien(string maNV, Form parent)
         {
             InitializeComponent();

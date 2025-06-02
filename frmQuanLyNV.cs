@@ -479,27 +479,156 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void frmQuanLyNV_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                
+
                 if (!IsClosingFromBackButton)
                 {
                     if (roleName.Trim().Equals("QuanTriVien", StringComparison.OrdinalIgnoreCase))
                     {
                         frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
                         frmMenuQuanTriVien.Show();
-                        
+
                     }
                     else if (roleName.Trim().Equals("TruongPhong", StringComparison.OrdinalIgnoreCase))
                     {
                         frmMenuTruongPhong frmTP = new frmMenuTruongPhong(userName);
                         frmTP.Show();
-                        
+
                     }
                 }
             }
         }
         private bool IsClosingFromBackButton = false;
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            Them = true;
+            txtMaNhanVien.ResetText();
+            txtHo.ResetText();
+            txtTen.ResetText();
+            cmbGioiTinh.ResetText();
+            dtpNgaySinh.ResetText();
+            txtDiaChi.ResetText();
+            txtSDT.ResetText();
+            txtEmail.ResetText();
+            txtCCCD.ResetText();
+            cmbTenPB.ResetText();
+            cmbTenCV.ResetText();
+
+            txtMaNhanVien.Enabled = true;
+            txtHo.Enabled = true;
+            txtTen.Enabled = true;
+            cmbGioiTinh.Enabled = true;
+            dtpNgaySinh.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtSDT.Enabled = true;
+            txtEmail.Enabled = true;
+            txtCCCD.Enabled = true;
+            cmbTenPB.Enabled = true;
+            cmbTenCV.Enabled = true;
+
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtMaNhanVien.Enabled = false;
+            txtHo.Enabled = false;
+            txtTen.Enabled = false;
+            cmbGioiTinh.Enabled = false;
+            dtpNgaySinh.Enabled = false;
+            txtDiaChi.Enabled = false;
+            txtSDT.Enabled = false;
+            txtEmail.Enabled = false;
+            txtCCCD.Enabled = false;
+            cmbTenPB.Enabled = false;
+            cmbTenCV.Enabled = false;
+
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dtNhanVien = new DataTable();
+            dtNhanVien.Clear();
+            DataSet ds = new DataSet();
+            if (roleName == "TruongPhong")
+            {
+                ds = bLNhanVien.TimNhanVienTheoMa1PB(txtTimKiem.Text, userName);
+
+            }
+            else
+            {
+                ds = bLNhanVien.TimNhanVienTheoMa(txtTimKiem.Text);
+
+            }
+            dtNhanVien = ds.Tables[0];
+            dgvNhanVien.DataSource = dtNhanVien;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult traloi;
+            traloi = MessageBox.Show("Chắc không?", "Trả lời",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            // Kiểm tra có nhắp chọn nút Ok không?  
+            if (traloi == DialogResult.OK)
+            {
+                IsClosingFromBackButton = true;
+                if (roleName.Trim().Equals("QuanTriVien", StringComparison.OrdinalIgnoreCase))
+                {
+                    frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                    frmMenuQuanTriVien.Show();
+                    this.Close();
+                }
+                else
+                {
+                    frmMenuTruongPhong frmTP = new frmMenuTruongPhong(userName);
+                    frmTP.Show();
+                    this.Close();
+                }
+
+            }
+        }
+
+        private void frmQuanLyNV_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel12_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtMaNhanVien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

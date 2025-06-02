@@ -36,9 +36,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnTinhLuong = new Button();
             btnThoat = new Button();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            btnTinhLuong = new Button();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -55,6 +56,7 @@
             txtThuongPhat = new TextBox();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            pictureBox1 = new PictureBox();
             txtTongBaoHiem = new TextBox();
             lblTongBHYT = new Label();
             lblBHTN = new Label();
@@ -68,31 +70,20 @@
             txtGiamTruGiaCanh = new TextBox();
             txtThue = new TextBox();
             lblThucLanh = new Label();
-            lblMaNhanVien = new Label();
             lblLuongCoBan = new Label();
             txtThucLanh = new TextBox();
-            txtMaNV = new TextBox();
             txtLuongCoBan = new TextBox();
+            lblMaNhanVien = new Label();
+            txtMaNV = new TextBox();
+            panel4 = new Panel();
+            pictureBox2 = new PictureBox();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // btnTinhLuong
-            // 
-            btnTinhLuong.BackColor = Color.Navy;
-            btnTinhLuong.FlatStyle = FlatStyle.Flat;
-            btnTinhLuong.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            btnTinhLuong.ForeColor = Color.White;
-            btnTinhLuong.Location = new Point(279, 770);
-            btnTinhLuong.Margin = new Padding(3, 2, 3, 2);
-            btnTinhLuong.Name = "btnTinhLuong";
-            btnTinhLuong.Size = new Size(176, 52);
-            btnTinhLuong.TabIndex = 2;
-            btnTinhLuong.Text = "Xem lương";
-            btnTinhLuong.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnTinhLuong.UseVisualStyleBackColor = false;
-            btnTinhLuong.Click += btnTinhLuong_Click;
             // 
             // btnThoat
             // 
@@ -100,10 +91,10 @@
             btnThoat.FlatStyle = FlatStyle.Flat;
             btnThoat.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             btnThoat.ForeColor = Color.White;
-            btnThoat.Location = new Point(646, 770);
+            btnThoat.Location = new Point(32, 418);
             btnThoat.Margin = new Padding(3, 2, 3, 2);
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(176, 52);
+            btnThoat.Size = new Size(153, 52);
             btnThoat.TabIndex = 3;
             btnThoat.Text = "Thoát";
             btnThoat.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -112,6 +103,8 @@
             // 
             // guna2GroupBox1
             // 
+            guna2GroupBox1.Controls.Add(guna2Separator3);
+            guna2GroupBox1.Controls.Add(btnTinhLuong);
             guna2GroupBox1.Controls.Add(guna2GroupBox3);
             guna2GroupBox1.Controls.Add(guna2GroupBox2);
             guna2GroupBox1.Controls.Add(label1);
@@ -119,22 +112,41 @@
             guna2GroupBox1.Controls.Add(txtGiamTruGiaCanh);
             guna2GroupBox1.Controls.Add(txtThue);
             guna2GroupBox1.Controls.Add(lblThucLanh);
-            guna2GroupBox1.Controls.Add(lblMaNhanVien);
             guna2GroupBox1.Controls.Add(lblLuongCoBan);
             guna2GroupBox1.Controls.Add(txtThucLanh);
-            guna2GroupBox1.Controls.Add(txtMaNV);
             guna2GroupBox1.Controls.Add(txtLuongCoBan);
             guna2GroupBox1.CustomBorderColor = Color.SteelBlue;
             guna2GroupBox1.CustomizableEdges = customizableEdges7;
             guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox1.ForeColor = Color.Black;
-            guna2GroupBox1.Location = new Point(12, 11);
+            guna2GroupBox1.Location = new Point(264, 11);
             guna2GroupBox1.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2GroupBox1.Size = new Size(976, 732);
+            guna2GroupBox1.Size = new Size(982, 911);
             guna2GroupBox1.TabIndex = 4;
             guna2GroupBox1.Text = "THÔNG TIN LƯƠNG";
+            // 
+            // guna2Separator3
+            // 
+            guna2Separator3.BackColor = Color.White;
+            guna2Separator3.Location = new Point(19, 406);
+            guna2Separator3.Margin = new Padding(4, 5, 4, 5);
+            guna2Separator3.Name = "guna2Separator3";
+            guna2Separator3.Size = new Size(470, 34);
+            guna2Separator3.TabIndex = 26;
+            // 
+            // btnTinhLuong
+            // 
+            btnTinhLuong.BackgroundImage = Properties.Resources.calculator;
+            btnTinhLuong.BackgroundImageLayout = ImageLayout.Zoom;
+            btnTinhLuong.Location = new Point(555, 668);
+            btnTinhLuong.Margin = new Padding(3, 4, 3, 4);
+            btnTinhLuong.Name = "btnTinhLuong";
+            btnTinhLuong.Size = new Size(71, 122);
+            btnTinhLuong.TabIndex = 27;
+            btnTinhLuong.UseVisualStyleBackColor = true;
+            btnTinhLuong.Click += btnTinhLuong_Click;
             // 
             // guna2GroupBox3
             // 
@@ -155,11 +167,11 @@
             guna2GroupBox3.CustomizableEdges = customizableEdges3;
             guna2GroupBox3.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox3.ForeColor = Color.Black;
-            guna2GroupBox3.Location = new Point(513, 75);
+            guna2GroupBox3.Location = new Point(519, 71);
             guna2GroupBox3.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox3.Name = "guna2GroupBox3";
             guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GroupBox3.Size = new Size(445, 478);
+            guna2GroupBox3.Size = new Size(446, 476);
             guna2GroupBox3.TabIndex = 25;
             guna2GroupBox3.Text = "CHẤM CÔNG";
             // 
@@ -190,7 +202,7 @@
             guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2DateTimePicker1.Size = new Size(195, 45);
             guna2DateTimePicker1.TabIndex = 24;
-            guna2DateTimePicker1.Value = new DateTime(2024, 10, 24, 13, 37, 28, 220);
+            guna2DateTimePicker1.Value = new DateTime(2025, 6, 2, 0, 0, 0, 0);
             // 
             // lblSoTienNguoiPhuThuoc
             // 
@@ -317,6 +329,7 @@
             // guna2GroupBox2
             // 
             guna2GroupBox2.Controls.Add(guna2Separator1);
+            guna2GroupBox2.Controls.Add(pictureBox1);
             guna2GroupBox2.Controls.Add(txtTongBaoHiem);
             guna2GroupBox2.Controls.Add(lblTongBHYT);
             guna2GroupBox2.Controls.Add(lblBHTN);
@@ -329,11 +342,11 @@
             guna2GroupBox2.CustomizableEdges = customizableEdges5;
             guna2GroupBox2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox2.ForeColor = Color.Black;
-            guna2GroupBox2.Location = new Point(19, 354);
+            guna2GroupBox2.Location = new Point(19, 448);
             guna2GroupBox2.Margin = new Padding(3, 2, 3, 2);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2GroupBox2.Size = new Size(464, 338);
+            guna2GroupBox2.Size = new Size(470, 448);
             guna2GroupBox2.TabIndex = 23;
             guna2GroupBox2.Text = "BẢO HIỂM";
             // 
@@ -345,6 +358,17 @@
             guna2Separator1.Name = "guna2Separator1";
             guna2Separator1.Size = new Size(457, 18);
             guna2Separator1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.healthcare;
+            pictureBox1.Location = new Point(386, 362);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(67, 62);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 28;
+            pictureBox1.TabStop = false;
             // 
             // txtTongBaoHiem
             // 
@@ -440,11 +464,11 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(30, 215);
+            label1.Location = new Point(31, 171);
             label1.Name = "label1";
-            label1.Size = new Size(151, 22);
+            label1.Size = new Size(157, 22);
             label1.TabIndex = 21;
-            label1.Text = "Giảm trừ gia cảnh";
+            label1.Text = "Giảm trừ gia cảnh:";
             // 
             // lblThue
             // 
@@ -452,7 +476,7 @@
             lblThue.BackColor = Color.White;
             lblThue.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             lblThue.ForeColor = Color.Black;
-            lblThue.Location = new Point(30, 283);
+            lblThue.Location = new Point(31, 254);
             lblThue.Name = "lblThue";
             lblThue.Size = new Size(55, 22);
             lblThue.TabIndex = 15;
@@ -461,7 +485,7 @@
             // txtGiamTruGiaCanh
             // 
             txtGiamTruGiaCanh.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtGiamTruGiaCanh.Location = new Point(279, 208);
+            txtGiamTruGiaCanh.Location = new Point(279, 171);
             txtGiamTruGiaCanh.Margin = new Padding(3, 2, 3, 2);
             txtGiamTruGiaCanh.Name = "txtGiamTruGiaCanh";
             txtGiamTruGiaCanh.ReadOnly = true;
@@ -471,7 +495,7 @@
             // txtThue
             // 
             txtThue.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtThue.Location = new Point(279, 274);
+            txtThue.Location = new Point(279, 254);
             txtThue.Margin = new Padding(3, 2, 3, 2);
             txtThue.Name = "txtThue";
             txtThue.ReadOnly = true;
@@ -484,23 +508,11 @@
             lblThucLanh.BackColor = Color.White;
             lblThucLanh.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 163);
             lblThucLanh.ForeColor = Color.Black;
-            lblThucLanh.Location = new Point(513, 582);
+            lblThucLanh.Location = new Point(683, 684);
             lblThucLanh.Name = "lblThucLanh";
-            lblThucLanh.Size = new Size(209, 35);
+            lblThucLanh.Size = new Size(199, 35);
             lblThucLanh.TabIndex = 17;
-            lblThucLanh.Text = "THỰC LÃNH:";
-            // 
-            // lblMaNhanVien
-            // 
-            lblMaNhanVien.AutoSize = true;
-            lblMaNhanVien.BackColor = Color.White;
-            lblMaNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            lblMaNhanVien.ForeColor = Color.Black;
-            lblMaNhanVien.Location = new Point(30, 81);
-            lblMaNhanVien.Name = "lblMaNhanVien";
-            lblMaNhanVien.Size = new Size(122, 22);
-            lblMaNhanVien.TabIndex = 19;
-            lblMaNhanVien.Text = "Mã nhân viên:";
+            lblThucLanh.Text = "THỰC LÃNH";
             // 
             // lblLuongCoBan
             // 
@@ -508,7 +520,7 @@
             lblLuongCoBan.BackColor = Color.White;
             lblLuongCoBan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             lblLuongCoBan.ForeColor = Color.Black;
-            lblLuongCoBan.Location = new Point(30, 148);
+            lblLuongCoBan.Location = new Point(31, 89);
             lblLuongCoBan.Name = "lblLuongCoBan";
             lblLuongCoBan.Size = new Size(125, 22);
             lblLuongCoBan.TabIndex = 20;
@@ -517,47 +529,84 @@
             // txtThucLanh
             // 
             txtThucLanh.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtThucLanh.Location = new Point(728, 582);
+            txtThucLanh.Location = new Point(643, 745);
             txtThucLanh.Margin = new Padding(3, 2, 3, 2);
             txtThucLanh.Name = "txtThucLanh";
             txtThucLanh.ReadOnly = true;
-            txtThucLanh.Size = new Size(227, 30);
+            txtThucLanh.Size = new Size(289, 30);
             txtThucLanh.TabIndex = 9;
-            // 
-            // txtMaNV
-            // 
-            txtMaNV.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtMaNV.Location = new Point(279, 75);
-            txtMaNV.Margin = new Padding(3, 2, 3, 2);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.ReadOnly = true;
-            txtMaNV.Size = new Size(193, 30);
-            txtMaNV.TabIndex = 10;
             // 
             // txtLuongCoBan
             // 
             txtLuongCoBan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtLuongCoBan.Location = new Point(279, 141);
+            txtLuongCoBan.Location = new Point(279, 85);
             txtLuongCoBan.Margin = new Padding(3, 2, 3, 2);
             txtLuongCoBan.Name = "txtLuongCoBan";
             txtLuongCoBan.ReadOnly = true;
             txtLuongCoBan.Size = new Size(193, 30);
             txtLuongCoBan.TabIndex = 13;
             // 
+            // lblMaNhanVien
+            // 
+            lblMaNhanVien.AutoSize = true;
+            lblMaNhanVien.BackColor = Color.White;
+            lblMaNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            lblMaNhanVien.ForeColor = Color.Black;
+            lblMaNhanVien.Location = new Point(53, 308);
+            lblMaNhanVien.Name = "lblMaNhanVien";
+            lblMaNhanVien.Size = new Size(122, 22);
+            lblMaNhanVien.TabIndex = 19;
+            lblMaNhanVien.Text = "Mã nhân viên:";
+            // 
+            // txtMaNV
+            // 
+            txtMaNV.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            txtMaNV.Location = new Point(22, 349);
+            txtMaNV.Margin = new Padding(3, 2, 3, 2);
+            txtMaNV.Name = "txtMaNV";
+            txtMaNV.ReadOnly = true;
+            txtMaNV.Size = new Size(193, 30);
+            txtMaNV.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel4.BorderStyle = BorderStyle.Fixed3D;
+            panel4.Controls.Add(pictureBox2);
+            panel4.Location = new Point(12, 15);
+            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(232, 272);
+            panel4.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.manager;
+            pictureBox2.Location = new Point(43, 28);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(128, 180);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
             // frmLuongNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1001, 833);
+            ClientSize = new Size(1258, 936);
+            Controls.Add(panel4);
             Controls.Add(btnThoat);
-            Controls.Add(btnTinhLuong);
             Controls.Add(guna2GroupBox1);
+            Controls.Add(lblMaNhanVien);
+            Controls.Add(txtMaNV);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(3, 2, 3, 2);
+            MinimizeBox = false;
             Name = "frmLuongNhanVien";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormLuongNhanVien";
+            Text = "Lương nhân viên";
             FormClosing += frmLuongNhanVien_FormClosing;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
@@ -565,12 +614,15 @@
             guna2GroupBox3.PerformLayout();
             guna2GroupBox2.ResumeLayout(false);
             guna2GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnTinhLuong;
         private System.Windows.Forms.Button btnThoat;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
@@ -607,5 +659,10 @@
         private System.Windows.Forms.Label lblTongBHYT;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private Panel panel4;
+        private PictureBox pictureBox2;
+        private Button btnTinhLuong;
+        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
     }
 }
