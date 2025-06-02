@@ -20,189 +20,195 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+      
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            dgvLuong = new DataGridView();
-            MaNV = new DataGridViewTextBoxColumn();
-            Ho = new DataGridViewTextBoxColumn();
-            Ten = new DataGridViewTextBoxColumn();
-            LuongCoBan = new DataGridViewTextBoxColumn();
-            LuongChiuThue = new DataGridViewTextBoxColumn();
-            Thue = new DataGridViewTextBoxColumn();
-            LuongThucLanh = new DataGridViewTextBoxColumn();
-            cbbMaThang = new ComboBox();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            btnXemLuong = new Button();
-            btnXemReport = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvLuong).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvLuong = new System.Windows.Forms.DataGridView();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LuongCoBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LuongChiuThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LuongThucLanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbbMaThang = new System.Windows.Forms.ComboBox();
+            this.btnXemLuong = new System.Windows.Forms.Button();
+            this.btnXemReport = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // dgvLuong
             // 
-            dgvLuong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvLuong.ColumnHeadersHeight = 34;
-            dgvLuong.Columns.AddRange(new DataGridViewColumn[] { MaNV, Ho, Ten, LuongCoBan, LuongChiuThue, Thue, LuongThucLanh });
-            dgvLuong.Location = new Point(12, 137);
-            dgvLuong.Margin = new Padding(3, 2, 3, 2);
-            dgvLuong.Name = "dgvLuong";
-            dgvLuong.RowHeadersVisible = false;
-            dgvLuong.RowHeadersWidth = 120;
-            dgvLuong.Size = new Size(1018, 378);
-            dgvLuong.TabIndex = 3;
+            this.dgvLuong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvLuong.ColumnHeadersHeight = 34;
+            this.dgvLuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaNV,
+            this.Ho,
+            this.Ten,
+            this.LuongCoBan,
+            this.LuongChiuThue,
+            this.Thue,
+            this.LuongThucLanh});
+            this.dgvLuong.Location = new System.Drawing.Point(12, 133);
+            this.dgvLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvLuong.Name = "dgvLuong";
+            this.dgvLuong.RowHeadersVisible = false;
+            this.dgvLuong.RowHeadersWidth = 120;
+            this.dgvLuong.Size = new System.Drawing.Size(1234, 605);
+            this.dgvLuong.TabIndex = 3;
             // 
             // MaNV
             // 
-            MaNV.DataPropertyName = "MaNV";
-            MaNV.HeaderText = "Mã NV";
-            MaNV.MinimumWidth = 8;
-            MaNV.Name = "MaNV";
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
             // 
             // Ho
             // 
-            Ho.DataPropertyName = "Ho";
-            Ho.HeaderText = "Họ";
-            Ho.MinimumWidth = 8;
-            Ho.Name = "Ho";
+            this.Ho.DataPropertyName = "Ho";
+            this.Ho.HeaderText = "Họ";
+            this.Ho.MinimumWidth = 8;
+            this.Ho.Name = "Ho";
             // 
             // Ten
             // 
-            Ten.DataPropertyName = "Ten";
-            Ten.HeaderText = "Tên";
-            Ten.MinimumWidth = 8;
-            Ten.Name = "Ten";
+            this.Ten.DataPropertyName = "Ten";
+            this.Ten.HeaderText = "Tên";
+            this.Ten.MinimumWidth = 8;
+            this.Ten.Name = "Ten";
             // 
             // LuongCoBan
             // 
-            LuongCoBan.DataPropertyName = "LuongCoBan";
-            LuongCoBan.HeaderText = "Lương Cơ Bản";
-            LuongCoBan.MinimumWidth = 6;
-            LuongCoBan.Name = "LuongCoBan";
+            this.LuongCoBan.DataPropertyName = "LuongCoBan";
+            this.LuongCoBan.HeaderText = "Lương Cơ Bản";
+            this.LuongCoBan.MinimumWidth = 6;
+            this.LuongCoBan.Name = "LuongCoBan";
             // 
             // LuongChiuThue
             // 
-            LuongChiuThue.DataPropertyName = "LuongChiuThue";
-            LuongChiuThue.HeaderText = "Lương Chịu Thuế";
-            LuongChiuThue.MinimumWidth = 8;
-            LuongChiuThue.Name = "LuongChiuThue";
+            this.LuongChiuThue.DataPropertyName = "LuongChiuThue";
+            this.LuongChiuThue.HeaderText = "Lương Chịu Thuế";
+            this.LuongChiuThue.MinimumWidth = 8;
+            this.LuongChiuThue.Name = "LuongChiuThue";
             // 
             // Thue
             // 
-            Thue.DataPropertyName = "Thue";
-            Thue.HeaderText = "Thuế thu nhập cá nhân";
-            Thue.MinimumWidth = 8;
-            Thue.Name = "Thue";
+            this.Thue.DataPropertyName = "Thue";
+            this.Thue.HeaderText = "Thuế thu nhập cá nhân";
+            this.Thue.MinimumWidth = 8;
+            this.Thue.Name = "Thue";
             // 
             // LuongThucLanh
             // 
-            LuongThucLanh.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            LuongThucLanh.DataPropertyName = "LuongThucLanh";
-            LuongThucLanh.HeaderText = "Lương Thực Lãnh";
-            LuongThucLanh.MinimumWidth = 8;
-            LuongThucLanh.Name = "LuongThucLanh";
-            LuongThucLanh.Width = 155;
+            this.LuongThucLanh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.LuongThucLanh.DataPropertyName = "LuongThucLanh";
+            this.LuongThucLanh.HeaderText = "Lương Thực Lãnh";
+            this.LuongThucLanh.MinimumWidth = 8;
+            this.LuongThucLanh.Name = "LuongThucLanh";
+            this.LuongThucLanh.Width = 155;
             // 
             // cbbMaThang
             // 
-            cbbMaThang.FormattingEnabled = true;
-            cbbMaThang.Location = new Point(116, 27);
-            cbbMaThang.Margin = new Padding(3, 2, 3, 2);
-            cbbMaThang.Name = "cbbMaThang";
-            cbbMaThang.Size = new Size(251, 28);
-            cbbMaThang.TabIndex = 9;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.salary;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(38, 75);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(72, 57);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.calendar;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(38, 12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(72, 57);
-            pictureBox2.TabIndex = 11;
-            pictureBox2.TabStop = false;
+            this.cbbMaThang.FormattingEnabled = true;
+            this.cbbMaThang.Location = new System.Drawing.Point(109, 45);
+            this.cbbMaThang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbMaThang.Name = "cbbMaThang";
+            this.cbbMaThang.Size = new System.Drawing.Size(216, 24);
+            this.cbbMaThang.TabIndex = 9;
             // 
             // btnXemLuong
             // 
-            btnXemLuong.BackColor = Color.Navy;
-            btnXemLuong.FlatStyle = FlatStyle.Flat;
-            btnXemLuong.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            btnXemLuong.ForeColor = Color.White;
-            btnXemLuong.Location = new Point(138, 81);
-            btnXemLuong.Name = "btnXemLuong";
-            btnXemLuong.Size = new Size(207, 44);
-            btnXemLuong.TabIndex = 12;
-            btnXemLuong.Text = "Xem lương";
-            btnXemLuong.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnXemLuong.UseVisualStyleBackColor = false;
-            btnXemLuong.Click += btnXemLuong_Click;
+            this.btnXemLuong.BackColor = System.Drawing.Color.Navy;
+            this.btnXemLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXemLuong.ForeColor = System.Drawing.Color.White;
+            this.btnXemLuong.Location = new System.Drawing.Point(355, 31);
+            this.btnXemLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXemLuong.Name = "btnXemLuong";
+            this.btnXemLuong.Size = new System.Drawing.Size(207, 49);
+            this.btnXemLuong.TabIndex = 12;
+            this.btnXemLuong.Text = "Xem lương";
+            this.btnXemLuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXemLuong.UseVisualStyleBackColor = false;
+            this.btnXemLuong.Click += new System.EventHandler(this.btnXemLuong_Click);
             // 
             // btnXemReport
             // 
-            btnXemReport.BackColor = Color.Navy;
-            btnXemReport.FlatStyle = FlatStyle.Flat;
-            btnXemReport.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            btnXemReport.ForeColor = Color.White;
-            btnXemReport.Location = new Point(823, 39);
-            btnXemReport.Name = "btnXemReport";
-            btnXemReport.Size = new Size(207, 44);
-            btnXemReport.TabIndex = 13;
-            btnXemReport.Text = "Xem báo cáo lương ";
-            btnXemReport.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnXemReport.UseVisualStyleBackColor = false;
-            btnXemReport.Click += btnXemReport_Click;
+            this.btnXemReport.BackColor = System.Drawing.Color.Navy;
+            this.btnXemReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemReport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXemReport.ForeColor = System.Drawing.Color.White;
+            this.btnXemReport.Location = new System.Drawing.Point(1039, 31);
+            this.btnXemReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXemReport.Name = "btnXemReport";
+            this.btnXemReport.Size = new System.Drawing.Size(207, 69);
+            this.btnXemReport.TabIndex = 13;
+            this.btnXemReport.Text = "Xem báo cáo lương theo hợp đồng";
+            this.btnXemReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXemReport.UseVisualStyleBackColor = false;
+            this.btnXemReport.Click += new System.EventHandler(this.btnXemReport_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::QuanLyNhanSu_3Tang_ADO.Properties.Resources.calendar;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(22, 27);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(72, 60);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::QuanLyNhanSu_3Tang_ADO.Properties.Resources.salary;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(951, 31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 69);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // frmThongKeLuongNhanVien
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1042, 527);
-            Controls.Add(btnXemReport);
-            Controls.Add(btnXemLuong);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(cbbMaThang);
-            Controls.Add(dgvLuong);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "frmThongKeLuongNhanVien";
-            Text = "FormThongKeLuong";
-            FormClosing += frmThongKeLuongNhanVien_FormClosing;
-            Load += frmThongKeLuongNhanVien_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvLuong).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ResumeLayout(false);
-        }
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1258, 749);
+            this.Controls.Add(this.btnXemReport);
+            this.Controls.Add(this.btnXemLuong);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.cbbMaThang);
+            this.Controls.Add(this.dgvLuong);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimizeBox = false;
+            this.Name = "frmThongKeLuongNhanVien";
+            this.Text = "Thống kê lương nhân viên";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmThongKeLuongNhanVien_FormClosing);
+            this.Load += new System.EventHandler(this.frmThongKeLuongNhanVien_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
 
-        #endregion
+        }
         private ComboBox cbbMaThang;
         private DataGridView dgvLuong;
         private PictureBox pictureBox1;
@@ -215,7 +221,7 @@
         private DataGridViewTextBoxColumn LuongChiuThue;
         private DataGridViewTextBoxColumn Thue;
         private DataGridViewTextBoxColumn LuongThucLanh;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+
         private Button btnXemReport;
     }
 }

@@ -39,6 +39,7 @@
             HeSo = new DataGridViewTextBoxColumn();
             fontDialog1 = new FontDialog();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             cbbLoaiChamCong = new ComboBox();
             btnChamCong = new Button();
@@ -47,12 +48,14 @@
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewChamCong).BeginInit();
             guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2GroupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridViewChamCong
             // 
             dataGridViewChamCong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewChamCong.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewChamCong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewChamCong.Columns.AddRange(new DataGridViewColumn[] { Column2, Thang, Column3, HeSo });
             dataGridViewChamCong.Location = new Point(6, 43);
@@ -61,7 +64,7 @@
             dataGridViewChamCong.RowHeadersVisible = false;
             dataGridViewChamCong.RowHeadersWidth = 51;
             dataGridViewChamCong.RowTemplate.Height = 24;
-            dataGridViewChamCong.Size = new Size(868, 451);
+            dataGridViewChamCong.Size = new Size(772, 189);
             dataGridViewChamCong.TabIndex = 4;
             // 
             // Column2
@@ -98,6 +101,7 @@
             // 
             // guna2GroupBox1
             // 
+            guna2GroupBox1.Controls.Add(pictureBox1);
             guna2GroupBox1.Controls.Add(label1);
             guna2GroupBox1.Controls.Add(cbbLoaiChamCong);
             guna2GroupBox1.Controls.Add(btnChamCong);
@@ -107,19 +111,28 @@
             guna2GroupBox1.CustomizableEdges = customizableEdges1;
             guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox1.ForeColor = Color.Black;
-            guna2GroupBox1.Location = new Point(25, 22);
+            guna2GroupBox1.Location = new Point(12, 12);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GroupBox1.Size = new Size(877, 243);
+            guna2GroupBox1.Size = new Size(781, 173);
             guna2GroupBox1.TabIndex = 10;
             guna2GroupBox1.Text = "THÔNG TIN CHẤM CÔNG";
-            guna2GroupBox1.Click += guna2GroupBox1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.back_in_time;
+            pictureBox1.Location = new Point(429, 61);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(60, 63);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label1.Location = new Point(547, 99);
+            label1.Location = new Point(21, 117);
             label1.Name = "label1";
             label1.Size = new Size(140, 22);
             label1.TabIndex = 14;
@@ -128,9 +141,9 @@
             // cbbLoaiChamCong
             // 
             cbbLoaiChamCong.FormattingEnabled = true;
-            cbbLoaiChamCong.Location = new Point(692, 95);
+            cbbLoaiChamCong.Location = new Point(167, 113);
             cbbLoaiChamCong.Name = "cbbLoaiChamCong";
-            cbbLoaiChamCong.Size = new Size(151, 31);
+            cbbLoaiChamCong.Size = new Size(204, 31);
             cbbLoaiChamCong.TabIndex = 13;
             // 
             // btnChamCong
@@ -139,7 +152,7 @@
             btnChamCong.FlatStyle = FlatStyle.Flat;
             btnChamCong.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
             btnChamCong.ForeColor = Color.White;
-            btnChamCong.Location = new Point(320, 173);
+            btnChamCong.Location = new Point(506, 70);
             btnChamCong.Name = "btnChamCong";
             btnChamCong.Size = new Size(237, 44);
             btnChamCong.TabIndex = 11;
@@ -150,17 +163,17 @@
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(180, 95);
+            txtMaNV.Location = new Point(167, 57);
             txtMaNV.Name = "txtMaNV";
             txtMaNV.ReadOnly = true;
-            txtMaNV.Size = new Size(310, 30);
+            txtMaNV.Size = new Size(204, 30);
             txtMaNV.TabIndex = 12;
             // 
             // lblMaNV
             // 
             lblMaNV.AutoSize = true;
             lblMaNV.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            lblMaNV.Location = new Point(37, 99);
+            lblMaNV.Location = new Point(21, 61);
             lblMaNV.Name = "lblMaNV";
             lblMaNV.Size = new Size(127, 22);
             lblMaNV.TabIndex = 10;
@@ -173,10 +186,10 @@
             guna2GroupBox2.CustomizableEdges = customizableEdges3;
             guna2GroupBox2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             guna2GroupBox2.ForeColor = Color.Black;
-            guna2GroupBox2.Location = new Point(25, 296);
+            guna2GroupBox2.Location = new Point(12, 191);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GroupBox2.Size = new Size(877, 497);
+            guna2GroupBox2.Size = new Size(781, 387);
             guna2GroupBox2.TabIndex = 11;
             guna2GroupBox2.Text = "DANH SÁCH CHẤM CÔNG";
             // 
@@ -184,13 +197,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(929, 805);
+            ClientSize = new Size(805, 590);
             Controls.Add(guna2GroupBox2);
             Controls.Add(guna2GroupBox1);
             Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 163);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
             Name = "frmChamCong";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormChamCong";
@@ -199,6 +212,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewChamCong).EndInit();
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2GroupBox2.ResumeLayout(false);
             ResumeLayout(false);
 
@@ -218,5 +232,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Label label1;
         private ComboBox cbbLoaiChamCong;
+        private PictureBox pictureBox1;
     }
 }

@@ -40,17 +40,18 @@
             stiRibbonViewerControl1.Report = null;
             stiRibbonViewerControl1.RightToLeft = RightToLeft.No;
             stiRibbonViewerControl1.ShowZoom = true;
-            stiRibbonViewerControl1.Size = new Size(1092, 744);
+            stiRibbonViewerControl1.Size = new Size(1236, 744);
             stiRibbonViewerControl1.TabIndex = 0;
             // 
             // frmReport
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1108, 764);
+            ClientSize = new Size(1262, 753);
             Controls.Add(stiRibbonViewerControl1);
+            MaximizeBox = false;
             Name = "frmReport";
-            Text = "frmReport";
+            Text = "Báo cáo";
             FormClosing += frmReport_FormClosing;
             Load += frmReport_Load;
             ResumeLayout(false);

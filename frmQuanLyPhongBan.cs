@@ -264,14 +264,24 @@ namespace QuanLyNhanSu_3Tang_ADO
             }
             else
             {
+                string err = "";
+                bool tc =
                 bLPhongBan.CapNhatPhongBan(
                     txtMaPB.Text,
                     txtTenPB.Text,
                     txtSDT.Text,
                     cmbMaTrP.SelectedValue.ToString(),
                     ref err);
-                LoadData();
-                MessageBox.Show("Đã sửa xong!");
+                if (tc)
+                {
+                    LoadData();
+                    MessageBox.Show("Đã sửa xong!");
+                }
+                else
+                {
+                    MessageBox.Show("Không sửa được. Lỗi: " + err);
+                }
+                
             }
         }
 
@@ -307,6 +317,116 @@ namespace QuanLyNhanSu_3Tang_ADO
                 frmMenuQuanTriVien.Show();
                 this.Hide();
             }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            Them = true;
+            txtMaPB.ResetText();
+            txtTenPB.ResetText();
+            txtSDT.ResetText();
+            cmbMaTrP.ResetText();
+            txtHo.ResetText();
+            txtTen.ResetText();
+
+            txtMaPB.Enabled = true;
+            txtTenPB.Enabled = true;
+            txtSDT.Enabled = true;
+            cmbMaTrP.Enabled = true;
+            txtHo.Enabled = false;
+            txtTen.Enabled = false;
+
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            Them = false;
+            txtMaPB.Enabled = false;
+            txtTenPB.Enabled = true;
+            txtSDT.Enabled = true;
+            cmbMaTrP.Enabled = true;
+            txtHo.Enabled = true;
+            txtTen.Enabled = true;
+
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtMaPB.Enabled = false;
+            txtTenPB.Enabled = false;
+            txtSDT.Enabled = false;
+            cmbMaTrP.Enabled = false;
+            txtHo.Enabled = false;
+            txtTen.Enabled = false;
+
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            if (roleName == "TruongPhong")
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+            }
+        }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPhongBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dgvPhongBan.CurrentCell.RowIndex;
+            String MaTrP = dgvPhongBan.Rows[r].Cells[3].Value.ToString();
+            txtMaPB.Text = dgvPhongBan.Rows[r].Cells[0].Value.ToString(); ;
+            txtTenPB.Text = dgvPhongBan.Rows[r].Cells[1].Value.ToString();
+            txtSDT.Text = dgvPhongBan.Rows[r].Cells[2].Value.ToString();
+            cmbMaTrP.SelectedValue = dgvPhongBan.Rows[r].Cells[3].Value.ToString();
+            txtHo.Text = dgvPhongBan.Rows[r].Cells[4].Value.ToString();
+            txtTen.Text = dgvPhongBan.Rows[r].Cells[5].Value.ToString();
+
+            dtSoLuong.Clear();
+            DataSet ds2 = bLPhongBan.TongSoLuongNhanVienCua1PhongBan(MaTrP);
+            dtSoLuong = ds2.Tables[0];
+
+            dgvSoLuong.DataSource = dtSoLuong;
+        }
+
+        private void frmQuanLyPhongBan_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void frmQuanLyPhongBan_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

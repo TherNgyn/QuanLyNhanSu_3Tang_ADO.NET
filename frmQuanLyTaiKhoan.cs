@@ -220,8 +220,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK)
             {
-                /*frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
-                frmMenuQuanTriVien.Show();*/
+                frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
+                frmMenuQuanTriVien.Show();
                 this.Hide();
             }
         }
@@ -264,6 +264,27 @@ namespace QuanLyNhanSu_3Tang_ADO
             frmMenuQuanTriVien frmMenuQuanTriVien = new frmMenuQuanTriVien(userName);
             frmMenuQuanTriVien.Show();
             this.Hide();
+        }
+
+        private void dgvTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dgvTaiKhoan.CurrentCell.RowIndex;
+            cmbTenDangNhap.SelectedValue = dgvTaiKhoan.Rows[r].Cells[0].Value.ToString();
+            txtMatKhau.Text = dgvTaiKhoan.Rows[r].Cells[1].Value.ToString();
+            txtMaLoai.Text = dgvTaiKhoan.Rows[r].Cells[2].Value.ToString();
+            txtHo.Text = dgvTaiKhoan.Rows[r].Cells[3].Value.ToString();
+            txtTen.Text = dgvTaiKhoan.Rows[r].Cells[4].Value.ToString();
+            cmbTenLoai.SelectedValue = dgvTaiKhoan.Rows[r].Cells[2].Value.ToString();
+        }
+
+        private void txtHo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTen_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -169,5 +169,25 @@ namespace QuanLyNhanSu_3Tang_ADO
                 frm.Show();
             }
         }
+
+        private void btnXemThongBaoMenu_Click(object sender, EventArgs e)
+        {
+            frmXemThongBao frmQLTB = new frmXemThongBao(userName, true);
+            frmQLTB.Show();
+            this.Close();
+        }
+
+        private void btnThoatThongTin_Click(object sender, EventArgs e)
+        {
+            DialogResult traloi;
+            traloi = MessageBox.Show("Chắc không?", "Trả lời",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            // Kiểm tra có nhắp chọn nút Ok không?  
+            if (traloi == DialogResult.OK)
+            {
+                isLoggingOut = true;
+                this.Close();
+            }
+        }
     }
 }

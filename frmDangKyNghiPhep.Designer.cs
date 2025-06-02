@@ -28,266 +28,251 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            btnDangKy = new Button();
-            txtLyDo = new Guna.UI2.WinForms.Guna2TextBox();
-            lblLyDo = new Label();
-            cbbMaThang = new ComboBox();
-            txtNgayNghi = new Guna.UI2.WinForms.Guna2TextBox();
-            txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            lblNgay = new Label();
-            lblThang = new Label();
-            lblMaNV = new Label();
-            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            dgvNghiPhep = new DataGridView();
-            guna2GroupBox3.SuspendLayout();
-            guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvNghiPhep).BeginInit();
-            SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDangKy = new System.Windows.Forms.Button();
+            this.txtLyDo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblLyDo = new System.Windows.Forms.Label();
+            this.cbbMaThang = new System.Windows.Forms.ComboBox();
+            this.txtNgayNghi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblNgay = new System.Windows.Forms.Label();
+            this.lblThang = new System.Windows.Forms.Label();
+            this.lblMaNV = new System.Windows.Forms.Label();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dgvNghiPhep = new System.Windows.Forms.DataGridView();
+            this.guna2GroupBox3.SuspendLayout();
+            this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNghiPhep)).BeginInit();
+            this.SuspendLayout();
             // 
             // guna2GroupBox3
             // 
-            guna2GroupBox3.Controls.Add(btnDangKy);
-            guna2GroupBox3.Controls.Add(txtLyDo);
-            guna2GroupBox3.Controls.Add(lblLyDo);
-            guna2GroupBox3.Controls.Add(cbbMaThang);
-            guna2GroupBox3.Controls.Add(txtNgayNghi);
-            guna2GroupBox3.Controls.Add(txtMaNV);
-            guna2GroupBox3.Controls.Add(lblNgay);
-            guna2GroupBox3.Controls.Add(lblThang);
-            guna2GroupBox3.Controls.Add(lblMaNV);
-            guna2GroupBox3.CustomBorderColor = Color.Navy;
-            guna2GroupBox3.CustomizableEdges = customizableEdges7;
-            guna2GroupBox3.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            guna2GroupBox3.ForeColor = Color.White;
-            guna2GroupBox3.Location = new Point(9, 8);
-            guna2GroupBox3.Margin = new Padding(3, 2, 3, 2);
-            guna2GroupBox3.Name = "guna2GroupBox3";
-            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2GroupBox3.Size = new Size(1128, 303);
-            guna2GroupBox3.TabIndex = 43;
-            guna2GroupBox3.Text = "THÔNG TIN NGHỈ PHÉP";
-            guna2GroupBox3.Click += guna2GroupBox3_Click;
+            this.guna2GroupBox3.Controls.Add(this.btnDangKy);
+            this.guna2GroupBox3.Controls.Add(this.txtLyDo);
+            this.guna2GroupBox3.Controls.Add(this.lblLyDo);
+            this.guna2GroupBox3.Controls.Add(this.cbbMaThang);
+            this.guna2GroupBox3.Controls.Add(this.txtNgayNghi);
+            this.guna2GroupBox3.Controls.Add(this.txtMaNV);
+            this.guna2GroupBox3.Controls.Add(this.lblNgay);
+            this.guna2GroupBox3.Controls.Add(this.lblThang);
+            this.guna2GroupBox3.Controls.Add(this.lblMaNV);
+            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.Navy;
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
+            this.guna2GroupBox3.Location = new System.Drawing.Point(9, 6);
+            this.guna2GroupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.Size = new System.Drawing.Size(1238, 242);
+            this.guna2GroupBox3.TabIndex = 43;
+            this.guna2GroupBox3.Text = "THÔNG TIN NGHỈ PHÉP";
             // 
             // btnDangKy
             // 
-            btnDangKy.BackColor = Color.Navy;
-            btnDangKy.FlatStyle = FlatStyle.Flat;
-            btnDangKy.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
-            btnDangKy.ForeColor = Color.White;
-            btnDangKy.Location = new Point(504, 231);
-            btnDangKy.Margin = new Padding(4, 2, 4, 2);
-            btnDangKy.Name = "btnDangKy";
-            btnDangKy.Size = new Size(121, 30);
-            btnDangKy.TabIndex = 24;
-            btnDangKy.Text = "Đăng ký";
-            btnDangKy.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnDangKy.UseVisualStyleBackColor = false;
-            btnDangKy.Click += btnDangKy_Click;
+            this.btnDangKy.BackColor = System.Drawing.Color.Navy;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.Location = new System.Drawing.Point(504, 185);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(121, 33);
+            this.btnDangKy.TabIndex = 24;
+            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // txtLyDo
             // 
-            txtLyDo.BackColor = Color.White;
-            txtLyDo.BorderThickness = 0;
-            txtLyDo.Cursor = Cursors.IBeam;
-            txtLyDo.CustomizableEdges = customizableEdges1;
-            txtLyDo.DefaultText = "";
-            txtLyDo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtLyDo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtLyDo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtLyDo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtLyDo.FillColor = SystemColors.Control;
-            txtLyDo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLyDo.Font = new Font("Segoe UI", 9F);
-            txtLyDo.ForeColor = Color.Black;
-            txtLyDo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLyDo.Location = new Point(712, 63);
-            txtLyDo.Margin = new Padding(3, 5, 3, 5);
-            txtLyDo.Name = "txtLyDo";
-            txtLyDo.PlaceholderText = "";
-            txtLyDo.SelectedText = "";
-            txtLyDo.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtLyDo.Size = new Size(391, 46);
-            txtLyDo.TabIndex = 23;
+            this.txtLyDo.BackColor = System.Drawing.Color.White;
+            this.txtLyDo.BorderRadius = 10;
+            this.txtLyDo.BorderThickness = 0;
+            this.txtLyDo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLyDo.DefaultText = "";
+            this.txtLyDo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLyDo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLyDo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLyDo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLyDo.FillColor = System.Drawing.SystemColors.Control;
+            this.txtLyDo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLyDo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLyDo.ForeColor = System.Drawing.Color.Black;
+            this.txtLyDo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLyDo.Location = new System.Drawing.Point(712, 57);
+            this.txtLyDo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLyDo.Name = "txtLyDo";
+            this.txtLyDo.PlaceholderText = "";
+            this.txtLyDo.SelectedText = "";
+            this.txtLyDo.Size = new System.Drawing.Size(391, 37);
+            this.txtLyDo.TabIndex = 23;
             // 
             // lblLyDo
             // 
-            lblLyDo.AutoSize = true;
-            lblLyDo.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLyDo.ForeColor = Color.Black;
-            lblLyDo.Location = new Point(624, 78);
-            lblLyDo.Name = "lblLyDo";
-            lblLyDo.Size = new Size(65, 23);
-            lblLyDo.TabIndex = 22;
-            lblLyDo.Text = "Lý do:";
+            this.lblLyDo.AutoSize = true;
+            this.lblLyDo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLyDo.ForeColor = System.Drawing.Color.Black;
+            this.lblLyDo.Location = new System.Drawing.Point(624, 62);
+            this.lblLyDo.Name = "lblLyDo";
+            this.lblLyDo.Size = new System.Drawing.Size(65, 23);
+            this.lblLyDo.TabIndex = 22;
+            this.lblLyDo.Text = "Lý do:";
             // 
             // cbbMaThang
             // 
-            cbbMaThang.BackColor = SystemColors.Control;
-            cbbMaThang.FormattingEnabled = true;
-            cbbMaThang.Location = new Point(178, 158);
-            cbbMaThang.Name = "cbbMaThang";
-            cbbMaThang.Size = new Size(391, 31);
-            cbbMaThang.TabIndex = 21;
+            this.cbbMaThang.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbMaThang.FormattingEnabled = true;
+            this.cbbMaThang.Location = new System.Drawing.Point(178, 126);
+            this.cbbMaThang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbMaThang.Name = "cbbMaThang";
+            this.cbbMaThang.Size = new System.Drawing.Size(391, 31);
+            this.cbbMaThang.TabIndex = 21;
             // 
             // txtNgayNghi
             // 
-            txtNgayNghi.BackColor = Color.White;
-            txtNgayNghi.BorderThickness = 0;
-            txtNgayNghi.Cursor = Cursors.IBeam;
-            txtNgayNghi.CustomizableEdges = customizableEdges3;
-            txtNgayNghi.DefaultText = "";
-            txtNgayNghi.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtNgayNghi.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtNgayNghi.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtNgayNghi.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtNgayNghi.FillColor = SystemColors.Control;
-            txtNgayNghi.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNgayNghi.Font = new Font("Segoe UI", 9F);
-            txtNgayNghi.ForeColor = Color.Black;
-            txtNgayNghi.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNgayNghi.Location = new Point(712, 150);
-            txtNgayNghi.Margin = new Padding(3, 5, 3, 5);
-            txtNgayNghi.Name = "txtNgayNghi";
-            txtNgayNghi.PlaceholderText = "";
-            txtNgayNghi.SelectedText = "";
-            txtNgayNghi.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtNgayNghi.Size = new Size(391, 46);
-            txtNgayNghi.TabIndex = 18;
+            this.txtNgayNghi.BackColor = System.Drawing.Color.White;
+            this.txtNgayNghi.BorderRadius = 10;
+            this.txtNgayNghi.BorderThickness = 0;
+            this.txtNgayNghi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNgayNghi.DefaultText = "";
+            this.txtNgayNghi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNgayNghi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNgayNghi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgayNghi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgayNghi.FillColor = System.Drawing.SystemColors.Control;
+            this.txtNgayNghi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNgayNghi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNgayNghi.ForeColor = System.Drawing.Color.Black;
+            this.txtNgayNghi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNgayNghi.Location = new System.Drawing.Point(712, 124);
+            this.txtNgayNghi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNgayNghi.Name = "txtNgayNghi";
+            this.txtNgayNghi.PlaceholderText = "";
+            this.txtNgayNghi.SelectedText = "";
+            this.txtNgayNghi.Size = new System.Drawing.Size(391, 37);
+            this.txtNgayNghi.TabIndex = 18;
             // 
             // txtMaNV
             // 
-            txtMaNV.BackColor = Color.White;
-            txtMaNV.BorderThickness = 0;
-            txtMaNV.Cursor = Cursors.IBeam;
-            txtMaNV.CustomizableEdges = customizableEdges5;
-            txtMaNV.DefaultText = "";
-            txtMaNV.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtMaNV.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtMaNV.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtMaNV.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtMaNV.FillColor = SystemColors.Control;
-            txtMaNV.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMaNV.Font = new Font("Segoe UI", 9F);
-            txtMaNV.ForeColor = Color.Black;
-            txtMaNV.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMaNV.Location = new Point(178, 63);
-            txtMaNV.Margin = new Padding(3, 5, 3, 5);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.PlaceholderText = "";
-            txtMaNV.SelectedText = "";
-            txtMaNV.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtMaNV.Size = new Size(391, 46);
-            txtMaNV.TabIndex = 16;
+            this.txtMaNV.BackColor = System.Drawing.Color.White;
+            this.txtMaNV.BorderRadius = 10;
+            this.txtMaNV.BorderThickness = 0;
+            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.DefaultText = "";
+            this.txtMaNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNV.FillColor = System.Drawing.SystemColors.Control;
+            this.txtMaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNV.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaNV.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNV.Location = new System.Drawing.Point(178, 58);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.PlaceholderText = "";
+            this.txtMaNV.SelectedText = "";
+            this.txtMaNV.Size = new System.Drawing.Size(391, 37);
+            this.txtMaNV.TabIndex = 16;
             // 
             // lblNgay
             // 
-            lblNgay.AutoSize = true;
-            lblNgay.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNgay.ForeColor = Color.Black;
-            lblNgay.Location = new Point(624, 161);
-            lblNgay.Name = "lblNgay";
-            lblNgay.Size = new Size(61, 23);
-            lblNgay.TabIndex = 7;
-            lblNgay.Text = "Ngày:";
+            this.lblNgay.AutoSize = true;
+            this.lblNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgay.ForeColor = System.Drawing.Color.Black;
+            this.lblNgay.Location = new System.Drawing.Point(624, 129);
+            this.lblNgay.Name = "lblNgay";
+            this.lblNgay.Size = new System.Drawing.Size(61, 23);
+            this.lblNgay.TabIndex = 7;
+            this.lblNgay.Text = "Ngày:";
             // 
             // lblThang
             // 
-            lblThang.AutoSize = true;
-            lblThang.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThang.ForeColor = Color.Black;
-            lblThang.Location = new Point(35, 161);
-            lblThang.Name = "lblThang";
-            lblThang.Size = new Size(75, 23);
-            lblThang.TabIndex = 8;
-            lblThang.Text = "Tháng: ";
+            this.lblThang.AutoSize = true;
+            this.lblThang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThang.ForeColor = System.Drawing.Color.Black;
+            this.lblThang.Location = new System.Drawing.Point(35, 129);
+            this.lblThang.Name = "lblThang";
+            this.lblThang.Size = new System.Drawing.Size(75, 23);
+            this.lblThang.TabIndex = 8;
+            this.lblThang.Text = "Tháng: ";
             // 
             // lblMaNV
             // 
-            lblMaNV.AutoSize = true;
-            lblMaNV.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMaNV.ForeColor = Color.Black;
-            lblMaNV.Location = new Point(35, 78);
-            lblMaNV.Name = "lblMaNV";
-            lblMaNV.Size = new Size(134, 23);
-            lblMaNV.TabIndex = 9;
-            lblMaNV.Text = "Mã nhân viên: ";
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.ForeColor = System.Drawing.Color.Black;
+            this.lblMaNV.Location = new System.Drawing.Point(35, 62);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(134, 23);
+            this.lblMaNV.TabIndex = 9;
+            this.lblMaNV.Text = "Mã nhân viên: ";
             // 
             // guna2GroupBox1
             // 
-            guna2GroupBox1.Controls.Add(dgvNghiPhep);
-            guna2GroupBox1.CustomBorderColor = Color.GhostWhite;
-            guna2GroupBox1.CustomBorderThickness = new Padding(0, 45, 0, 0);
-            guna2GroupBox1.CustomizableEdges = customizableEdges9;
-            guna2GroupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            guna2GroupBox1.ForeColor = Color.Black;
-            guna2GroupBox1.Location = new Point(9, 320);
-            guna2GroupBox1.Margin = new Padding(3, 2, 3, 2);
-            guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2GroupBox1.Size = new Size(1128, 394);
-            guna2GroupBox1.TabIndex = 44;
-            guna2GroupBox1.Text = "LỊCH SỬ XIN NGHỈ PHÉP";
+            this.guna2GroupBox1.Controls.Add(this.dgvNghiPhep);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.GhostWhite;
+            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 45, 0, 0);
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(9, 256);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1241, 486);
+            this.guna2GroupBox1.TabIndex = 44;
+            this.guna2GroupBox1.Text = "LỊCH SỬ XIN NGHỈ PHÉP";
             // 
             // dgvNghiPhep
             // 
-            dgvNghiPhep.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvNghiPhep.BackgroundColor = SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvNghiPhep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvNghiPhep.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvNghiPhep.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvNghiPhep.Location = new Point(3, 49);
-            dgvNghiPhep.Margin = new Padding(3, 4, 3, 4);
-            dgvNghiPhep.Name = "dgvNghiPhep";
-            dgvNghiPhep.ReadOnly = true;
-            dgvNghiPhep.RowHeadersVisible = false;
-            dgvNghiPhep.RowHeadersWidth = 51;
-            dgvNghiPhep.RowTemplate.Height = 24;
-            dgvNghiPhep.Size = new Size(1122, 341);
-            dgvNghiPhep.TabIndex = 10;
+            this.dgvNghiPhep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNghiPhep.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNghiPhep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNghiPhep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNghiPhep.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNghiPhep.Location = new System.Drawing.Point(3, 39);
+            this.dgvNghiPhep.Name = "dgvNghiPhep";
+            this.dgvNghiPhep.ReadOnly = true;
+            this.dgvNghiPhep.RowHeadersVisible = false;
+            this.dgvNghiPhep.RowHeadersWidth = 51;
+            this.dgvNghiPhep.RowTemplate.Height = 24;
+            this.dgvNghiPhep.Size = new System.Drawing.Size(1235, 444);
+            this.dgvNghiPhep.TabIndex = 10;
             // 
             // frmDangKyNghiPhep
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1146, 718);
-            Controls.Add(guna2GroupBox3);
-            Controls.Add(guna2GroupBox1);
-            Name = "frmDangKyNghiPhep";
-            Text = "Đăng ký nghỉ phép";
-            FormClosing += frmDangKyNghiPhep_FormClosing;
-            Load += frmDangKyNghiPhep_Load;
-            guna2GroupBox3.ResumeLayout(false);
-            guna2GroupBox3.PerformLayout();
-            guna2GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvNghiPhep).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1262, 753);
+            this.Controls.Add(this.guna2GroupBox3);
+            this.Controls.Add(this.guna2GroupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimizeBox = false;
+            this.Name = "frmDangKyNghiPhep";
+            this.Text = "Đăng ký nghỉ phép";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangKyNghiPhep_FormClosing);
+            this.Load += new System.EventHandler(this.frmDangKyNghiPhep_Load);
+            this.guna2GroupBox3.ResumeLayout(false);
+            this.guna2GroupBox3.PerformLayout();
+            this.guna2GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNghiPhep)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -304,5 +289,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private DataGridView dgvNghiPhep;
         private Button btnDangKy;
+
     }
 }
