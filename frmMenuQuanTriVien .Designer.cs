@@ -168,7 +168,7 @@
             panelThongTin.Location = new Point(12, 134);
             panelThongTin.Margin = new Padding(3, 2, 3, 2);
             panelThongTin.Name = "panelThongTin";
-            panelThongTin.Padding = new Padding(20, 20, 20, 20);
+            panelThongTin.Padding = new Padding(20);
             panelThongTin.ShadowDecoration.CustomizableEdges = customizableEdges30;
             panelThongTin.Size = new Size(1276, 574);
             panelThongTin.TabIndex = 1;
@@ -518,6 +518,7 @@
             btnLuu.Size = new Size(225, 56);
             btnLuu.TabIndex = 22;
             btnLuu.Text = "Lưu";
+            btnLuu.Click += btnLuu_Click;
             // 
             // btnHuy
             // 
@@ -538,6 +539,7 @@
             btnHuy.Size = new Size(225, 56);
             btnHuy.TabIndex = 23;
             btnHuy.Text = "Hủy";
+            btnHuy.Click += btnHuy_Click;
             // 
             // btnThoat
             // 
@@ -601,7 +603,7 @@
             panelHeader.Location = new Point(0, 0);
             panelHeader.Margin = new Padding(3, 2, 3, 2);
             panelHeader.Name = "panelHeader";
-            panelHeader.Padding = new Padding(10, 10, 10, 10);
+            panelHeader.Padding = new Padding(10);
             panelHeader.ShadowDecoration.CustomizableEdges = customizableEdges38;
             panelHeader.Size = new Size(1300, 118);
             panelHeader.TabIndex = 0;
@@ -835,7 +837,6 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
-
         }
 
         #endregion

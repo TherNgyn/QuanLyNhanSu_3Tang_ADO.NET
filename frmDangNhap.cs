@@ -72,8 +72,9 @@ namespace QuanLyNhanSu_3Tang_ADO
             }
             else
             {
-                lblMessage.Text = authResult;
-                lblMessage.ForeColor = System.Drawing.Color.Red;
+                //lblMessage.Text = authResult;
+                //lblMessage.ForeColor = System.Drawing.Color.Red;
+                MessageBox.Show(authResult);
             }
         }
 
@@ -122,6 +123,11 @@ namespace QuanLyNhanSu_3Tang_ADO
                     form.Close();
                 }
             }
+        }
+
+        private void pnLoad_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

@@ -212,7 +212,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
 
         public bool ThemPhongBan(String MaPB, String TenPB, String SDT, String MaTrP, ref string err)
         {
-           
+            MessageBox.Show(MaTrP);
             if (!KiemTraTruongPhongHopLe(MaPB, MaTrP, ref err))
             {
                 return false;

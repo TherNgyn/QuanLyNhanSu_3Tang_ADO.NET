@@ -768,6 +768,7 @@
             btnTimKiem.TabIndex = 11;
             btnTimKiem.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnTimKiem.UseVisualStyleBackColor = false;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // txtTimKiem
             // 
@@ -951,7 +952,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvGioiTinh).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvPhongBan).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion

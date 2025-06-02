@@ -98,27 +98,12 @@ namespace QuanLyNhanSu_3Tang_ADO
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            err = "";
-            DateTime ngaySinh = dtpNgaySinh.Value.Date;
-            bLNhanVien.CapNhatNhanVienCV(txtMaNhanVien.Text, txtHo.Text, txtTen.Text, cmbGioiTinh.SelectedItem.ToString(), ngaySinh,
-                txtDiaChi.Text, txtSoDT.Text, txtEmail.Text, txtCCCD.Text, ref err);
-            LoadData();
+            
         }
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            txtHo.ResetText();
-            txtTen.ResetText();
-            cmbGioiTinh.ResetText();
-            dtpNgaySinh.ResetText();
-            txtDiaChi.ResetText();
-            txtSoDT.ResetText();
-            txtEmail.ResetText();
-            txtCCCD.ResetText();
-
-            btnLuu.Enabled = false;
-            btnHuy.Enabled = false;
-            btnSua.Enabled = true;
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -152,7 +137,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             // Kiểm tra có nhắp chọn nút Ok không?  
             if (traloi == DialogResult.OK)
             {
-                
+
                 this.Close();
             }
         }
@@ -260,7 +245,24 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             frmDangNhap frm = new frmDangNhap();
             frm.Show();
-            
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            err = "";
+            DateTime ngaySinh = dtpNgaySinh.Value.Date;
+            bLNhanVien.CapNhatNhanVienCV(txtMaNhanVien.Text, txtHo.Text, txtTen.Text, cmbGioiTinh.SelectedItem.ToString(), ngaySinh,
+                txtDiaChi.Text, txtSoDT.Text, txtEmail.Text, txtCCCD.Text, ref err);
+            LoadData();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
+            btnSua.Enabled = true;
         }
     }
 }

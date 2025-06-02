@@ -346,7 +346,8 @@ namespace QuanLyNhanSu_3Tang_ADO
             }
             else
             {
-                bLNhanVien.CapNhatNhanVien(txtMaNhanVien.Text,
+                //MessageBox.Show(cmbTenCV.SelectedValue.ToString());
+                bool suaThanhCong =bLNhanVien.CapNhatNhanVien(txtMaNhanVien.Text,
                     txtHo.Text, txtTen.Text,
                     cmbGioiTinh.SelectedItem.ToString(),
                     dtpNgaySinh.Value.Date,
@@ -358,7 +359,15 @@ namespace QuanLyNhanSu_3Tang_ADO
                     cmbTenCV.SelectedValue.ToString(),
                     ref err);
                 LoadData();
-                MessageBox.Show("Đã sửa xong!");
+                if (suaThanhCong)
+                {
+                    MessageBox.Show("Đã sửa xong!");
+                }
+                else
+                {
+                    MessageBox.Show("Không sửa được. Lỗi: " + err);
+
+                }
             }
             // Đóng kết nối 
 
@@ -627,6 +636,11 @@ namespace QuanLyNhanSu_3Tang_ADO
         }
 
         private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiem_Click_1(object sender, EventArgs e)
         {
 
         }

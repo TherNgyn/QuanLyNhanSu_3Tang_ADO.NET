@@ -37,7 +37,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             try
             {
                 dtBH = dbBH.LayBaoHiem().Tables[0];
-                dgvBaoHiem.AutoGenerateColumns = false;
+                //dgvBaoHiem.AutoGenerateColumns = false;
                 dgvBaoHiem.DataSource = dtBH;
                 dgvBaoHiem.AutoResizeColumns();
 

@@ -33,7 +33,7 @@ namespace QuanLyNhanSu_3Tang_ADO
         {
             try
             {
-                DataSet ds = blNV.TimNhanVienTheoMa(userName);
+                DataSet ds = blNV.TimNhanVienTheoMaTen(userName);
                 DataTable dt = new DataTable();
                 dt = ds.Tables[0];
 

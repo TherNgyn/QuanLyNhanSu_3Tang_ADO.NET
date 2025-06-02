@@ -128,7 +128,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
 
         public DataSet LayNhanVien1PBCV(String MaTrP)
         {
-            return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.TenPB,CV.TenCV " +
+            return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.MaPB,CV.MaCV " +
                 "FROM NhanVien NV " +
                 "INNER JOIN PhongBan PB ON NV.MaPB = PB.MaPB and PB.MaTrP ='" + MaTrP + "' " +
                 "INNER JOIN ChucVu CV ON NV.MaCV = CV.MaCV", CommandType.Text);
@@ -136,7 +136,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
 
         public DataSet LayNhanVienPBCV()
         {
-            return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.TenPB,CV.TenCV " +
+            return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.MaPB,CV.MaCV " +
                 "FROM NhanVien NV " +
                 "INNER JOIN PhongBan PB ON NV.MaPB = PB.MaPB " +
                 "INNER JOIN ChucVu CV ON NV.MaCV = CV.MaCV", CommandType.Text);
@@ -144,7 +144,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
 
         public DataSet TimNhanVienTheoMa1PB(String MaNV, String MaTrP)
         {
-            return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.TenPB,CV.TenCV " +
+            return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.MaPB,CV.MaCV " +
                 "FROM NhanVien NV " +
                 "INNER JOIN PhongBan PB ON NV.MaPB = PB.MaPB and PB.MaTrP ='" + MaTrP + "' " +
                 "INNER JOIN ChucVu CV ON NV.MaCV = CV.MaCV " +
@@ -152,6 +152,14 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
         }
 
         public DataSet TimNhanVienTheoMa(String MaNV)
+        {
+            return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.MaPB,CV.MaCV " +
+                "FROM NhanVien NV " +
+                "INNER JOIN PhongBan PB ON NV.MaPB = PB.MaPB " +
+                "INNER JOIN ChucVu CV ON NV.MaCV = CV.MaCV " +
+                "WHERE MaNV Like" + "'%" + MaNV + "%'", CommandType.Text);
+        }
+        public DataSet TimNhanVienTheoMaTen(String MaNV)
         {
             return db.ExecuteQueryDataSet("SELECT MaNV,Ho,Ten,GioiTinh,NgaySinh,DiaChi, NV.SDT,Email,CCCD,PB.TenPB,CV.TenCV " +
                 "FROM NhanVien NV " +
@@ -226,6 +234,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
 
         public bool CapNhatNhanVien(String MaNV, String Ho, String Ten, String GioiTinh, DateTime NgaySinh, String DiaChi, String SDT, String Email, String CCCD, String MaPB, String MaCV, ref string err)
         {
+
             try
             {
                
@@ -248,7 +257,7 @@ namespace QuanLyNhanSu_3Tang_ADO.BS_Layer
                 {
                     return false;
                 }
-
+                MessageBox.Show(MaCV);
                
                 string sqlString = "UPDATE NhanVien " +
                     "SET Ho = @Ho, Ten = @Ten, GioiTinh = @GioiTinh, NgaySinh = @NgaySinh, DiaChi = @DiaChi, SDT = @SDT, Email = @Email, CCCD = @CCCD, MaPB = @MaPB, MaCV = @MaCV " +

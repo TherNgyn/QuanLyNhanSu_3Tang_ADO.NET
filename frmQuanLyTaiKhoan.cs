@@ -186,7 +186,7 @@ namespace QuanLyNhanSu_3Tang_ADO
             {
                 string err = "";
                 bool themThanhCong = bLTaiKhoan.ThemTaiKhoan(
-                    cmbTenDangNhap.SelectedItem.ToString(),
+                    cmbTenDangNhap.SelectedValue.ToString(),
                     txtMatKhau.Text,
                     cmbTenLoai.SelectedValue.ToString(),
                     ref err);
